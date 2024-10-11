@@ -1,0 +1,13 @@
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\bin\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.dacpac
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\bin\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\bin\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\bin\Release\master.dacpac
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\bin\Release\OCAS_MSCRM.dacpac
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.sqlprojAssemblyReference.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\Model.xml
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\refactor.xml
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\postdeploy.sql
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\predeploy.sql
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.sqlproj.CopyComplete
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Db.Ssdt\obj\Release\Ocas.Domestic.Crm.Extras.Db.Ssdt.pdb

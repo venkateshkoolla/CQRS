@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "2abc5b53511ff46df4e3f85e36abe0b064b553dd"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Ocas.Domestic.Admin.Core/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Ocas.Domestic.Apply.Core": "1.0.26"
+        },
+        "runtime": {
+          "Ocas.Domestic.Admin.Core.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Ocas.Domestic.Apply.Core/1.0.26": {
+        "runtime": {
+          "lib/net461/Ocas.Domestic.Apply.Core.dll": {
+            "assemblyVersion": "1.0.26.0",
+            "fileVersion": "1.0.26.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ocas.Domestic.Admin.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Ocas.Domestic.Apply.Core/1.0.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hzTmC7HJKPtCiCeYoW1utv36FLsnlHZ9TpdJM0WHjlOquWuUhbwp1hmVO4LtUA1PNbExmIgV76dgwOvx8Ox8wA==",
+      "path": "ocas.domestic.apply.core/1.0.26",
+      "hashPath": "ocas.domestic.apply.core.1.0.26.nupkg.sha512"
+    }
+  }
+}

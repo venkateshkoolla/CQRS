@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "oCsctUKhLn3Zx544BrjydnfbtR/12CUkk5/d1fD1oxZpusmX/5LpwEK3iSAuFcGYM/td5r3l4t1Sa2VOBzUcPw==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Admin.Core\\Ocas.Domestic.Admin.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0-beta2-19367-01\\microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0-beta2-19367-01\\microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.vsts.git\\1.0.0-beta2-19367-01\\microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\ocas.common\\1.4.7\\ocas.common.1.4.7.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ocas.Domestic.Apply.Core depends on Ocas.Common (>= 1.4.4) but Ocas.Common 1.4.4 was not found. An approximate best match of Ocas.Common 1.4.7 was resolved.",
+      "libraryId": "Ocas.Common",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+2020-02-21 10:03:50.691 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-21 10:19:37.410 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

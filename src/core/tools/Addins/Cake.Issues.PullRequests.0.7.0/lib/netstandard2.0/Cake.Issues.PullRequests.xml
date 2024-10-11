@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Issues.PullRequests</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Issues.PullRequests.Aliases">
+            <summary>
+            Contains functionality related to reporting issues to pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Aliases.ReportIssuesToPullRequest(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},Cake.Issues.PullRequests.IPullRequestSystem,Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Reports issues to pull requests.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="issues">Issues which should be reported.</param>
+            <param name="pullRequestSystem">The pull request system.</param>
+            <param name="repositoryRoot">Root path of the repository.</param>
+            <returns>Information about the reported and written issues.</returns>
+            <example>
+            <para>Report issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    issues,
+                    TfsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        "refs/heads/feature/myfeature",
+                        TfsAuthenticationNtlm()),
+                    @"C:\repo"));
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Aliases.ReportIssuesToPullRequest(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},Cake.Issues.PullRequests.IPullRequestSystem,Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+             <summary>
+             Reports issues to pull requests using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="issues">Issues which should be reported.</param>
+             <param name="pullRequestSystem">The pull request system.</param>
+             <param name="settings">The settings.</param>
+             <returns>Information about the reported and written issues.</returns>
+             <example>
+             <para>Report issues reported as MsBuild warnings to a TFS pull request and limit number of comments to ten:</para>
+             <code>
+             <![CDATA[
+                 var settings =
+                     new ReportIssuesToPullRequestSettings(@"C:\repo")
+                     {
+                         MaxIssuesToPost = 10
+                     };
+            
+                 ReportIssuesToPullRequest(
+                     issues,
+                     TfsPullRequests(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm()),
+                     settings));
+             ]]>
+             </code>
+             </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Aliases.ReportIssuesToPullRequest(Cake.Core.ICakeContext,Cake.Issues.IIssueProvider,Cake.Issues.PullRequests.IPullRequestSystem,Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Reports issues to pull requests.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="issueProvider">The provider for issues.</param>
+            <param name="pullRequestSystem">The pull request system.</param>
+            <param name="repositoryRoot">Root path of the repository.</param>
+            <returns>Information about the reported and written issues.</returns>
+            <example>
+            <para>Report issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildIssuesFromFilePath(
+                        @"C:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    TfsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        "refs/heads/feature/myfeature",
+                        TfsAuthenticationNtlm()),
+                    @"C:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Aliases.ReportIssuesToPullRequest(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Issues.IIssueProvider},Cake.Issues.PullRequests.IPullRequestSystem,Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Reports issues to pull requests.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="issueProviders">The list of provider for issues.</param>
+            <param name="pullRequestSystem">The pull request system.</param>
+            <param name="repositoryRoot">Root path of the repository.</param>
+            <returns>Information about the reported and written issues.</returns>
+            <example>
+            <para>Report issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    new List<IIssueProvider>
+                    {
+                        MsBuildIssuesFromFilePath(
+                            @"C:\build\msbuild.log",
+                            MsBuildXmlFileLoggerFormat),
+                        InspectCodeFromFilePath(
+                            @"C:\build\inspectcode.log")
+                    },
+                    TfsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        "refs/heads/feature/myfeature",
+                        TfsAuthenticationNtlm()),
+                    @"C:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Aliases.ReportIssuesToPullRequest(Cake.Core.ICakeContext,Cake.Issues.IIssueProvider,Cake.Issues.PullRequests.IPullRequestSystem,Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+             <summary>
+             Reports issues to pull requests using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="issueProvider">The provider for issues.</param>
+             <param name="pullRequestSystem">The pull request system.</param>
+             <param name="settings">The settings.</param>
+             <returns>Information about the reported and written issues.</returns>
+             <example>
+             <para>Report issues reported as MsBuild warnings to a TFS pull request and limit number of comments to ten:</para>
+             <code>
+             <![CDATA[
+                 var settings =
+                     new ReportIssuesToPullRequestSettings(@"C:\repo")
+                     {
+                         MaxIssuesToPost = 10
+                     };
+            
+                 ReportIssuesToPullRequest(
+                     MsBuildIssuesFromFilePath(
+                         @"C:\build\msbuild.log",
+                         MsBuildXmlFileLoggerFormat),
+                     TfsPullRequests(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm()),
+                     settings));
+             ]]>
+             </code>
+             </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Aliases.ReportIssuesToPullRequest(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Issues.IIssueProvider},Cake.Issues.PullRequests.IPullRequestSystem,Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+             <summary>
+             Reports issues to pull requests using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="issueProviders">The list of provider for issues.</param>
+             <param name="pullRequestSystem">The pull request system.</param>
+             <param name="settings">The settings.</param>
+             <returns>Information about the reported and written issues.</returns>
+             <example>
+             <para>Report issues reported as MsBuild warnings to a TFS pull request and limit number of comments to ten:</para>
+             <code>
+             <![CDATA[
+                 var settings =
+                     new ReportIssuesToPullRequestSettings(@"C:\repo")
+                     {
+                         MaxIssuesToPost = 10
+                     };
+            
+                 ReportIssuesToPullRequest(
+                     new List<IIssueProvider>
+                     {
+                         MsBuildIssuesFromFilePath(
+                             @"C:\build\msbuild.log",
+                             MsBuildXmlFileLoggerFormat),
+                         InspectCodeFromFilePath(
+                             @"C:\build\inspectcode.log")
+                     },
+                     TfsPullRequests(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm()),
+                     settings));
+             ]]>
+             </code>
+             </example>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.BaseCheckingCommitIdCapability`1">
+            <summary>
+            Capability to post issues only if pull request is for a specific commit.
+            </summary>
+            <typeparam name="T">Type of the pull request system to which this capability belongs.</typeparam>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseCheckingCommitIdCapability`1.#ctor(Cake.Core.Diagnostics.ICakeLog,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.BaseCheckingCommitIdCapability`1"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseCheckingCommitIdCapability`1.GetLastSourceCommitId">
+            <inheritdoc/>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1">
+            <summary>
+            Capability to read, resolve and reopen discussion threads.
+            </summary>
+            <typeparam name="T">Type of the pull request system to which this capability belongs.</typeparam>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.#ctor(Cake.Core.Diagnostics.ICakeLog,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.FetchDiscussionThreads(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.ResolveDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.ReopenDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.InternalFetchDiscussionThreads(System.String)">
+            <summary>
+            Returns a list of all discussion threads.
+            Compared to <see cref="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.FetchDiscussionThreads(System.String)"/> it is safe to access Settings from this method.
+            </summary>
+            <param name="commentSource">Value used to indicate threads created by this addin.</param>
+            <returns>List of all discussion threads.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.InternalResolveDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <summary>
+            Marks a list of discussion threads as resolved.
+            Compared to <see cref="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.ResolveDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})"/> it is safe to access Settings from this method.
+            </summary>
+            <param name="threads">Threads to mark as fixed.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.InternalReopenDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <summary>
+            Marks a list of discussion threads as active.
+            Compared to <see cref="M:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1.ReopenDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})"/> it is safe to access Settings from this method.
+            </summary>
+            <param name="threads">Threads to mark as active.</param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1">
+            <summary>
+            Capability to filter issues to only those affecting files modified in the pull request.
+            </summary>
+            <typeparam name="T">Type of the pull request system to which this capability belongs.</typeparam>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1.#ctor(Cake.Core.Diagnostics.ICakeLog,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1.GetModifiedFilesInPullRequest">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1.InternalGetModifiedFilesInPullRequest">
+            <summary>
+            Returns a list of all files modified in a pull request.
+            Compared to <see cref="M:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1.GetModifiedFilesInPullRequest"/> it is safe to access Settings from this method.
+            </summary>
+            <returns>List of all files modified in a pull request.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.BasePullRequestSystem">
+            <summary>
+            Base class for all pull request system implementations.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.#ctor(Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.BasePullRequestSystem"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.AddCapability(Cake.Issues.PullRequests.IPullRequestSystemCapability)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.HasCapability``1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.GetCapability``1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.GetPreferredCommentFormat">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.PostDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystem.InternalPostDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.String)">
+            <summary>
+            Posts discussion threads for all issues which need to be posted.
+            Compared to <see cref="M:Cake.Issues.PullRequests.BasePullRequestSystem.PostDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.String)"/> it is safe to access Settings from this method.
+            </summary>
+            <param name="issues">Issues which need to be posted.</param>
+            <param name="commentSource">Value used to decorate comments created by this addin.</param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.BasePullRequestSystemCapability`1">
+            <summary>
+            Base class for all optional pull request system capabilities.
+            </summary>
+            <typeparam name="T">Type of the pull request system.</typeparam>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.BasePullRequestSystemCapability`1.#ctor(Cake.Core.Diagnostics.ICakeLog,`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.BasePullRequestSystemCapability`1"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.BasePullRequestSystemCapability`1.Log">
+            <summary>
+            Gets the Cake log context.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.BasePullRequestSystemCapability`1.PullRequestSystem">
+            <summary>
+            Gets the pull request system to which the capability belongs.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.IPullRequestDiscussionComment">
+            <summary>
+            Description of a comment on a pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionComment.Content">
+            <summary>
+            Gets or sets the content of the comment.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionComment.IsDeleted">
+            <summary>
+            Gets or sets a value indicating whether the comment is deleted or not.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.IPullRequestDiscussionThread">
+            <summary>
+            Description of a collection of pull request comments relating to each other.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.Id">
+            <summary>
+            Gets or sets the ID of the discussion thread.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.Status">
+            <summary>
+            Gets or sets if the thread is active or already fixed.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.Resolution">
+            <summary>
+            Gets or sets the resolution of the thred if <see cref="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.Status"/> is <see cref="F:Cake.Issues.PullRequests.PullRequestDiscussionStatus.Resolved"/>.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.AffectedFileRelativePath">
+            <summary>
+            Gets or sets the path to the file where the message should be posted.
+            The path needs to be relative to the repository root.
+            Can be <c>null</c> if discussion is not related to a change in a file.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.CommentSource">
+            <summary>
+            Gets or sets a value used to decorate comments created by this addin.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.Comments">
+            <summary>
+            Gets all the comments of this thread.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.IPullRequestSystem">
+            <summary>
+            Interface describing a pull request server.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IPullRequestSystem.AddCapability(Cake.Issues.PullRequests.IPullRequestSystemCapability)">
+            <summary>
+            Adds a capability.
+            </summary>
+            <param name="capability">Capability to add.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IPullRequestSystem.HasCapability``1">
+            <summary>
+            Checks if a pull request has a specific capability.
+            </summary>
+            <typeparam name="T">Type of the capability.</typeparam>
+            <returns>True if pull request system has the specific capability.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IPullRequestSystem.GetCapability``1">
+            <summary>
+            Returns the instance of a specific capability.
+            </summary>
+            <typeparam name="T">Type of the capability.</typeparam>
+            <returns>Instance of the specific capability.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IPullRequestSystem.GetPreferredCommentFormat">
+            <summary>
+            Returns the preferred format for pull request comments.
+            </summary>
+            <returns>The preferred format for pull request comments.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IPullRequestSystem.PostDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.String)">
+            <summary>
+            Posts discussion threads for all issues which need to be posted.
+            </summary>
+            <param name="issues">Issues which need to be posted.</param>
+            <param name="commentSource">Value used to decorate comments created by this addin.</param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.IPullRequestSystemCapability">
+            <summary>
+            Interface for all optional pull request system capabilities.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.IssueCommentInfo">
+            <summary>
+            Information about comments of an issue.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueCommentInfo.#ctor(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionComment},System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionComment},System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionComment})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.IssueCommentInfo"/> class.
+            </summary>
+            <param name="activeComments">Active comments.</param>
+            <param name="wontFixComments">Comments from threads marked as won't fix.</param>
+            <param name="resolvedComments">Comments from threads marked as resolved.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IssueCommentInfo.ActiveComments">
+            <summary>
+            Gets active comments.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IssueCommentInfo.WontFixComments">
+            <summary>
+            Gets comments from threads marked as won't fix.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.IssueCommentInfo.ResolvedComments">
+            <summary>
+            Gets comments from threads marked as resolved.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.IssueFilterer">
+            <summary>
+            Class for filtering issues.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.IPullRequestSystem,Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.IssueFilterer"/> class.
+            </summary>
+            <param name="log">The Cake log instance.</param>
+            <param name="pullRequestSystem">Pull request system to use.</param>
+            <param name="settings">Settings to use.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.FilterIssues(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo})">
+            <summary>
+            Filters all issues which should not be logged.
+            </summary>
+            <param name="issues">Found issues.</param>
+            <param name="issueComments">List of existing comments on the pull request or null if the
+            pull request system doesn't support discussions.</param>
+            <returns>List of filtered issues.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.IssueHasMatchingComments(Cake.Issues.IIssue,System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo})">
+            <summary>
+            Checks if there's already a comment for an issue.
+            </summary>
+            <param name="issue">Issue to check.</param>
+            <param name="issueComments">List of existing comments.</param>
+            <returns>True if there are already comments for an issue.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.ValidateModifiedFiles(System.Collections.Generic.IEnumerable{Cake.Core.IO.FilePath})">
+            <summary>
+            Validate the list of modified files in the pull request.
+            </summary>
+            <param name="modifiedFilePaths">List of modified files in the pull request.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.FilterIssuesByPath(System.Collections.Generic.IList{Cake.Issues.IIssue})">
+            <summary>
+            Filters all issues affecting files which do not belong to files changed in this pull request.
+            </summary>
+            <param name="issues">List of issues which should be filtered.</param>
+            <returns>List of issues filtered to only the ones affecting files changed in this pull request.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.FilterPreExistingComments(System.Collections.Generic.IList{Cake.Issues.IIssue},System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo})">
+            <summary>
+            Filters issues for which already a comment exists.
+            </summary>
+            <param name="issues">List of issues which should be filtered.</param>
+            <param name="issueComments">List of issues and their existing matching comments on the pull request.</param>
+            <returns>List issues filtered to only the ones not having already a comment.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.IssueFilterer.FilterIssuesByNumber(System.Collections.Generic.IList{Cake.Issues.IIssue})">
+            <summary>
+            Limits the number of issues so as to not overload the pull request with too many comments.
+            </summary>
+            <param name="issues">List of issues which should be filtered.</param>
+            <returns>List of issues limited to the maximum number of issues to post.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.ISupportCheckingCommitId">
+            <summary>
+            Interface describing that a pull request system supports checking if commit Id is still up to date.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ISupportCheckingCommitId.GetLastSourceCommitId">
+            <summary>
+            Gets the hash of the latest commit on the source branch.
+            </summary>
+            <returns>The hash of the latest commit on the source branch, null or <see cref="F:System.String.Empty"/>
+            if no pull request could be found.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.ISupportCheckingCommitIdExtensions">
+            <summary>
+            Interface describing a pull request server.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ISupportCheckingCommitIdExtensions.IsCurrentCommitId(Cake.Issues.PullRequests.ISupportCheckingCommitId,System.String)">
+            <summary>
+            Checks if a specific commit hash is the last commit on the source branch of a pull request.
+            </summary>
+            <param name="capability">Pull request system capability.</param>
+            <param name="commitId">Hash of the commit ID to check.</param>
+            <returns>True if the commit ID is the last commit on the source branch.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.ISupportDiscussionThreads">
+            <summary>
+            Interface describing that a pull request system supports discussion threads.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ISupportDiscussionThreads.FetchDiscussionThreads(System.String)">
+            <summary>
+            Returns a list of all discussion threads.
+            </summary>
+            <param name="commentSource">Value used to indicate threads created by this addin.</param>
+            <returns>List of all discussion threads.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ISupportDiscussionThreads.ResolveDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <summary>
+            Marks a list of discussion threads as resolved.
+            </summary>
+            <param name="threads">Threads to mark as fixed.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ISupportDiscussionThreads.ReopenDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <summary>
+            Marks a list of discussion threads as active.
+            </summary>
+            <param name="threads">Threads to mark as active.</param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.ISupportFilteringByModifiedFiles">
+            <summary>
+            Interface describing that a pull request system supports filtering by modified files.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ISupportFilteringByModifiedFiles.GetModifiedFilesInPullRequest">
+            <summary>
+            Returns a list of all files modified in a pull request.
+            </summary>
+            <returns>List of all files modified in a pull request.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Orchestrator">
+            <summary>
+            Class for writing issues to pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.IPullRequestSystem,Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Orchestrator"/> class.
+            </summary>
+            <param name="log">Cake log instance.</param>
+            <param name="pullRequestSystem">Object for accessing pull request system.
+            <c>null</c> if only issues should be read.</param>
+            <param name="settings">Settings.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.Run(System.Collections.Generic.IEnumerable{Cake.Issues.IIssueProvider})">
+            <summary>
+            Runs the orchestrator.
+            Posts new issues, ignoring duplicate comments and resolves comments that were open in an old iteration
+            of the pull request.
+            </summary>
+            <param name="issueProviders">List of issue providers to use.</param>
+            <returns>Information about the reported and written issues.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.Run(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue})">
+            <summary>
+            Runs the orchestrator.
+            Posts new issues, ignoring duplicate comments and resolves comments that were open in an old iteration
+            of the pull request.
+            </summary>
+            <param name="issues">Issues which should be reported.</param>
+            <returns>Information about the reported and written issues.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.FilePathsAreMatching(Cake.Issues.IIssue,Cake.Issues.PullRequests.IPullRequestDiscussionThread)">
+            <summary>
+            Checks if file path from an <see cref="T:Cake.Issues.IIssue"/> and <see cref="T:Cake.Issues.PullRequests.IPullRequestDiscussionThread"/>
+            are matching.
+            </summary>
+            <param name="issue">Issue to check.</param>
+            <param name="thread">Comment thread to check.</param>
+            <returns><c>true</c> if both paths are matching or if both paths are set to <c>null</c>.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.PostAndResolveComments(Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings,System.Collections.Generic.IList{Cake.Issues.IIssue})">
+            <summary>
+            Posts new issues, ignoring duplicate comments and resolves comments that were open in an old iteration
+            of the pull request.
+            </summary>
+            <param name="reportIssuesToPullRequestSettings">Settings for posting the issues.</param>
+            <param name="issues">Issues to post.</param>
+            <returns>Issues reported to the pull request.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.GetCommentsForIssue(Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings,System.Collections.Generic.IList{Cake.Issues.IIssue},System.Collections.Generic.IList{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <summary>
+            Returns existing matching comments from the pull request for a list of issues.
+            </summary>
+            <param name="reportIssuesToPullRequestSettings">Settings to use.</param>
+            <param name="issues">Issues for which matching comments should be found.</param>
+            <param name="existingThreads">Existing discussion threads on the pull request.</param>
+            <returns>Dictionary containing issues and its associated matching comments on the pull request.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.GetMatchingComments(Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings,Cake.Issues.IIssue,System.Collections.Generic.IList{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <summary>
+            Returns all matching comments from discussion threads for an issue.
+            Comments are considered matching if they fulfill all of the following conditions:
+            * The thread is active.
+            * The thread is for the same file.
+            * The thread was created by the same logic, i.e. the same <see cref="P:Cake.Issues.PullRequests.IPullRequestDiscussionThread.CommentSource"/>.
+            * The comment contains the same content.
+            </summary>
+            <remarks>
+            The line cannot be used since comments can move around.
+            </remarks>
+            <param name="reportIssuesToPullRequestSettings">Settings to use.</param>
+            <param name="issue">Issue for which the comments should be returned.</param>
+            <param name="existingThreads">Existing discussion threads on the pull request.</param>
+            <returns>Comments for the issue.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.ResolveExistingComments(Cake.Issues.PullRequests.ISupportDiscussionThreads,System.Collections.Generic.IList{Cake.Issues.PullRequests.IPullRequestDiscussionThread},System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo},Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <summary>
+            Marks comment threads created by this logic but without active issues as resolved.
+            </summary>
+            <param name="discussionThreadsCapability">Pull request system capability for working with discussion threads.</param>
+            <param name="existingThreads">Existing discussion threads on the pull request.</param>
+            <param name="issueComments">Issues and their related existing comments on the pull request.</param>
+            <param name="reportIssuesToPullRequestSettings">Settings for posting the issues.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.GetThreadsToResolve(System.Collections.Generic.IList{Cake.Issues.PullRequests.IPullRequestDiscussionThread},System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo},Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <summary>
+            Returns threads that can be resolved.
+            </summary>
+            <param name="existingThreads">Existing discussion threads on the pull request.</param>
+            <param name="issueComments">Issues and their related existing comments on the pull request.</param>
+            <param name="reportIssuesToPullRequestSettings">Settings for posting the issues.</param>
+            <returns>List of threads which can be resolved.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.ReopenExistingComments(Cake.Issues.PullRequests.ISupportDiscussionThreads,System.Collections.Generic.IList{Cake.Issues.PullRequests.IPullRequestDiscussionThread},System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo},Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <summary>
+            Marks resolved comment threads created by this logic with active issues as active.
+            </summary>
+            <param name="discussionThreadsCapability">Pull request system capability for working with discussion threads.</param>
+            <param name="existingThreads">Existing discussion threads on the pull request.</param>
+            <param name="issueComments">Issues and their related existing comments on the pull request.</param>
+            <param name="reportIssuesToPullRequestSettings">Settings for posting the issues.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Orchestrator.GetThreadsToReopen(System.Collections.Generic.IList{Cake.Issues.PullRequests.IPullRequestDiscussionThread},System.Collections.Generic.IDictionary{Cake.Issues.IIssue,Cake.Issues.PullRequests.IssueCommentInfo},Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <summary>
+            Returns threads that should be reopened.
+            </summary>
+            <param name="existingThreads">Existing discussion threads on the pull request.</param>
+            <param name="issueComments">Issues and their related existing comments on the pull request.</param>
+            <param name="reportIssuesToPullRequestSettings">Settings for posting the issues.</param>
+            <returns>List of threads which should be reopened.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestDiscussionComment">
+            <summary>
+            Base class for a pull request comment.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionComment.Content">
+            <inheritdoc/>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionComment.IsDeleted">
+            <inheritdoc/>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestDiscussionResolution">
+            <summary>
+            Resolution of discussions in pull requests.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestDiscussionResolution.Unknown">
+            <summary>
+            Unknown discussion resolution.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestDiscussionResolution.Resolved">
+            <summary>
+            Discussion is resolved.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestDiscussionResolution.WontFix">
+            <summary>
+            Discussion is marked as won't fix.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestDiscussionStatus">
+            <summary>
+            Status of discussions in pull requests.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestDiscussionStatus.Unknown">
+            <summary>
+            Unknown discussion status.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestDiscussionStatus.Active">
+            <summary>
+            Discussion is active.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestDiscussionStatus.Resolved">
+            <summary>
+            Discussion is resolved.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestDiscussionThread">
+            <summary>
+            Base class for a collection of pull request comments relating to each other.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.PullRequestDiscussionThread.#ctor(System.Int32,Cake.Issues.PullRequests.PullRequestDiscussionStatus,Cake.Core.IO.FilePath,System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionComment})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.PullRequestDiscussionThread"/> class.
+            </summary>
+            <param name="id">ID of the discussion thread.</param>
+            <param name="status">A value if the thread is active or already fixed.</param>
+            <param name="filePath">The path to the file where the message should be posted.
+            The path needs to be relative to the repository root.
+            Can be <c>null</c> if discussion is not related to a change in a file.</param>
+            <param name="comments">All the comments of this thread.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionThread.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionThread.Status">
+            <inheritdoc/>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionThread.Resolution">
+            <inheritdoc/>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionThread.AffectedFileRelativePath">
+            <inheritdoc/>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionThread.Comments">
+            <inheritdoc/>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestDiscussionThread.CommentSource">
+            <inheritdoc/>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestIssueResult">
+            <summary>
+            Result from reporting issues to a pull request.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.PullRequestIssueResult.#ctor(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.Collections.Generic.IEnumerable{Cake.Issues.IIssue})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.PullRequestIssueResult"/> class.
+            </summary>
+            <param name="reportedIssues">Issues reported by the issue providers.</param>
+            <param name="postedIssues">Issues posted to the pull request.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestIssueResult.ReportedIssues">
+            <summary>
+            Gets all issues reported by the issue providers.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.PullRequestIssueResult.PostedIssues">
+            <summary>
+            Gets the issues posted to the pull request.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestIssuesException">
+            <summary>
+            Represents errors that occur during issues processing.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.PullRequestIssuesException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.PullRequestIssuesException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.PullRequestIssuesException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.PullRequestIssuesException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.PullRequestIssuesException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.PullRequestIssuesException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.PullRequestIssuesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.PullRequestIssuesException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.PullRequestsAliasConstants">
+            <summary>
+            Class containing constants used for defining Cake aliases.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestsAliasConstants.PullRequestSystemCakeAliasCategory">
+            <summary>
+            Category to use for all Cake aliases creating pull request systems.
+            </summary>
+        </member>
+        <member name="F:Cake.Issues.PullRequests.PullRequestsAliasConstants.ReportIssuesToPullRequestCakeAliasCategory">
+            <summary>
+            Category to use for all Cake aliases providing functionality for writing issues to pull requests.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings">
+            <summary>
+            Settings affecting how issues are reported to pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.#ctor(Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryRoot">Root path of the repository.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.CommitId">
+            <summary>
+            Gets or sets the hash of the commit for which the issues were reported.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.MaxIssuesToPost">
+            <summary>
+            Gets or sets the global number of issues which should be posted at maximum over all
+            <see cref="T:Cake.Issues.IIssueProvider"/>.
+            Issues are filtered by <see cref="P:Cake.Issues.IIssue.Priority"/> and issues with an <see cref="P:Cake.Issues.IIssue.AffectedFileRelativePath"/>
+            are prioritized.
+            Set to <c>null</c> to not set a global limit.
+            Default is to not set a global limit.
+            Use <see cref="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.MaxIssuesToPostForEachIssueProvider"/> to set the limit for each issue provider.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.MaxIssuesToPostForEachIssueProvider">
+            <summary>
+            Gets or sets the number of issues which should be posted at maximum for each
+            <see cref="T:Cake.Issues.IIssueProvider"/>.
+            Issues are filtered by <see cref="P:Cake.Issues.IIssue.Priority"/> and issues with an <see cref="P:Cake.Issues.IIssue.AffectedFileRelativePath"/>
+            are prioritized.
+            Set to <c>null</c> to not limit issues per issue provider.
+            Default is to filter to 100 issues for each issue provider.
+            Use <see cref="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.MaxIssuesToPost"/> to set the global limit over all issue providers.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.CommentSource">
+            <summary>
+            Gets or sets a value used to decorate comments created by this addin.
+            Only comments with the same source will be resolved.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings.IssueFilters">
+            <summary>
+            Gets list of filter functions which should be applied before posting issues to pull requests.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2230 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.AzureDevOps</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.AzureDevOps.ArgumentChecks">
+            <summary>
+            Common runtime checks that throw <see cref="T:System.ArgumentException"/> upon failure.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.ArgumentChecks.NotNull``1(``0,System.String)">
+            <summary>
+            Throws an exception if the specified parameter's value is null.
+            </summary>
+            <typeparam name="T">The type of the parameter.</typeparam>
+            <param name="value">The value of the argument.</param>
+            <param name="parameterName">The name of the parameter to include in any thrown exception.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.ArgumentChecks.NotNullOrWhiteSpace(System.String,System.String)">
+            <summary>
+            Throws an exception if the specified parameter's value is null, empty or consists only of white-space characters.
+            </summary>
+            <param name="value">The value of the argument.</param>
+            <param name="parameterName">The name of the parameter to include in any thrown exception.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="value"/> is empty or consists only of white-space characters.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.ArgumentChecks.NotNegativeOrZero(System.Int32,System.String)">
+            <summary>
+            Throws an exception if the specified parameter's value is negative or zero.
+            </summary>
+            <param name="value">The value of the argument.</param>
+            <param name="parameterName">The name of the parameter to include in any thrown exception.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="value"/> is negative or zero.</exception>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.AuthenticationProvider">
+            <summary>
+            Class providing credentials for different authentication schemas.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AuthenticationProvider.AuthenticationNtlm">
+            <summary>
+            Returns credentials for integrated / NTLM authentication.
+            Can only be used for on-premise Azure DevOps Server.
+            </summary>
+            <returns>Credentials for integrated / NTLM authentication.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AuthenticationProvider.AuthenticationBasic(System.String,System.String)">
+            <summary>
+            Returns credentials for basic authentication.
+            Can only be used for on-premise Azure DevOps Server configured for basic authentication.
+            See https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for basic authentication.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AuthenticationProvider.AuthenticationPersonalAccessToken(System.String)">
+            <summary>
+            Returns credentials for authentication with a personal access token.
+            Can be used for Azure DevOps and Azure DevOps Server.
+            </summary>
+            <param name="personalAccessToken">Personal access token.</param>
+            <returns>Credentials for authentication with a personal access token.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AuthenticationProvider.AuthenticationOAuth(System.String)">
+            <summary>
+            Returns credentials for OAuth authentication.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="accessToken">OAuth access token.</param>
+            <returns>Credentials for OAuth authentication.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AuthenticationProvider.AuthenticationAzureActiveDirectory(System.String,System.String)">
+            <summary>
+            Returns credentials for authentication with an Azure Active Directory.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for authentication with an Azure Active Directory.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.AzureDevOpsAadCredentials">
+            <summary>
+            Credentials for authentication with an Azure Active Directory.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AzureDevOpsAadCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Authentication.AzureDevOpsAadCredentials"/> class.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.AzureDevOpsBasicCredentials">
+            <summary>
+            Credentials for basic authentication.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AzureDevOpsBasicCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Authentication.AzureDevOpsBasicCredentials"/> class.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.Authentication.AzureDevOpsBasicCredentials.UserName">
+            <summary>
+            Gets the user name.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Authentication.AzureDevOpsBasicCredentials.Password">
+            <summary>
+            Gets the password.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.AzureDevOpsCredentialsExtensions">
+            <summary>
+            Extensions for the <see cref="T:Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials"/> interface.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AzureDevOpsCredentialsExtensions.ToVssCredentials(Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Returns the <see cref="T:Microsoft.VisualStudio.Services.Common.VssCredentials"/> corresponding to a <see cref="T:Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials"/> object.
+            </summary>
+            <param name="credentials"><see cref="T:Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials"/> credential instance.</param>
+            <returns><see cref="T:Microsoft.VisualStudio.Services.Common.VssCredentials"/> instance.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.AzureDevOpsNtlmCredentials">
+            <summary>
+            Credentials for integrated / NTLM authentication.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.AzureDevOpsOAuthCredentials">
+            <summary>
+            Credentials for OAuth authentication.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Authentication.AzureDevOpsOAuthCredentials.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Authentication.AzureDevOpsOAuthCredentials"/> class.
+            </summary>
+            <param name="accessToken">OAuth access token.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.Authentication.AzureDevOpsOAuthCredentials.AccessToken">
+            <summary>
+            Gets the OAuth access token.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials">
+            <summary>
+            Interface for different credential types.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.AzureDevOpsAliases">
+            <content>
+            Contains functionality related to authenticating to Azure DevOps.
+            </content>
+            <summary>
+            Contains functionality related to Azure DevOps.
+            </summary>
+            <content>
+            Contains functionality related to Azure Pipeline builds.
+            </content>
+            <content>
+            Contains functionality related to Azure DevOps pull requests.
+            </content>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsAuthenticationNtlm(Cake.Core.ICakeContext)">
+            <summary>
+            Returns credentials for integrated / NTLM authentication.
+            Can only be used for on-premise Azure DevOps Server.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Credentials for integrated / NTLM authentication.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsAuthenticationBasic(Cake.Core.ICakeContext,System.String,System.String)">
+            <summary>
+            Returns credentials for basic authentication.
+            Can only be used for on-premise Azure DevOps Server configured for basic authentication.
+            See https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for basic authentication.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsAuthenticationPersonalAccessToken(Cake.Core.ICakeContext,System.String)">
+            <summary>
+            Returns credentials for authentication with a personal access token.
+            Can be used for Azure DevOps Server and Azure DevOps Service.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="personalAccessToken">Personal access token.</param>
+            <returns>Credentials for authentication with a personal access token.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsAuthenticationOAuth(Cake.Core.ICakeContext,System.String)">
+            <summary>
+            Returns credentials for OAuth authentication.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="accessToken">OAuth access token.</param>
+            <returns>Credentials for OAuth authentication.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsAuthenticationAzureActiveDirectory(Cake.Core.ICakeContext,System.String,System.String)">
+            <summary>
+            Returns credentials for authentication with an Azure Active Directory.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for authentication with an Azure Active Directory.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsBuild(Cake.Core.ICakeContext,Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings)">
+             <summary>
+             Gets an Azure Pipelines build using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for getting the build.</param>
+             <example>
+             <para>Get a build running on Azure DevOps Server:</para>
+             <code>
+             <![CDATA[
+             var buildSettings =
+                 new AzureDevOpsBuildSettings(
+                     new Uri("http://myserver:8080/defaultcollection"),
+                     "MyProject",
+                     42,
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var build =
+                 AzureDevOpsBuild(
+                     buildSettings);
+             ]]>
+             </code>
+             </example>
+             <returns>Description of the build.
+             Returns <c>null</c> if build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsBuildUsingAzurePipelinesOAuthToken(Cake.Core.ICakeContext)">
+            <summary>
+            Gets the description of the Azure Pipelines build which is running.
+            Make sure the build has the 'Allow Scripts to access OAuth token' option enabled.
+            </summary>
+            <param name="context">The context.</param>
+            <example>
+            <para>Get current Azure Pipelines build:</para>
+            <code>
+            <![CDATA[
+            var build =
+                AzureDevOpsBuildUsingAzurePipelinesOAuthToken();
+            ]]>
+            </code>
+            </example>
+            <returns>Description of the build.
+            Returns <c>null</c> if build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsBuildIsFailing(Cake.Core.ICakeContext,Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings)">
+             <summary>
+             Returns if the Azure DevOps build is failing.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for getting the build.</param>
+             <example>
+             <para>Get changes associated with an Azure Pipelines build:</para>
+             <code>
+             <![CDATA[
+             var buildSettings =
+                 new AzureDevOpsBuildSettings(
+                     new Uri("http://myserver:8080/defaultcollection"),
+                     "MyProject",
+                     42,
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var isFailing =
+                 AzureDevOpsBuildIsFailing(
+                     buildSettings);
+            
+             if (isFailing)
+             {
+                 Information("Build is failing");
+             }
+             ]]>
+             </code>
+             </example>
+             <returns>The changes associated with the build.
+             Returns an empty list if build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsBuildChanges(Cake.Core.ICakeContext,Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings)">
+             <summary>
+             Gets the changes associated with an Azure Pipelines build.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for getting the build.</param>
+             <example>
+             <para>Get changes associated with an Azure Pipelines build:</para>
+             <code>
+             <![CDATA[
+             var buildSettings =
+                 new AzureDevOpsBuildSettings(
+                     new Uri("http://myserver:8080/defaultcollection"),
+                     "MyProject",
+                     42,
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var changes =
+                 AzureDevOpsBuildChanges(
+                     buildSettings);
+            
+             Information("Changes:");
+             foreach (var change in changes)
+             {
+                 Information("  {0}: {1}", change.Id, change.Message);
+             }
+             ]]>
+             </code>
+             </example>
+             <returns>The changes associated with the build.
+             Returns an empty list if build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsBuildTimelineRecords(Cake.Core.ICakeContext,Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings)">
+             <summary>
+             Gets the timeline entries for an Azure Pipelines build.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for getting the build.</param>
+             <example>
+             <para>Get timeline entries for an Azure Pipelines build:</para>
+             <code>
+             <![CDATA[
+             var buildSettings =
+                 new AzureDevOpsBuildSettings(
+                     new Uri("http://myserver:8080/defaultcollection"),
+                     "MyProject",
+                     42,
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var timelineRecords =
+                 AzureDevOpsBuildTimelineRecords(
+                     buildSettings);
+            
+             Information("Timeline:");
+             foreach (var timelineRecord in timelineRecords)
+             {
+                 Information("  {0}: {1}", timelineRecord.Name, timelineRecord.Result);
+             }
+             ]]>
+             </code>
+             </example>
+             <returns>The timeline entries for the build.
+             Returns an empty list if build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+             <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsPullRequest(Cake.Core.ICakeContext,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings)">
+             <summary>
+             Gets an Azure DevOps pull request using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for getting the pull request.</param>
+             <example>
+             <para>Get a pull request based on the source branch:</para>
+             <code>
+             <![CDATA[
+             var pullRequestSettings =
+                 new AzureDevOpsPullRequestSettings(
+                     new Uri("http://myserver:8080/defaultcollection/myproject/_git/myrepository"),
+                     "refs/heads/feature/myfeature",
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var pullRequest =
+                 AzureDevOpsPullRequest(
+                     pullRequestSettings);
+             ]]>
+             </code>
+             </example>
+             <returns>Description of the pull request.
+             Returns null if pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsPullRequestUsingAzurePipelinesOAuthToken(Cake.Core.ICakeContext)">
+            <summary>
+            Gets an Azure DevOps pull request using the settings provided by an Azure Pipelines build.
+            Make sure the build has the 'Allow Scripts to access OAuth token' option enabled.
+            </summary>
+            <param name="context">The context.</param>
+            <example>
+            <para>Get a pull request:</para>
+            <code>
+            <![CDATA[
+            var pullRequest =
+                AzureDevOpsPullRequestUsingAzurePipelinesOAuthToken();
+            ]]>
+            </code>
+            </example>
+            <returns>Description of the pull request.</returns>
+            <exception cref="T:System.InvalidOperationException">If build is not running in Azure Pipelines,
+            build is not for a pull request or 'Allow Scripts to access OAuth token' option is not enabled
+            on the build definition.</exception>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsPullRequestUsingAzurePipelinesOAuthToken(Cake.Core.ICakeContext,System.Boolean)">
+            <summary>
+            Gets an Azure DevOps pull request using the settings provided by an Azure Pipelines build.
+            Make sure the build has the 'Allow Scripts to access OAuth token' option enabled.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="throwExceptionIfPullRequestCouldNotBeFound">Value indicating whether an exception
+            should be thrown if pull request could not be found.</param>
+            <example>
+            <para>Get a pull request:</para>
+            <code>
+            <![CDATA[
+            var pullRequest =
+                AzureDevOpsPullRequestUsingAzurePipelinesOAuthToken(false);
+            ]]>
+            </code>
+            </example>
+            <returns>Description of the pull request.
+            Returns <c>null</c> if pull request could not be found and
+            <paramref name="throwExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.</returns>
+            <exception cref="T:System.InvalidOperationException">If build is not running in Azure Pipelines,
+            build is not for a pull request or 'Allow Scripts to access OAuth token' option is not enabled
+            on the build definition.</exception>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <paramref name="throwExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsVotePullRequest(Cake.Core.ICakeContext,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote)">
+             <summary>
+             Votes for an Azure DevOps pull request using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request.</param>
+             <param name="vote">The vote for the pull request.</param>
+             <example>
+             <para>Vote 'Approved' to a Azure DevOps Server pull request:</para>
+             <code>
+             <![CDATA[
+             var pullRequestSettings =
+                 new AzureDevOpsPullRequestSettings(
+                     new Uri("http://myserver:8080/defaultcollection/myproject/_git/myrepository"),
+                     "refs/heads/feature/myfeature",
+                     AzureDevOpsAuthenticationNtlm());
+            
+             AzureDevOpsVotePullRequest(
+                 pullRequestSettings,
+                 AzureDevOpsVotePullRequest.Approved);
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsSetPullRequestStatus(Cake.Core.ICakeContext,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus)">
+             <summary>
+             Sets a status on an Azure DevOps pull request using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request.</param>
+             <param name="status">Description of the status which should be set.</param>
+             <example>
+             <para>Set a custom status on the pull request:</para>
+             <code>
+             <![CDATA[
+             var pullRequestSettings =
+                 new AzureDevOpsPullRequestSettings(
+                     new Uri("http://myserver:8080/defaultcollection/myproject/_git/myrepository"),
+                     "refs/heads/feature/myfeature",
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var pullRequstStatus =
+                 new AzureDevOpsPullRequestStatus("MyStatus")
+                 {
+                     Genre = "MyGenre",
+                     State = AzureDevOpsPullRequestStatusState.Succeeded,
+                     Description = "My custom status is successful"
+                 };
+            
+             AzureDevOpsSetPullRequestStatus(
+                 pullRequestSettings,
+                 pullRequstStatus);
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsAddCommentToPullRequest(Cake.Core.ICakeContext,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings,System.String)">
+             <summary>
+             Adds a new comment thread with a single comment to an Azure DevOps pull request using
+             the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request.</param>
+             <param name="comment">The comment which should be added to the pull request.</param>
+             <example>
+             <para>Add comment 'Hello World' to pull request:</para>
+             <code>
+             <![CDATA[
+             var pullRequestSettings =
+                 new AzureDevOpsPullRequestSettings(
+                     new Uri("http://myserver:8080/defaultcollection/myproject/_git/myrepository"),
+                     "refs/heads/feature/myfeature",
+                     AzureDevOpsAuthenticationNtlm());
+            
+             AzureDevOpsAddCommentToPullRequest(
+                 pullRequestSettings,
+                 "Hello World");
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsGetPullRequestCommits(Cake.Core.ICakeContext,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings)">
+             <summary>
+             Gets the commits contained in the Azure DevOps pull request using
+             the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request.</param>
+             <example>
+             <para>Lists id and message of commits of a pull request:</para>
+             <code>
+             <![CDATA[
+             var pullRequestSettings =
+                 new AzureDevOpsPullRequestSettings(
+                     new Uri("http://myserver:8080/defaultcollection/myproject/_git/myrepository"),
+                     "refs/heads/feature/myfeature",
+                     AzureDevOpsAuthenticationNtlm());
+            
+             var commits =
+                 AzureDevOpsGetPullRequestCommits(
+                     pullRequestSettings);
+            
+             Information("Commits");
+             foreach (var commit in commits)
+             {
+                 Information("  {0}: {1}", commit.Id, commit.Message);
+             }
+             ]]>
+             </code>
+             </example>
+             <returns>The commits contained in the pull request.
+             Returns an empty list if pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsAliases.AzureDevOpsCreatePullRequest(Cake.Core.ICakeContext,Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings)">
+             <summary>
+             Creates a pull request in Azure DevOps using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for creating the pull request.</param>
+             <returns>Returns a <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest" /> initialized with the
+             created pull request.</returns>
+             <example>
+             <para>Creates a pull request:</para>
+             <code>
+             <![CDATA[
+             var pullRequestSettings =
+                 new AzureDevOpsCreatePullRequestSettings(
+                     new Uri("http://myserver:8080/defaultcollection/myproject/_git/myrepository"),
+                     "refs/heads/feature/myfeature",
+                     "refs/heads/develop",
+                     "Merge my feature from myfeature",
+                     "Merge my feature from myfeature",
+                     AzureDevOpsAuthenticationNtlm());
+            
+             AzureDevOpsCreatePullRequest(pullRequestSettings);
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException">If the target branch could not be found.</exception>
+        </member>
+        <member name="T:Cake.AzureDevOps.AzureDevOpsException">
+            <summary>
+            Represents errors that occur during connecting to Azure DevOps.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.AzureDevOpsException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.AzureDevOpsException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.AzureDevOpsException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.AzureDevOpsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.AzureDevOpsException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild">
+            <summary>
+            Class for writing issues to Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing AzureDevOps.</param>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/>
+            is set to <c>true</c> and no build could be found.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings,Cake.AzureDevOps.IBuildClientFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing AzureDevOps.</param>
+            <param name="buildClientFactory">A factory to communicate with Build client.</param>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/>
+            is set to <c>true</c> and no build could be found.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.HasBuildLoaded">
+            <summary>
+            Gets a value indicating whether a build has been successfully loaded.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.CollectionUrl">
+            <summary>
+            Gets the URL for accessing the web portal of the Azure DevOps collection.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.ProjectId">
+            <summary>
+            Gets the id of the Azure DevOps project.
+            Returns <see cref="F:System.Guid.Empty"/> if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.ProjectName">
+            <summary>
+            Gets the name of the Azure DevOps project.
+            Returns empty string if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.RepositoryName">
+            <summary>
+            Gets the name of the Git repository.
+            Returns <see cref="F:System.String.Empty"/> if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.RepositoryId">
+            <summary>
+            Gets the ID of the repository.
+            Returns <see cref="F:System.Guid.Empty"/> if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.BuildId">
+            <summary>
+            Gets the ID of the build.
+            Returns 0 if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.Status">
+            <summary>
+            Gets the status of the build.
+            Returns 0 if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.Result">
+            <summary>
+            Gets the result of the build.
+            Returns 0 if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <remarks>
+            Result is only available after a build has been finished.
+            The check if a running build is failing you can call <see cref="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.IsBuildFailing"/>.
+            </remarks>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.Parameters">
+            <summary>
+            Gets the parameters passed to the build.
+            Returns an empty dictionary if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.GetChanges">
+            <summary>
+            Gets the changes associated with a build.
+            </summary>
+            <returns>The changes associated with a build or an empty list if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.IsBuildFailing">
+            <summary>
+            Checks if the build is failing.
+            </summary>
+            <returns><c>true</c> if build is failing.</returns>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.GetTimelineRecords">
+            <summary>
+            Gets the timeline entries for a build.
+            </summary>
+            <returns>The timeline entries for the build or an empty list if no build could be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>false</c>.</returns>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If build could not be found and
+            <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuild.ValidateBuild">
+            <summary>
+            Validates if a build could be found.
+            Depending on <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/>
+            the build instance can be null for subsequent calls.
+            </summary>
+            <returns>True if a valid build instance exists.</returns>
+            <exception cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">If <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound"/>
+            is set to <c>true</c> and no build could be found.</exception>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException">
+            <summary>
+            Represents an error if a build was not found.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException.#ctor(System.Guid,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException"/> class.
+            </summary>
+            <param name="repositoryId">ID of the repository where the pull request was searched.</param>
+            <param name="pullRequestId">ID of the pull request which could not be found.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildNotFoundException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult">
+            <summary>
+            Possible results of a build.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult.None">
+            <summary>
+            Result is not set.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult.Succeeded">
+            <summary>
+            The build completed successfully.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult.PartiallySucceeded">
+            <summary>
+            The build completed compilation successfully but had other errors.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult.Failed">
+            <summary>
+            The build completed unsuccessfully.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult.Canceled">
+            <summary>
+            The build was canceled before starting.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings">
+            <summary>
+            Settings for aliases handling builds.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.#ctor(System.Uri,System.Guid,System.Int32,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings"/> class.
+            </summary>
+            <param name="collectionUrl">Full URL of the Azure DevOps collection,
+            eg. <code>http://myserver:8080/defaultcollection</code>.</param>
+            <param name="projectGuid">ID of the project.</param>
+            <param name="buildId">ID of the build.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.#ctor(System.Uri,System.String,System.Int32,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings"/> class.
+            </summary>
+            <param name="collectionUrl">Full URL of the Azure DevOps collection,
+            eg. <code>http://myserver:8080/defaultcollection</code>.</param>
+            <param name="projectName">Name of the project.</param>
+            <param name="buildId">ID of the build.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.#ctor(Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings"/> class
+            based on the instance of a <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.#ctor(Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings"/> class using environment variables
+            as set by a Azure Pipelines build.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.CollectionUrl">
+            <summary>
+            Gets the full URL of the Azure DevOps collection, eg. <code>http://myserver:8080/defaultcollection</code>.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ProjectGuid">
+            <summary>
+            Gets the Guid of the project.
+            Can be <see cref="F:System.Guid.Empty"/> if <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ProjectName"/> is set.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ProjectName">
+            <summary>
+            Gets the name of the project.
+            Can be <c>null</c> if <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ProjectGuid"/> is set.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.Credentials">
+            <summary>
+            Gets the credentials used to authenticate against Azure DevOps.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.BuildId">
+            <summary>
+            Gets the ID of the build.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.ThrowExceptionIfBuildCouldNotBeFound">
+            <summary>
+            Gets or sets a value indicating whether an exception should be thrown if
+            build for <see cref="P:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.BuildId"/> could not be found.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings.UsingAzurePipelinesOAuthToken">
+            <summary>
+            Constructs the settings object using the access token provided by Azure Pipelines.
+            </summary>
+            <returns>The instance of <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildSettings"/> class.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus">
+            <summary>
+            Possible states of a build.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.None">
+            <summary>
+            Status is not set.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.InProgress">
+            <summary>
+            The build is currently in progress.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.Completed">
+            <summary>
+            The build has been completed.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.Cancelling">
+            <summary>
+            The build is cancelling.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.Postponed">
+            <summary>
+            The build is inactive in the queue.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.NotStarted">
+            <summary>
+            The build has not yet started.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus.All">
+            <summary>
+            All status.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsChange">
+            <summary>
+            Represents a change associated with a build.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Id">
+            <summary>
+            Gets the identifier for the change.
+            For a commit, this would be the SHA1.
+            For a TFVC changeset, this would be the changeset ID.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Message">
+            <summary>
+            Gets the description of the change.
+            This might be a commit message or changeset description.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Type">
+            <summary>
+            Gets the type of change. "commit", "changeset", etc.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Author">
+            <summary>
+            Gets the author of the change.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Timestamp">
+            <summary>
+            Gets the timestamp for the change.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Location">
+            <summary>
+            Gets the location of the full representation of the resource.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.MessageTruncated">
+            <summary>
+            Gets a value indicating whether the message was truncated.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.DisplayUri">
+            <summary>
+            Gets the location of a user-friendly representation of the resource.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsChange.Pusher">
+            <summary>
+            Gets the person or process that pushed the change.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult">
+            <summary>
+            Results of an Azure Pipelines task.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult.Succeeded">
+            <summary>
+            Task succeeded.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult.SucceededWithIssues">
+            <summary>
+            Task succeeded with issues.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult.Failed">
+            <summary>
+            Task failed.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult.Canceled">
+            <summary>
+            Task has been canceled.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult.Skipped">
+            <summary>
+            Task has been skipped.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult.Abandoned">
+            <summary>
+            Task was abandoned.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord">
+            <summary>
+            Represents of an entry in a build's timeline.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.Attempt">
+            <summary>
+            Gets the attempt of the build.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.WarningCount">
+            <summary>
+            Gets the number of warnings in the build.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.ErrorCount">
+            <summary>
+            Gets the number of errors in the build.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.Order">
+            <summary>
+            Gets an ordinal value relative to other records.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.WorkerName">
+            <summary>
+            Gets the name of the agent running the operation.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.LastModified">
+            <summary>
+            Gets the time the record was last modified.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.ChangeId">
+            <summary>
+            Gets the change ID.
+            </summary>
+            <remarks>
+            This is a monotonically-increasing number used to ensure consistency in the UI.
+            </remarks>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.ResultCode">
+            <summary>
+            Gets the result code.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.Result">
+            <summary>
+            Gets the result.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.State">
+            <summary>
+            Gets the state of the record.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.PercentComplete">
+            <summary>
+            Gets the current completion percentage.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.CurrentOperation">
+            <summary>
+            Gets a string that indicates the current operation.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.FinishTime">
+            <summary>
+            Gets the finish time.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.StartTime">
+            <summary>
+            Gets the start time.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.RecordType">
+            <summary>
+            Gets the type of the record.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.ParentId">
+            <summary>
+            Gets the ID of the record's parent.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord.Id">
+            <summary>
+            Gets the ID of the record.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecordState">
+            <summary>
+            State of an Azure Pipelines timeline record.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecordState.Pending">
+            <summary>
+            Task execution is pending.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecordState.InProgress">
+            <summary>
+            Task execution is in progres.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecordState.Completed">
+            <summary>
+            Task has been completed.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.BuildResultExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildResult"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.BuildResultExtensions.ToAzureDevOpsBuildResult(Microsoft.TeamFoundation.Build.WebApi.BuildResult)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildResult"/> to an <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildResult"/>.
+            </summary>
+            <param name="result">Build result to convert.</param>
+            <returns>Converted build result.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.BuildStatusExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildStatus"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.BuildStatusExtensions.ToAzureDevOpsBuildStatus(Microsoft.TeamFoundation.Build.WebApi.BuildStatus)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildStatus"/> to an <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsBuildStatus"/>.
+            </summary>
+            <param name="status">State to convert.</param>
+            <returns>Converted state.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.ChangeExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.Change"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.ChangeExtensions.ToAzureDevOpsChange(Microsoft.TeamFoundation.Build.WebApi.Change)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.Build.WebApi.Change"/> to an <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsChange"/>.
+            </summary>
+            <param name="change">Change to convert.</param>
+            <returns>Converted change.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.TaskResultExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.TaskResult"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.TaskResultExtensions.ToAzureDevOpsTaskResult(Microsoft.TeamFoundation.Build.WebApi.TaskResult)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.Build.WebApi.TaskResult"/> to an <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsTaskResult"/>.
+            </summary>
+            <param name="result">Result to convert.</param>
+            <returns>Converted result.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.TimelineRecordExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.TimelineRecord"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.TimelineRecordExtensions.ToAzureDevOpsTimelineRecord(Microsoft.TeamFoundation.Build.WebApi.TimelineRecord)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.Build.WebApi.TimelineRecord"/> to an <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecord"/>.
+            </summary>
+            <param name="timelineRecord">Timeline record to convert.</param>
+            <returns>Converted timeline record.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Pipelines.TimelineRecordStateExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.TimelineRecordState"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Pipelines.TimelineRecordStateExtensions.ToAzureDevOpsTimelineRecordState(Microsoft.TeamFoundation.Build.WebApi.TimelineRecordState)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.Build.WebApi.TimelineRecordState"/> to an <see cref="T:Cake.AzureDevOps.Pipelines.AzureDevOpsTimelineRecordState"/>.
+            </summary>
+            <param name="state">State to convert.</param>
+            <returns>Converted state.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.BuildClientFactory">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.AzureDevOps.BuildClientFactory.CreateBuildClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials,Microsoft.VisualStudio.Services.Identity.Identity@)">
+            <summary>
+            Creates a client object for communicating with Azure DevOps.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <param name="authorizedIdentity">Returns identity which is authorized.</param>
+            <returns>Client object for communicating with Azure DevOps.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.BuildClientFactory.CreateBuildClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Creates a client object for communicating with Azure DevOps.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <returns>Client object for communicating with Azure DevOps.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.IBuildClientFactory">
+            <summary>
+            The interface for a Git client factory.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.IBuildClientFactory.CreateBuildClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Creates the instance of the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildHttpClient"/> class.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <returns>The instance of <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildHttpClient"/> class.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.IBuildClientFactory.CreateBuildClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials,Microsoft.VisualStudio.Services.Identity.Identity@)">
+            <summary>
+            Creates the instance of the <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildHttpClient"/> class.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <param name="identity">Returns identity which is authorized.</param>
+            <returns>The instance of <see cref="T:Microsoft.TeamFoundation.Build.WebApi.BuildHttpClient"/> class.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException">
+            <summary>
+            Represents an error if a branch was not found.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException"/> class for a specific branch.
+            </summary>
+            <param name="branchName">The name of the branch which could not be found. </param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException"/> class for a specific branch
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="branchName">The name of the branch which could not be found. </param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsBranchNotFoundException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings">
+            <summary>
+            Settings for aliases creating pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings.#ctor(System.Uri,System.String,System.String,System.String,System.String,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceRefName">Branch for which the pull request is made.</param>
+            <param name="targetRefName">Target branch of the pull request.
+            If <see langword="null"/> or <see cref="F:System.String.Empty"/> the default branch of the repository will be used.</param>
+            <param name="title">Title of the pull request.</param>
+            <param name="description">Description of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings.TargetRefName">
+            <summary>
+            Gets the target branch of the pull request.
+            If <see langword="null"/> or <see cref="F:System.String.Empty"/> the default branch of the repository will be used.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings.Title">
+            <summary>
+            Gets the title of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings.Description">
+            <summary>
+            Gets the description of the pull request.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings.UsingAzurePipelinesOAuthToken(System.Uri,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructs the settings object using the access token provided by Azure Pipelines.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceRefName">Branch for which the pull request is made.</param>
+            <param name="targetRefName">Target branch of the pull request.
+            If <see langword="null"/> or <see cref="F:System.String.Empty"/> the default branch of the repository will be used.</param>
+            <param name="title">Title of the pull request.</param>
+            <param name="description">Description of the pull request.</param>
+            <returns>The instance of <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings"/> class.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest">
+            <summary>
+            Class for writing issues to Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing AzureDevOps.</param>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            is set to <c>true</c> and no pull request could be found.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings,Cake.AzureDevOps.IGitClientFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing AzureDevOps.</param>
+            <param name="gitClientFactory">A factory to communicate with Git client.</param>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            is set to <c>true</c> and no pull request could be found.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.HasPullRequestLoaded">
+            <summary>
+            Gets a value indicating whether a pull request has been successfully loaded.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.ServerUrl">
+            <summary>
+            Gets the Url of the Azure DevOps server.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.CollectionName">
+            <summary>
+            Gets the name of the Azure DevOps collection.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.CollectionUrl">
+            <summary>
+            Gets the URL for accessing the web portal of the Azure DevOps collection.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.ProjectName">
+            <summary>
+            Gets the name of the Azure DevOps project.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.RepositoryName">
+            <summary>
+            Gets the name of the Git repository.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.RepositoryId">
+            <summary>
+            Gets the ID of the repository.
+            Returns <see cref="F:System.Guid.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.PullRequestId">
+            <summary>
+            Gets the ID of the pull request.
+            Returns 0 if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.IsDraft">
+            <summary>
+            Gets if the pull request is in draft mode.
+            Returns <see cref="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState.NotSet"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.PullRequestStatus">
+            <summary>
+            Gets the status of the pull request.
+            Returns <see cref="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState.NotSet"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.CodeReviewId">
+            <summary>
+            Gets the ID of the code review.
+            Returns 0 if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.SourceRefName">
+            <summary>
+            Gets the name of the source branch from the pull request.
+            </summary>
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false.</c>.
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.TargetRefName">
+            <summary>
+            Gets the name of the target branch.
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.LastSourceCommitId">
+            <summary>
+            Gets the commit at the head of the source branch at the time of the last pull request merge.
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.LastTargetCommitId">
+            <summary>
+            Gets the commit at the head of the target branch at the time of the last pull request merge.
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.Create(Cake.Core.Diagnostics.ICakeLog,Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings)">
+            <summary>
+            Create a pull request.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing AzureDevOps.</param>
+            <returns>Instance of the created pull request.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.Vote(Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote)">
+            <summary>
+            Votes for the pullrequest.
+            </summary>
+            <param name="vote">The vote for the pull request.</param>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.SetStatus(Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus)">
+            <summary>
+            Sets a status on the pull request.
+            </summary>
+            <param name="status">The description of the status which should be set.</param>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.GetCommits">
+            <summary>
+            Gets the commits contained in the pull request.
+            </summary>
+            <returns>The commits contained in the pull request or an empty list if no pull request could be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.</returns>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.GetModifiedFiles">
+            <summary>
+            Gets the files modified by the pull request.
+            </summary>
+            <returns>The collection of the modified files paths.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.GetCommentThreads">
+            <summary>
+            Gets the pull request comment threads.
+            </summary>
+            <returns>The list of comment threads of the pull request.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.ResolveCommentThread(System.Int32)">
+            <summary>
+            Sets the pull request comment thread status to <see cref="F:Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus.Fixed"/>.
+            </summary>
+            <param name="threadId">The Id of the comment thread.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.ActivateCommentThread(System.Int32)">
+            <summary>
+            Sets the pull request comment thread to <see cref="F:Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus.Active"/>.
+            </summary>
+            <param name="threadId">The Id of the comment thread.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.CreateComment(System.String)">
+            <summary>
+            Creates a new comment thread with a single comment in the pull request.
+            </summary>
+            <param name="comment">Comment which should be added.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.CreateCommentThread(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread)">
+            <summary>
+            Creates a new comment thread in the pull request.
+            </summary>
+            <param name="thread">The instance of the thread.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.GetLatestIterationId">
+            <summary>
+            Gets the Id of the latest pull request iteration.
+            </summary>
+            <returns>The Id of the pull request iteration. Returns -1 in case the pull request is not valid.</returns>
+            <exception cref="T:Cake.AzureDevOps.AzureDevOpsException">If it is not possible to obtain a collection of <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitPullRequestIteration"/>.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.GetIterationChanges(System.Int32)">
+            <summary>
+            Gets all the pull request changes of the given iteration.
+            </summary>
+            <param name="iterationId">The id of the iteration.</param>
+            <returns>The colletion of the iteration changes of the given id. Returns <c>null</c> if pull request is not valid.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.Create(Cake.Core.Diagnostics.ICakeLog,Cake.AzureDevOps.IGitClientFactory,Cake.AzureDevOps.PullRequest.AzureDevOpsCreatePullRequestSettings)">
+            <summary>
+            Create a pull request.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="gitClientFactory">Git client factory.</param>
+            <param name="settings">Settings for accessing AzureDevOps.</param>
+            <returns>Instance of the created pull request.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.SetCommentThreadStatus(System.Int32,Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus)">
+            <summary>
+            Sets the pull request comment thread status.
+            </summary>
+            <param name="threadId">The Id of the comment thread.</param>
+            <param name="status">The comment thread status.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequest.ValidatePullRequest">
+            <summary>
+            Validates if a pull request could be found.
+            Depending on <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            the pull request instance can be null for subsequent calls.
+            </summary>
+            <returns>True if a valid pull request instance exists.</returns>
+            <exception cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">If <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            is set to <c>true</c> and no pull request could be found.</exception>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestIterationChange">
+            <summary>
+            Class representing an iteration change of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestIterationChange.ItemPath">
+            <summary>
+            Gets or sets the file path the iteration change is associated with.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestIterationChange.ChangeId">
+            <summary>
+            Gets or sets the id of the iteration change.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestIterationChange.ChangeTrackingId">
+            <summary>
+            Gets or sets the tracking id of the iteration change.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException">
+            <summary>
+            Represents an error if a pull request was not found.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException.#ctor(System.Guid,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException"/> class.
+            </summary>
+            <param name="repositoryId">ID of the repository where the pull request was searched.</param>
+            <param name="pullRequestId">ID of the pull request which could not be found.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestNotFoundException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings">
+            <summary>
+            Settings for aliases handling pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.#ctor(System.Uri,System.String,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceBranch">Branch for which the pull request is made.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.#ctor(System.Uri,System.Int32,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="pullRequestId">ID of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.#ctor(Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class
+            based on the instance of a <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.#ctor(Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class using environment variables
+            as set by a Azure Pipelines build.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+            <exception cref="T:System.InvalidOperationException">If build is not running in Azure Pipelines,
+            or build is not for a pull request.</exception>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.PullRequestId">
+            <summary>
+            Gets the ID of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound">
+            <summary>
+            Gets or sets a value indicating whether an exception should be thrown if
+            pull request for <see cref="P:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.SourceRefName"/> or <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.PullRequestId"/> could not be found.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.UsingAzurePipelinesOAuthToken">
+            <summary>
+            Constructs the settings object using the access token provided by Azure Pipelines.
+            </summary>
+            <returns>The instance of <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class.</returns>
+            <exception cref="T:System.InvalidOperationException">If build is not running in Azure Pipelines,
+            build is not for a pull request or 'Allow Scripts to access OAuth token' option is not enabled
+            on the build definition.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.UsingAzurePipelinesOAuthToken(System.Boolean)">
+            <summary>
+            Constructs the settings object using the access token provided by Azure Pipelines.
+            </summary>
+            <param name="throwExceptionIfVariablesDontExist">Value indicating whether an exception
+            should be thrown if required environment variables could not be found.</param>
+            <returns>The instance of <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class.
+            Returns <c>null</c> if variables don't exist and
+            <paramref name="throwExceptionIfVariablesDontExist"/> is set to <c>false</c>.</returns>
+            <exception cref="T:System.InvalidOperationException">If <paramref name="throwExceptionIfVariablesDontExist"/>
+            is set to <c>true</c> and build is not running in Azure Pipelines, build is not for a pull request
+            or 'Allow Scripts to access OAuth token' option is not enabled on the build definition.</exception>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.RetrieveAzurePipelinesVariables(System.Boolean)">
+            <summary>
+            Validates and retrieves variables set by Azure Pipelines.
+            </summary>
+            <param name="throwExceptionIfVariablesDontExist">Value indicating whether an exception
+            should be thrown if required environment variables could not be found.</param>
+            <returns>Tuple containing a flag if variables are valid and the variable values.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState">
+            <summary>
+            Possible states of a pull request.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState.NotSet">
+            <summary>
+            Status is not set.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState.Active">
+            <summary>
+            Pull request is active.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState.Abandoned">
+            <summary>
+            Pull request is abandoned.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState.Completed">
+            <summary>
+            Pull request is completed.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus">
+            <summary>
+            Description of a pull request status.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus"/> class.
+            </summary>
+            <param name="name">Name of the status.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus.Name">
+            <summary>
+            Gets the name of the status.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus.Genre">
+            <summary>
+            Gets or sets the genre of the status.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus.State">
+            <summary>
+            Gets or sets the state of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus.Description">
+            <summary>
+            Gets or sets the description of the status.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatus.TargetUrl">
+            <summary>
+            Gets or sets the URL of the status.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState">
+            <summary>
+            Possible states for a pull request status.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState.NotSet">
+            <summary>
+            Status is not set.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState.Pending">
+            <summary>
+            Status is pending.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState.Succeeded">
+            <summary>
+            Status is successful.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState.Failed">
+            <summary>
+            Status failed.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState.Error">
+            <summary>
+            Status showing an error.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusStateExtensions">
+            <summary>
+            Extensions for the <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusStateExtensions.ToGitStatusState(Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState)">
+            <summary>
+            Converts a <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestStatusState"/> to an <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitStatusState"/>.
+            </summary>
+            <param name="state">State to convert.</param>
+            <returns>Converted state.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote">
+            <summary>
+            Defines the vote for a Azure DevOps pull request.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote.Rejected">
+            <summary>
+            The changes aren't acceptable.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote.WaitingForAuthor">
+            <summary>
+            Do not approve the changes, the author should take some actions.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote.ResetFeedback">
+            <summary>
+            Reset a previous vote.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote.ApprovedWithSuggestions">
+            <summary>
+            Approve the changes but let the author know there are some suggestions.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestVote.Approved">
+            <summary>
+            Approve the changes.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings">
+            <summary>
+            Base class for settings for aliases handling pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.#ctor(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.#ctor(System.Uri,System.String,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceRefName">Branch for which the pull request is made.
+            <see cref="T:System.ArgumentException"/> if <see langword="null"/> or <see cref="F:System.String.Empty"/>.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.
+            <see cref="T:System.ArgumentException"/> if <see langword="null"/>.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.#ctor(Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings"/> class
+            based on the instance of a <see cref="T:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.
+            <see cref="T:System.ArgumentException"/> if <see langword="null"/>.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.#ctor(Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings"/> class using environment variables
+            as set by an Azure Pipelines build.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.RepositoryUrl">
+            <summary>
+            Gets the full URL of the Git repository, eg. <code>http://myserver:8080/defaultcollection/myproject/_git/myrepository</code>.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.SourceBranch">
+            <summary>
+            Gets the branch for which the pull request is made.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.SourceRefName">
+            <summary>
+            Gets the branch for which the pull request is made.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.BaseAzureDevOpsPullRequestSettings.Credentials">
+            <summary>
+            Gets the credentials used to authenticate against Azure DevOps.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment">
+            <summary>
+            Class representing a comment in the pull request comment thread.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment"/> class.
+            </summary>
+            <param name="content">The content of the comment.</param>
+            <param name="isDeleted">Equals 'true' if a comment is deleted. Otherwise, 'false'.</param>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment"/> class with empty Git comment.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment.#ctor(Microsoft.TeamFoundation.SourceControl.WebApi.Comment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment"/> class with real Git comment.
+            </summary>
+            <param name="comment">The original Azure DevOps pull request comment.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment.Content">
+            <summary>
+            Gets or sets the content of the pull request comment.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment.IsDeleted">
+            <summary>
+            Gets or sets a value indicating whether the comment is deleted.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment.CommentType">
+            <summary>
+            Gets or sets the comment type.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus">
+            <summary>
+            The wrapper around the native Azure DevOps API comment thread status.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.Active">
+            <summary>
+            The comment thread is active.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.ByDesign">
+            <summary>
+            The comment thread status is by design.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.Closed">
+            <summary>
+            The comment thread is closed.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.Fixed">
+            <summary>
+            The comment thread is fixed.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.Pending">
+            <summary>
+            The comment thread is pending.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.Unknown">
+            <summary>
+            Unknown comment thread status.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus.WontFix">
+            <summary>
+            The comment thread won't be fixed.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentType">
+            <summary>
+            The wrapper around the native Azure DevOps API comment type.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentType.Unknown">
+            <summary>
+            Unknown comment type.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentType.Text">
+            <summary>
+            The comment is text.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentType.CodeChange">
+            <summary>
+            The comment is a code change.
+            </summary>
+        </member>
+        <member name="F:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentType.System">
+            <summary>
+            System comment.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread">
+            <summary>
+            Class for dealing with comments in pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.#ctor(Microsoft.TeamFoundation.SourceControl.WebApi.GitPullRequestCommentThread)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread"/> class.
+            </summary>
+            <param name="thread">The original comment thread in the Azue DevOps pull request.</param>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.Id">
+            <summary>
+            Gets or sets the Id of the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.Status">
+            <summary>
+            Gets or sets the status of the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.FilePath">
+            <summary>
+            Gets or sets the path of the modified file the pull request comment thread belongs to.
+            Returns 'null' for the comment threads not related to any particular file.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.Comments">
+            <summary>
+            Gets or sets the collection of comments in the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.Properties">
+            <summary>
+            Gets or sets the collection of properties of the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.InnerThread">
+            <summary>
+            Gets the inner Git comment thread object. Intended for the internal use only.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.GetValue``1(System.String)">
+            <summary>
+            Gets the value of the thread property.
+            </summary>
+            <typeparam name="T">Type of the value.</typeparam>
+            <param name="propertyName">Name of the property.</param>
+            <returns>Value of the property or default value for <typeparamref name="T"/> if property does not exist.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread.SetValue``1(System.String,``0)">
+            <summary>
+            Sets a value in the thread properties.
+            </summary>
+            <typeparam name="T">Type of the value.</typeparam>
+            <param name="propertyName">Name of the property.</param>
+            <param name="value">Value to set.</param>
+            <exception cref="T:System.InvalidOperationException">If properties collection is not created.</exception>
+        </member>
+        <member name="T:Cake.AzureDevOps.PullRequest.PullRequestStatusExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.PullRequestStatus"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.PullRequest.PullRequestStatusExtensions.ToAzureDevOpsPullRequestState(Microsoft.TeamFoundation.SourceControl.WebApi.PullRequestStatus)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.PullRequestStatus"/> to a <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestState"/>.
+            </summary>
+            <param name="state">State to convert.</param>
+            <returns>Converted state.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.GitClientFactory">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.AzureDevOps.GitClientFactory.CreateGitClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials,Microsoft.VisualStudio.Services.Identity.Identity@)">
+            <summary>
+            Creates a client object for communicating with Azure DevOps.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <param name="authorizedIdentity">Returns identity which is authorized.</param>
+            <returns>Client object for communicating with Azure DevOps.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.GitClientFactory.CreateGitClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Creates a client object for communicating with Azure DevOps.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <returns>Client object for communicating with Azure DevOps.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.IGitClientFactory">
+            <summary>
+            The interface for a Git client factory.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.IGitClientFactory.CreateGitClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Creates the instance of the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <returns>The instance of <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.</returns>
+        </member>
+        <member name="M:Cake.AzureDevOps.IGitClientFactory.CreateGitClient(System.Uri,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials,Microsoft.VisualStudio.Services.Identity.Identity@)">
+            <summary>
+            Creates the instance of the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.
+            </summary>
+            <param name="collectionUrl">The URL of the Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to Azure DevOps.</param>
+            <param name="identity">Returns identity which is authorized.</param>
+            <returns>The instance of <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.Repos.AzureDevOpsCommit">
+            <summary>
+            Description of a commit.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Repos.AzureDevOpsCommit.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzureDevOps.Repos.AzureDevOpsCommit"/> class.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Repos.AzureDevOpsCommit.Id">
+            <summary>
+            Gets the ID (SHA-1) of the commit.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Repos.AzureDevOpsCommit.Message">
+            <summary>
+            Gets the Comment or message of the commit.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Repos.AzureDevOpsCommit.IsMessageTruncated">
+            <summary>
+            Gets a value indicating whether the comment is truncated from the full Git
+            commit comment message or not.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Repos.AzureDevOpsCommit.ParentIds">
+            <summary>
+            Gets the parent commit IDs of the commit.
+            </summary>
+        </member>
+        <member name="P:Cake.AzureDevOps.Repos.AzureDevOpsCommit.RemoteUrl">
+            <summary>
+            Gets the remote URL path to the commit.
+            </summary>
+        </member>
+        <member name="T:Cake.AzureDevOps.Repos.GitCommitRefExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitCommitRef"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.AzureDevOps.Repos.GitCommitRefExtensions.ToAzureDevOpsCommit(Microsoft.TeamFoundation.SourceControl.WebApi.GitCommitRef)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitCommitRef"/> to a <see cref="T:Cake.AzureDevOps.Repos.AzureDevOpsCommit"/>.
+            </summary>
+            <param name="commit">Commit to convert.</param>
+            <returns>Converted commit.</returns>
+        </member>
+        <member name="T:Cake.AzureDevOps.ValidatedNotNullAttribute">
+            <summary>
+            Indicates to code analysis that a method validates a particular parameter.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,370 @@
+2019-10-24 10:32:24.619 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-24 10:32:29.504 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants/current  
+2019-10-24 10:32:30.242 -04:00 [INF] Route matched with {action = "Get", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 10:32:30.682 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 10:32:30.718 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:30.718 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:30.841 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 10:32:30.841 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:30.841 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:30.985 -04:00 [INF] Successfully validated the token.
+2019-10-24 10:32:31.006 -04:00 [INF] Authorization was successful.
+2019-10-24 10:32:31.078 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) - Validation state: "Valid"
+2019-10-24 10:32:45.917 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14824.206100000001ms.
+2019-10-24 10:32:45.956 -04:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Models.Applicant'.
+2019-10-24 10:32:46.045 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) in 15796.1798ms
+2019-10-24 10:32:46.048 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 10:32:46.054 -04:00 [INF] HTTP GET /api/v1/applicants/current responded 200 in 16483.6241 ms
+2019-10-24 10:32:46.076 -04:00 [INF] Request finished in 16576.0988ms 200 application/json; charset=utf-8
+2019-10-24 10:32:46.103 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications?applicantId=1f45eada-d8cd-43ef-a4d1-a041ea2365bf  
+2019-10-24 10:32:46.125 -04:00 [INF] Route matched with {action = "Get", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 10:32:46.126 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 10:32:46.126 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:46.126 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:46.126 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 10:32:46.126 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:46.126 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:46.127 -04:00 [INF] Successfully validated the token.
+2019-10-24 10:32:46.127 -04:00 [INF] Authorization was successful.
+2019-10-24 10:32:46.207 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) with arguments (["1f45eada-d8cd-43ef-a4d1-a041ea2365bf"]) - Validation state: "Valid"
+2019-10-24 10:32:48.794 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2583.4368ms.
+2019-10-24 10:32:48.796 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.Application, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 10:32:48.802 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) in 2677.2539ms
+2019-10-24 10:32:48.802 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 10:32:48.802 -04:00 [INF] HTTP GET /api/v1/applications responded 200 in 2698.8477000000003 ms
+2019-10-24 10:32:48.803 -04:00 [INF] Request finished in 2699.9404ms 200 application/json; charset=utf-8
+2019-10-24 10:32:48.818 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/college-transmissions?applicationId=f7337dd4-44be-4de7-9f78-0d6242206ada  
+2019-10-24 10:32:48.826 -04:00 [INF] Route matched with {action = "GetCollegeTransmissions", controller = "CollegeTransmissions"}. Executing action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api)
+2019-10-24 10:32:48.827 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 10:32:48.827 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:48.827 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:48.827 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 10:32:48.828 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:48.828 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 10:32:48.828 -04:00 [INF] Successfully validated the token.
+2019-10-24 10:32:48.828 -04:00 [INF] Authorization was successful.
+2019-10-24 10:32:48.829 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) with arguments (["f7337dd4-44be-4de7-9f78-0d6242206ada"]) - Validation state: "Valid"
+2019-10-24 10:33:14.039 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25209.4944ms.
+2019-10-24 10:33:14.040 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.CollegeTransmission, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 10:33:14.045 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) in 25219.3537ms
+2019-10-24 10:33:14.045 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 10:33:14.045 -04:00 [INF] HTTP GET /api/v1/college-transmissions responded 200 in 25227.4496 ms
+2019-10-24 10:33:14.046 -04:00 [INF] Request finished in 25228.4137ms 200 application/json; charset=utf-8
+2019-10-24 11:02:00.222 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-24 11:02:04.252 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants/current  
+2019-10-24 11:02:04.916 -04:00 [INF] Route matched with {action = "Get", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 11:02:05.322 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 11:02:05.367 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:05.367 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:05.494 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 11:02:05.495 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:05.495 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:05.609 -04:00 [INF] Successfully validated the token.
+2019-10-24 11:02:05.632 -04:00 [INF] Authorization was successful.
+2019-10-24 11:02:05.685 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) - Validation state: "Valid"
+2019-10-24 11:02:25.194 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19496.1341ms.
+2019-10-24 11:02:25.225 -04:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Models.Applicant'.
+2019-10-24 11:02:25.301 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) in 20378.367700000003ms
+2019-10-24 11:02:25.305 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 11:02:25.309 -04:00 [INF] HTTP GET /api/v1/applicants/current responded 200 in 21005.116 ms
+2019-10-24 11:02:25.332 -04:00 [INF] Request finished in 21084.4294ms 200 application/json; charset=utf-8
+2019-10-24 11:02:25.356 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications?applicantId=1f45eada-d8cd-43ef-a4d1-a041ea2365bf  
+2019-10-24 11:02:25.376 -04:00 [INF] Route matched with {action = "Get", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 11:02:25.377 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 11:02:25.377 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:25.377 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:25.377 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 11:02:25.377 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:25.377 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:25.378 -04:00 [INF] Successfully validated the token.
+2019-10-24 11:02:25.378 -04:00 [INF] Authorization was successful.
+2019-10-24 11:02:25.444 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) with arguments (["1f45eada-d8cd-43ef-a4d1-a041ea2365bf"]) - Validation state: "Valid"
+2019-10-24 11:02:30.738 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5290.3378ms.
+2019-10-24 11:02:30.738 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.Application, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 11:02:30.744 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) in 5367.5210000000006ms
+2019-10-24 11:02:30.744 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 11:02:30.744 -04:00 [INF] HTTP GET /api/v1/applications responded 200 in 5387.2522 ms
+2019-10-24 11:02:30.744 -04:00 [INF] Request finished in 5387.84ms 200 application/json; charset=utf-8
+2019-10-24 11:02:30.754 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/college-transmissions?applicationId=f7337dd4-44be-4de7-9f78-0d6242206ada  
+2019-10-24 11:02:30.758 -04:00 [INF] Route matched with {action = "GetCollegeTransmissions", controller = "CollegeTransmissions"}. Executing action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api)
+2019-10-24 11:02:30.759 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 11:02:30.759 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:30.759 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:30.759 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 11:02:30.759 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:30.759 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 11:02:30.760 -04:00 [INF] Successfully validated the token.
+2019-10-24 11:02:30.760 -04:00 [INF] Authorization was successful.
+2019-10-24 11:02:30.760 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) with arguments (["f7337dd4-44be-4de7-9f78-0d6242206ada"]) - Validation state: "Valid"
+2019-10-24 11:03:06.982 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36221.9577ms.
+2019-10-24 11:03:06.982 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.CollegeTransmission, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 11:03:06.987 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) in 36228.9145ms
+2019-10-24 11:03:06.988 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 11:03:06.988 -04:00 [INF] HTTP GET /api/v1/college-transmissions responded 200 in 36233.3758 ms
+2019-10-24 11:03:06.988 -04:00 [INF] Request finished in 36234.0239ms 200 application/json; charset=utf-8
+2019-10-24 13:00:55.805 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-24 13:00:59.903 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants/current  
+2019-10-24 13:01:00.547 -04:00 [INF] Route matched with {action = "Get", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 13:01:00.968 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:01:01.003 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:01.004 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:01.173 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:01:01.173 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:01.174 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:01.310 -04:00 [INF] Successfully validated the token.
+2019-10-24 13:01:01.331 -04:00 [INF] Authorization was successful.
+2019-10-24 13:01:01.391 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) - Validation state: "Valid"
+2019-10-24 13:01:21.254 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19843.3989ms.
+2019-10-24 13:01:21.292 -04:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Models.Applicant'.
+2019-10-24 13:01:21.372 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) in 20819.5286ms
+2019-10-24 13:01:21.375 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 13:01:21.381 -04:00 [INF] HTTP GET /api/v1/applicants/current responded 200 in 21422.0597 ms
+2019-10-24 13:01:21.404 -04:00 [INF] Request finished in 21504.7008ms 200 application/json; charset=utf-8
+2019-10-24 13:01:21.427 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications?applicantId=1f45eada-d8cd-43ef-a4d1-a041ea2365bf  
+2019-10-24 13:01:21.448 -04:00 [INF] Route matched with {action = "Get", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 13:01:21.449 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:01:21.449 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:21.449 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:21.449 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:01:21.450 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:21.450 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:21.450 -04:00 [INF] Successfully validated the token.
+2019-10-24 13:01:21.450 -04:00 [INF] Authorization was successful.
+2019-10-24 13:01:21.527 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) with arguments (["1f45eada-d8cd-43ef-a4d1-a041ea2365bf"]) - Validation state: "Valid"
+2019-10-24 13:01:27.548 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6017.7899000000007ms.
+2019-10-24 13:01:27.549 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.Application, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 13:01:27.554 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) in 6105.5149ms
+2019-10-24 13:01:27.554 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 13:01:27.554 -04:00 [INF] HTTP GET /api/v1/applications responded 200 in 6126.7248 ms
+2019-10-24 13:01:27.555 -04:00 [INF] Request finished in 6127.5717ms 200 application/json; charset=utf-8
+2019-10-24 13:01:27.565 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/college-transmissions?applicationId=f7337dd4-44be-4de7-9f78-0d6242206ada  
+2019-10-24 13:01:27.571 -04:00 [INF] Route matched with {action = "GetCollegeTransmissions", controller = "CollegeTransmissions"}. Executing action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api)
+2019-10-24 13:01:27.571 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:01:27.572 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:27.572 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:27.572 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:01:27.572 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:27.573 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:01:27.573 -04:00 [INF] Successfully validated the token.
+2019-10-24 13:01:27.573 -04:00 [INF] Authorization was successful.
+2019-10-24 13:01:27.574 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) with arguments (["f7337dd4-44be-4de7-9f78-0d6242206ada"]) - Validation state: "Valid"
+2019-10-24 13:02:39.894 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-24 13:02:45.105 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants/current  
+2019-10-24 13:02:45.718 -04:00 [INF] Route matched with {action = "Get", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 13:02:46.133 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:02:46.168 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:46.169 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:46.290 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:02:46.291 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:46.291 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:46.448 -04:00 [INF] Successfully validated the token.
+2019-10-24 13:02:46.468 -04:00 [INF] Authorization was successful.
+2019-10-24 13:02:46.519 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) - Validation state: "Valid"
+2019-10-24 13:02:56.083 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9548.5213ms.
+2019-10-24 13:02:56.121 -04:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Models.Applicant'.
+2019-10-24 13:02:56.203 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Apply.Api) in 10478.641ms
+2019-10-24 13:02:56.206 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 13:02:56.211 -04:00 [INF] HTTP GET /api/v1/applicants/current responded 200 in 11051.211800000001 ms
+2019-10-24 13:02:56.233 -04:00 [INF] Request finished in 11131.9597ms 200 application/json; charset=utf-8
+2019-10-24 13:02:56.253 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications?applicantId=1f45eada-d8cd-43ef-a4d1-a041ea2365bf  
+2019-10-24 13:02:56.274 -04:00 [INF] Route matched with {action = "Get", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api)
+2019-10-24 13:02:56.274 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:02:56.275 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:56.275 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:56.275 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:02:56.275 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:56.275 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:56.276 -04:00 [INF] Successfully validated the token.
+2019-10-24 13:02:56.276 -04:00 [INF] Authorization was successful.
+2019-10-24 13:02:56.350 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) with arguments (["1f45eada-d8cd-43ef-a4d1-a041ea2365bf"]) - Validation state: "Valid"
+2019-10-24 13:02:58.689 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2335.1857ms.
+2019-10-24 13:02:58.690 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.Application, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 13:02:58.698 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.ApplicationsController.Get (Ocas.Domestic.Apply.Api) in 2423.0082ms
+2019-10-24 13:02:58.698 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 13:02:58.698 -04:00 [INF] HTTP GET /api/v1/applications responded 200 in 2443.1041 ms
+2019-10-24 13:02:58.698 -04:00 [INF] Request finished in 2443.7715ms 200 application/json; charset=utf-8
+2019-10-24 13:02:58.720 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/college-transmissions?applicationId=f7337dd4-44be-4de7-9f78-0d6242206ada  
+2019-10-24 13:02:58.728 -04:00 [INF] Route matched with {action = "GetCollegeTransmissions", controller = "CollegeTransmissions"}. Executing action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api)
+2019-10-24 13:02:58.729 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:02:58.730 -04:00 [INF] OcasSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:58.730 -04:00 [INF] OcasScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:58.731 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-10-24 13:02:58.731 -04:00 [INF] ApplicantSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:58.731 -04:00 [INF] ApplicantScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2019-10-24 13:02:58.732 -04:00 [INF] Successfully validated the token.
+2019-10-24 13:02:58.732 -04:00 [INF] Authorization was successful.
+2019-10-24 13:02:58.733 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) with arguments (["f7337dd4-44be-4de7-9f78-0d6242206ada"]) - Validation state: "Valid"
+2019-10-24 13:03:17.267 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18533.332000000002ms.
+2019-10-24 13:03:17.267 -04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.CollegeTransmission, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-10-24 13:03:17.274 -04:00 [INF] Executed action Ocas.Domestic.Apply.Api.Controllers.CollegeTransmissionsController.GetCollegeTransmissions (Ocas.Domestic.Apply.Api) in 18545.5957ms
+2019-10-24 13:03:17.274 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2019-10-24 13:03:17.274 -04:00 [INF] HTTP GET /api/v1/college-transmissions responded 200 in 18553.5759 ms
+2019-10-24 13:03:17.275 -04:00 [INF] Request finished in 18554.5195ms 200 application/json; charset=utf-8

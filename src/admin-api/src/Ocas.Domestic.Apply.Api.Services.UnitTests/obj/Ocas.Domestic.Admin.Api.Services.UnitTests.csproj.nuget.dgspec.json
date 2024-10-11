@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Apply.Api.Services.UnitTests\\Ocas.Domestic.Admin.Api.Services.UnitTests.csproj": {}
+  },
+  "projects": {
+    "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Apply.Api.Services.UnitTests\\Ocas.Domestic.Admin.Api.Services.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Apply.Api.Services.UnitTests\\Ocas.Domestic.Admin.Api.Services.UnitTests.csproj",
+        "projectName": "Ocas.Domestic.Admin.Api.Services.UnitTests",
+        "projectPath": "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Apply.Api.Services.UnitTests\\Ocas.Domestic.Admin.Api.Services.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\koolla\\.nuget\\packages\\",
+        "outputPath": "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Apply.Api.Services.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\OcasProjects\\apply-api\\NuGet.Config",
+          "C:\\Users\\koolla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/Domestic/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/OcasLibs/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

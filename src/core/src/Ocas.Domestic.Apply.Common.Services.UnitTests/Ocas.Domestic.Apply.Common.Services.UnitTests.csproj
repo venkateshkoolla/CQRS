@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <TargetFramework>net461</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace>Ocas.Domestic.Apply.Common.Services.UnitTests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Mappers\ApiMapperBaseTests.*.cs">
+      <DependentUpon>ApiMapperBaseTests.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Bogus" Version="28.4.1" />
+    <PackageReference Include="FluentAssertions" Version="5.9.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.categories" Version="2.0.4" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\apply-api\src\Ocas.Domestic.Apply.TestFramework\Ocas.Domestic.Apply.TestFramework.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Apply.Common.Services\Ocas.Domestic.Apply.Common.Services.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="AssemblyInfo">
+    <TargetFramework>net461</TargetFramework>
+    <Authors>OCAS</Authors>
+    <Copyright>Copyright (c) 2018 OCAS</Copyright>
+    <UpdateVersionProperties>false</UpdateVersionProperties>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\*.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\GlobalSuppressions.Global.cs" Link="GlobalSuppressions.Global.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\*.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EvoHtmlToPdf_Azure_Client" Version="8.0.0" />
+    <PackageReference Include="EvoPDF" Version="8.0.0" />
+    <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RazorEngine" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ocas.Domestic.Apply.Core\Ocas.Domestic.Apply.Core.csproj" />
+  </ItemGroup>
+  
+</Project>

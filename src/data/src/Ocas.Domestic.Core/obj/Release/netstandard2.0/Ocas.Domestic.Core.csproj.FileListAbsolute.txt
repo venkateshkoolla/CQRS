@@ -1,0 +1,10 @@
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\bin\Release\netstandard2.0\Ocas.Domestic.Core.deps.json
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\bin\Release\netstandard2.0\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\bin\Release\netstandard2.0\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.sourcelink.json
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Core\obj\Release\netstandard2.0\Ocas.Domestic.Core.csprojAssemblyReference.cache

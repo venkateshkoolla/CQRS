@@ -1,0 +1,346 @@
+2020-03-05 09:55:41.672 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 09:55:57.181 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/applicants/b0df5cf8-6dde-4453-be1a-5a9a1baf0c52/academic-record application/json; charset=utf-8 
+2020-03-05 09:55:58.025 -05:00 [INF] Route matched with {action = "AcademicRecord", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api)
+2020-03-05 09:55:58.366 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 09:55:58.418 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 09:55:58.418 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 09:55:58.572 -05:00 [INF] Successfully validated the token.
+2020-03-05 09:55:58.598 -05:00 [INF] Authorization was successful.
+2020-03-05 09:55:58.756 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) with arguments (["b0df5cf8-6dde-4453-be1a-5a9a1baf0c52","Ocas.Domestic.Apply.Admin.Models.AcademicRecordBase"]) - Validation state: "Valid"
+2020-03-05 09:56:24.926 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) in 26893.2673ms
+2020-03-05 09:56:24.929 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.ForbiddenException: Exception of type 'Ocas.Common.Exceptions.ForbiddenException' was thrown.
+   at Ocas.Domestic.Apply.Admin.Api.Services.UserAuthorization.<CanAccessApplicantAsync>d__5.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Authorization\UserAuthorization.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Behaviors.ApplicantUserAuthorizationBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ApplicantUserAuthorizationBehavior.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.<AcademicRecord>d__5.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicantsController.cs:line 65
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-03-05 09:56:25.065 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-03-05 09:56:25.070 -05:00 [INF] HTTP POST /api/v1/applicants/b0df5cf8-6dde-4453-be1a-5a9a1baf0c52/academic-record responded 403 in 27797.9987 ms
+2020-03-05 09:56:25.088 -05:00 [FTL] HTTP REQUEST POST to applicants/b0df5cf8-6dde-4453-be1a-5a9a1baf0c52/academic-record responded Forbidden.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of Forbidden code 403
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0055 | Exception of type 'Ocas.Common.Exceptions.ForbiddenException' was thrown.
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-03-05 09:56:25.103 -05:00 [FTL] HTTP RESPONSE POST to applicants/b0df5cf8-6dde-4453-be1a-5a9a1baf0c52/academic-record responded Forbidden.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of Forbidden code 403
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0055 | Exception of type 'Ocas.Common.Exceptions.ForbiddenException' was thrown.
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-03-05 09:56:25.161 -05:00 [INF] Request finished in 27990.4411ms 403 application/json
+2020-03-05 09:57:35.942 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 09:57:55.819 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/applicants/28fd9e2b-a70d-4c38-9b0e-7a9520b29a8e/academic-record application/json; charset=utf-8 
+2020-03-05 09:57:56.460 -05:00 [INF] Route matched with {action = "AcademicRecord", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api)
+2020-03-05 09:57:56.792 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 09:57:56.844 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 09:57:56.847 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 09:57:56.986 -05:00 [INF] Successfully validated the token.
+2020-03-05 09:57:57.016 -05:00 [INF] Authorization was successful.
+2020-03-05 09:57:57.190 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) with arguments (["28fd9e2b-a70d-4c38-9b0e-7a9520b29a8e","Ocas.Domestic.Apply.Admin.Models.AcademicRecordBase"]) - Validation state: "Valid"
+2020-03-05 09:58:47.256 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) in 50784.8354ms
+2020-03-05 09:58:47.368 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.ForbiddenException: Exception of type 'Ocas.Common.Exceptions.ForbiddenException' was thrown.
+   at Ocas.Domestic.Apply.Admin.Api.Services.UserAuthorization.<CanAccessApplicantAsync>d__5.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Authorization\UserAuthorization.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Behaviors.ApplicantUserAuthorizationBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ApplicantUserAuthorizationBehavior.cs:line 21
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.<AcademicRecord>d__5.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicantsController.cs:line 65
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-03-05 09:58:47.475 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-03-05 09:58:47.481 -05:00 [INF] HTTP POST /api/v1/applicants/28fd9e2b-a70d-4c38-9b0e-7a9520b29a8e/academic-record responded 403 in 51598.6034 ms
+2020-03-05 09:58:47.559 -05:00 [FTL] HTTP REQUEST POST to applicants/28fd9e2b-a70d-4c38-9b0e-7a9520b29a8e/academic-record responded Forbidden.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of Forbidden code 403
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0055 | Exception of type 'Ocas.Common.Exceptions.ForbiddenException' was thrown.
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-03-05 09:58:47.571 -05:00 [FTL] HTTP RESPONSE POST to applicants/28fd9e2b-a70d-4c38-9b0e-7a9520b29a8e/academic-record responded Forbidden.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of Forbidden code 403
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0055 | Exception of type 'Ocas.Common.Exceptions.ForbiddenException' was thrown.
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-03-05 09:58:47.673 -05:00 [INF] Request finished in 51858.0412ms 403 application/json
+2020-03-05 09:59:33.195 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 09:59:56.862 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/applicants/95bf4ab2-44c0-4cf0-b484-00408fdab6bd/academic-record application/json; charset=utf-8 
+2020-03-05 09:59:57.521 -05:00 [INF] Route matched with {action = "AcademicRecord", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api)
+2020-03-05 09:59:57.869 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 09:59:57.918 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 09:59:57.919 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 09:59:58.062 -05:00 [INF] Successfully validated the token.
+2020-03-05 09:59:58.097 -05:00 [INF] Authorization was successful.
+2020-03-05 09:59:58.274 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) with arguments (["95bf4ab2-44c0-4cf0-b484-00408fdab6bd","Ocas.Domestic.Apply.Admin.Models.AcademicRecordBase"]) - Validation state: "Valid"
+2020-03-05 10:06:35.011 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 10:06:54.874 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/applicants/59956449-bb3d-4fd7-9e0f-2c587fcdc518/academic-record application/json; charset=utf-8 
+2020-03-05 10:06:55.547 -05:00 [INF] Route matched with {action = "AcademicRecord", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api)
+2020-03-05 10:06:55.889 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 10:06:55.937 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 10:06:55.938 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 10:06:56.121 -05:00 [INF] Successfully validated the token.
+2020-03-05 10:06:56.147 -05:00 [INF] Authorization failed.
+2020-03-05 10:06:56.152 -05:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2020-03-05 10:06:56.165 -05:00 [INF] Executing ForbidResult with authentication schemes (["AdfsScheme","NewAdfsScheme"]).
+2020-03-05 10:06:56.183 -05:00 [INF] AuthenticationScheme: AdfsScheme was forbidden.
+2020-03-05 10:06:56.185 -05:00 [INF] AuthenticationScheme: NewAdfsScheme was forbidden.
+2020-03-05 10:06:56.189 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) in 633.14960000000008ms
+2020-03-05 10:06:56.201 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-03-05 10:06:56.206 -05:00 [INF] HTTP POST /api/v1/applicants/59956449-bb3d-4fd7-9e0f-2c587fcdc518/academic-record responded 403 in 1265.0321000000001 ms
+2020-03-05 10:06:56.230 -05:00 [INF] Request finished in 1358.8268ms 403 
+2020-03-05 10:06:56.399 -05:00 [FTL] HTTP REQUEST POST to applicants/59956449-bb3d-4fd7-9e0f-2c587fcdc518/academic-record responded Forbidden.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: Status of Forbidden code 403
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-03-05 10:06:56.429 -05:00 [FTL] HTTP RESPONSE POST to applicants/59956449-bb3d-4fd7-9e0f-2c587fcdc518/academic-record responded Forbidden.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: Status of Forbidden code 403
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-03-05 10:09:56.928 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 10:10:59.876 -05:00 [FTL] HTTP REQUEST PUT to applications/826585d4-cc5c-4442-8dac-d7f4a8fa6f2e/program-choices responded BadRequest.
+Ocas.Domestic.Apply.Api.Client.StatusCodeException: ==============================================================
+Status of BadRequest code 400
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0040 | Intake must be in the application's cycle.
+==============================================================
+
+   at Ocas.Domestic.Apply.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 269
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Api.Client.ApplyApiClient.<ThrowStatusCodeExceptionAsync>d__50.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 245
+2020-03-05 10:10:59.948 -05:00 [FTL] HTTP RESPONSE PUT to applications/826585d4-cc5c-4442-8dac-d7f4a8fa6f2e/program-choices responded BadRequest.
+Ocas.Domestic.Apply.Api.Client.StatusCodeException: ==============================================================
+Status of BadRequest code 400
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0040 | Intake must be in the application's cycle.
+==============================================================
+
+   at Ocas.Domestic.Apply.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 269
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Api.Client.ApplyApiClient.<ThrowStatusCodeExceptionAsync>d__50.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 245
+2020-03-05 10:12:49.545 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 10:15:51.433 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/applicants/9e441749-e8de-4f8f-99e0-fee2cd94a24e/academic-record application/json; charset=utf-8 
+2020-03-05 10:15:52.115 -05:00 [INF] Route matched with {action = "AcademicRecord", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api)
+2020-03-05 10:15:52.505 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 10:15:52.559 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 10:15:52.560 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 10:15:52.715 -05:00 [INF] Successfully validated the token.
+2020-03-05 10:15:52.741 -05:00 [INF] Authorization was successful.
+2020-03-05 10:15:52.925 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) with arguments (["9e441749-e8de-4f8f-99e0-fee2cd94a24e","Ocas.Domestic.Apply.Admin.Models.AcademicRecordBase"]) - Validation state: "Valid"
+2020-03-05 13:06:11.965 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 13:06:33.239 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants?accountnumber=210027129455&page=1&pagesize=100&sortby=AccountNumber&sortdirection=Ascending  
+2020-03-05 13:06:33.845 -05:00 [INF] Route matched with {action = "Get", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api)
+2020-03-05 13:06:34.167 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 13:06:34.203 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 13:06:34.203 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 13:06:34.294 -05:00 [INF] Successfully validated the token.
+2020-03-05 13:06:34.315 -05:00 [INF] Authorization was successful.
+2020-03-05 13:06:34.451 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api) with arguments (["Ocas.Domestic.Apply.Admin.Models.GetApplicantBriefOptions"]) - Validation state: "Valid"
+2020-03-05 13:06:52.413 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 17950.7655ms.
+2020-03-05 13:06:52.437 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantBrief, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-05 13:06:52.501 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api) in 18650.856200000002ms
+2020-03-05 13:06:52.504 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-03-05 13:06:52.508 -05:00 [INF] HTTP GET /api/v1/applicants responded 200 in 19213.4941 ms
+2020-03-05 13:06:52.574 -05:00 [INF] Request finished in 19340.0213ms 200 application/json; charset=utf-8
+2020-03-05 15:35:39.912 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-05 15:35:50.966 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/08c312db-1842-4e08-8d5d-e3463b27ec7b/offer-histories  
+2020-03-05 15:35:51.654 -05:00 [INF] Route matched with {action = "OfferHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.OfferHistories (Ocas.Domestic.Admin.Api)
+2020-03-05 15:35:52.117 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-05 15:35:52.171 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 15:35:52.171 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-05 15:35:52.344 -05:00 [INF] Successfully validated the token.
+2020-03-05 15:35:52.367 -05:00 [INF] Authorization was successful.
+2020-03-05 15:35:52.494 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.OfferHistories (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b"]) - Validation state: "Valid"
+2020-03-05 15:36:07.184 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.OfferHistories (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14677.017600000001ms.
+2020-03-05 15:36:07.217 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ocas.Domestic.Apply.Models.OfferHistory, Ocas.Domestic.Apply.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-03-05 15:36:07.303 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.OfferHistories (Ocas.Domestic.Admin.Api) in 15641.9565ms
+2020-03-05 15:36:07.307 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-03-05 15:36:07.311 -05:00 [INF] HTTP GET /api/v1/applications/08c312db-1842-4e08-8d5d-e3463b27ec7b/offer-histories responded 200 in 16287.4765 ms
+2020-03-05 15:36:07.385 -05:00 [INF] Request finished in 16424.1843ms 200 application/json; charset=utf-8

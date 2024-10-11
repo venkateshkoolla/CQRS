@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\CreateVoucher.sql" />
+    <None Remove="Resources\GetAlgoliaColleges.sql" />
+    <None Remove="Resources\GetAlgoliaProgramIntakes.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\GlobalSuppressionsTests.cs" Link="GlobalSuppressionsTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CreateVoucher.sql" />
+    <EmbeddedResource Include="Resources\GetAlgoliaColleges.sql" />
+    <EmbeddedResource Include="Resources\GetAlgoliaProgramIntakes.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="28.4.1" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Ocas.ApplicantIdp.Client" Version="2.0.3" />
+    <PackageReference Include="Ocas.Identity.Provider.Clients" Version="4.0.0-zeta.8" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.10.0">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\core\src\Ocas.Domestic.Apply.Core.Extensions\Ocas.Domestic.Apply.Core.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\core\src\Ocas.Domestic.Apply.Core\Ocas.Domestic.Apply.Core.csproj" />
+    <ProjectReference Include="..\..\..\data\src\Ocas.Domestic.Data.TestFramework.SeedData\Ocas.Domestic.Data.TestFramework.SeedData.csproj" />
+    <ProjectReference Include="..\..\..\data\src\Ocas.Domestic.Data\Ocas.Domestic.Data.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Apply.Api.Client\Ocas.Domestic.Apply.Api.Client.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Apply.Core.Extras\Ocas.Domestic.Apply.Core.Extras.csproj" />
+  </ItemGroup>
+
+</Project>

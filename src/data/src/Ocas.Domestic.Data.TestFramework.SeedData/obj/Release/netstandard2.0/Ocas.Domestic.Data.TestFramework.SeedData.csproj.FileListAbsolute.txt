@@ -1,0 +1,13 @@
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\bin\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.deps.json
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\bin\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\bin\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\bin\Release\netstandard2.0\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\bin\Release\netstandard2.0\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.csprojAssemblyReference.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.sourcelink.json
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.csproj.CopyComplete
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.TestFramework.SeedData\obj\Release\netstandard2.0\Ocas.Domestic.Data.TestFramework.SeedData.pdb

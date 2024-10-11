@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>SqlPackage.CommandLine</id>
+    <version>14.0.3953.4</version>
+    <title>SqlPackage command line tool</title>
+    <authors>David.DeSloovere</authors>
+    <owners>microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://msdn.microsoft.com/en-us/library/hh550080(v=vs.103).aspx</projectUrl>
+    <description>Unofficial package for the SqlPackage command-line utility from Microsoft.
+Command line SqlPackage.exe to integrate in build. Taken from SQL2017 (v14) installation.</description>
+    <summary>Unofficial package for the SqlPackage command-line utility from Microsoft.</summary>
+    <copyright>© 2018 Microsoft. All rights reserved.</copyright>
+    <tags>sqlpackage sql deploy</tags>
+  </metadata>
+</package>

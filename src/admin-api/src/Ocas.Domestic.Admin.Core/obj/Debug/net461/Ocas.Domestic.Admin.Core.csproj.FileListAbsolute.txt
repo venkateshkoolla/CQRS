@@ -1,0 +1,16 @@
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Domestic.Admin.Core.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Domestic.Admin.Core.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Newtonsoft.Json.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Common.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Domestic.Apply.Core.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Domestic.Apply.Core.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.sourcelink.json
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.csproj.CopyComplete
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\net461\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\net461\Ocas.Domestic.Admin.Core.csprojAssemblyReference.cache

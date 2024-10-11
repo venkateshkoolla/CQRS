@@ -1,0 +1,7 @@
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\bin\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\bin\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\obj\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\obj\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\obj\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\obj\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Apply.Api.Services.UnitTests\obj\Debug\net48\Ocas.Domestic.Admin.Api.Services.UnitTests.pdb

@@ -1,0 +1,90 @@
+2020-02-13 14:20:57.762 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 14:24:54.369 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 14:34:13.303 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:26:30.723 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:26:43.542 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/applicants/c6a25e30-d37e-4d99-ae51-a888943f972d/academic-record application/json; charset=utf-8 
+2020-02-13 16:26:44.261 -05:00 [INF] Route matched with {action = "AcademicRecord", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api)
+2020-02-13 16:26:44.576 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-13 16:26:44.622 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:26:44.623 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:26:44.712 -05:00 [INF] Successfully validated the token.
+2020-02-13 16:26:44.737 -05:00 [INF] Authorization was successful.
+2020-02-13 16:26:44.949 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) with arguments (["c6a25e30-d37e-4d99-ae51-a888943f972d","Ocas.Domestic.Apply.Admin.Models.AcademicRecordBase"]) - Validation state: "Valid"
+2020-02-13 16:27:27.210 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 42248.5633ms.
+2020-02-13 16:27:27.238 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.UpsertAcademicRecordResult'.
+2020-02-13 16:27:27.307 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.AcademicRecord (Ocas.Domestic.Admin.Api) in 43037.1119ms
+2020-02-13 16:27:27.312 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-13 16:27:27.316 -05:00 [INF] HTTP POST /api/v1/applicants/c6a25e30-d37e-4d99-ae51-a888943f972d/academic-record responded 200 in 43701.370800000004 ms
+2020-02-13 16:27:27.343 -05:00 [INF] Request finished in 43806.062ms 200 application/json; charset=utf-8
+2020-02-13 16:27:27.362 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/ontario-student-course-credits application/json; charset=utf-8 
+2020-02-13 16:27:27.366 -05:00 [INF] Route matched with {action = "Post", controller = "OntarioStudentCourseCredits"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Post (Ocas.Domestic.Admin.Api)
+2020-02-13 16:27:27.367 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-13 16:27:27.367 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:27:27.367 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:27:27.367 -05:00 [INF] Successfully validated the token.
+2020-02-13 16:27:27.368 -05:00 [INF] Authorization was successful.
+2020-02-13 16:27:27.379 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Post (Ocas.Domestic.Admin.Api) with arguments (["Ocas.Domestic.Apply.Admin.Models.OntarioStudentCourseCreditBase"]) - Validation state: "Valid"
+2020-02-13 16:27:30.597 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Post (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3218.8578ms.
+2020-02-13 16:27:30.597 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.OntarioStudentCourseCredit'.
+2020-02-13 16:27:30.601 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Post (Ocas.Domestic.Admin.Api) in 3235.1393000000003ms
+2020-02-13 16:27:30.601 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-13 16:27:30.601 -05:00 [INF] HTTP POST /api/v1/ontario-student-course-credits responded 200 in 3239.0515 ms
+2020-02-13 16:27:30.601 -05:00 [INF] Request finished in 3239.7098ms 200 application/json; charset=utf-8
+2020-02-13 16:27:30.621 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost/api/v1/ontario-student-course-credits/de18b1b0-cba6-4ff3-bf01-243fbdaf3be3 application/json; charset=utf-8 
+2020-02-13 16:27:30.629 -05:00 [INF] Route matched with {action = "Put", controller = "OntarioStudentCourseCredits"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Put (Ocas.Domestic.Admin.Api)
+2020-02-13 16:27:30.667 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-13 16:27:30.667 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:27:30.667 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:27:30.668 -05:00 [INF] Successfully validated the token.
+2020-02-13 16:27:30.668 -05:00 [INF] Authorization was successful.
+2020-02-13 16:27:30.673 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Put (Ocas.Domestic.Admin.Api) with arguments (["de18b1b0-cba6-4ff3-bf01-243fbdaf3be3","Ocas.Domestic.Apply.Admin.Models.OntarioStudentCourseCredit"]) - Validation state: "Valid"
+2020-02-13 16:27:31.429 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Put (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 755.7401ms.
+2020-02-13 16:27:31.429 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.OntarioStudentCourseCredit'.
+2020-02-13 16:27:31.430 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.Put (Ocas.Domestic.Admin.Api) in 800.0715ms
+2020-02-13 16:27:31.430 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-13 16:27:31.430 -05:00 [INF] HTTP PUT /api/v1/ontario-student-course-credits/de18b1b0-cba6-4ff3-bf01-243fbdaf3be3 responded 200 in 808.0714 ms
+2020-02-13 16:27:31.430 -05:00 [INF] Request finished in 808.4131ms 200 application/json; charset=utf-8
+2020-02-13 16:27:31.520 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost/api/v1/ontario-student-course-credits/de18b1b0-cba6-4ff3-bf01-243fbdaf3be3 application/json; charset=utf-8 
+2020-02-13 16:27:31.525 -05:00 [INF] Route matched with {action = "DeleteOntarioStudentCourseCredit", controller = "OntarioStudentCourseCredits"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.DeleteOntarioStudentCourseCredit (Ocas.Domestic.Admin.Api)
+2020-02-13 16:27:31.526 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-13 16:27:31.526 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:27:31.526 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-13 16:27:31.527 -05:00 [INF] Successfully validated the token.
+2020-02-13 16:27:31.527 -05:00 [INF] Authorization was successful.
+2020-02-13 16:27:31.527 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.DeleteOntarioStudentCourseCredit (Ocas.Domestic.Admin.Api) with arguments (["de18b1b0-cba6-4ff3-bf01-243fbdaf3be3"]) - Validation state: "Valid"
+2020-02-13 16:27:32.188 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.DeleteOntarioStudentCourseCredit (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 661.63560000000007ms.
+2020-02-13 16:27:32.189 -05:00 [INF] Executing ObjectResult, writing value of type 'MediatR.Unit'.
+2020-02-13 16:27:32.190 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.OntarioStudentCourseCreditsController.DeleteOntarioStudentCourseCredit (Ocas.Domestic.Admin.Api) in 664.4326ms
+2020-02-13 16:27:32.190 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-13 16:27:32.190 -05:00 [INF] HTTP DELETE /api/v1/ontario-student-course-credits/de18b1b0-cba6-4ff3-bf01-243fbdaf3be3 responded 200 in 670.2109 ms
+2020-02-13 16:27:32.197 -05:00 [INF] Request finished in 677.3898ms 200 application/json; charset=utf-8
+2020-02-13 16:31:19.859 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-13 16:45:27.206 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.

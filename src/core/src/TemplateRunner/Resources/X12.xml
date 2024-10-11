@@ -1,0 +1,607 @@
+﻿<envelope format="X12">
+  <segment code="ISA" name="Interchange Control Header">
+    <element code="I01" name="Authorization Information Qualifier">
+      <value description="No Authorization Information Present (No Meaningful Information in I02)">00</value>
+    </element>
+    <element code="I02" name="Authorization Information">
+      <value>          </value>
+    </element>
+    <element code="I03" name="Security Information Qualifier">
+      <value description="No Security Information Present (No Meaningful Information in I04)">00</value>
+    </element>
+    <element code="I04" name="Security Information">
+      <value>          </value>
+    </element>
+    <element code="I05" name="Interchange ID Qualifier">
+      <value description="Statistics Canada Canadian College Student Information System Institution Codes">35</value>
+    </element>
+    <element code="I06" name="Interchange Sender ID">
+      <value>355500         </value>
+    </element>
+    <element code="I05" name="Interchange ID Qualifier">
+      <value description="Mutually Defined">ZZ</value>
+    </element>
+    <element code="I07" name="Interchange Receiver ID">
+      <value>OCAS           </value>
+    </element>
+    <element code="I08" name="Interchange Date">
+      <value>110629</value>
+    </element>
+    <element code="I09" name="Interchange Time">
+      <value>1205</value>
+    </element>
+    <element code="I10" name="Interchange Control Standards Identifier">
+      <value description="U.S. EDI Community of ASC X12, TDCC, and UCS">U</value>
+    </element>
+    <element code="I11" name="Interchange Control Version Number">
+      <value description="Draft Standards for Trial Use Approved for Publication by ASC X12 Procedures Review Board through October 1997">00401</value>
+    </element>
+    <element code="I12" name="Interchange Control Number">
+      <value>004225392</value>
+    </element>
+    <element code="I13" name="Acknowledgment Requested">
+      <value description="Interchange Acknowledgment Requested">1</value>
+    </element>
+    <element code="I14" name="Usage Indicator">
+      <value description="Production Data">P</value>
+    </element>
+    <element code="I15" name="Component Element Separator">
+      <value>|</value>
+    </element>
+  </segment>
+  <functionalgroup>
+    <segment code="GS" name="Functional Group Header">
+      <element code="479" name="Functional Identifier Code">
+        <value description="Student Educational Record (Transcript) (130)">ED</value>
+      </element>
+      <element code="142" name="Application Sender's Code">
+        <value>355500</value>
+      </element>
+      <element code="124" name="Application Receiver's Code">
+        <value>OCAS</value>
+      </element>
+      <element code="373" name="Date">
+        <value>20110629</value>
+      </element>
+      <element code="337" name="Time">
+        <value>1205</value>
+      </element>
+      <element code="28" name="Group Control Number">
+        <value>4225392</value>
+      </element>
+      <element code="455" name="Responsible Agency Code">
+        <value description="Accredited Standards Committee X12">X</value>
+      </element>
+      <element code="480" name="Version / Release / Industry Identifier Code">
+        <value description="Draft Standards Approved for Publication by ASC X12 Procedures Review Board through October 1997">004010</value>
+      </element>
+    </segment>
+    <transactionset code="130" name="Student Educational Record (Transcript)">
+      <table section="header">
+        <segment code="ST" name="Transaction Set Header">
+          <element code="143" name="Transaction Set Identifier Code">
+            <value description="Student Educational Record (Transcript)">130</value>
+          </element>
+          <element code="329" name="Transaction Set Control Number">
+            <value>4225392</value>
+          </element>
+        </segment>
+        <segment code="BGN" name="Beginning Segment">
+          <element code="353" name="Transaction Set Purpose Code">
+            <value description="Original">00</value>
+          </element>
+          <element code="127" name="Reference Identification">
+            <value>C20110629897310</value>
+          </element>
+          <element code="373" name="Date">
+            <value>20110629</value>
+          </element>
+          <element code="337" name="Time">
+            <value>0940</value>
+          </element>
+          <element code="623" name="Time Code">
+            <value description="Eastern Time">ET</value>
+          </element>
+        </segment>
+        <segment code="ERP" name="Educational Record Purpose">
+          <element code="640" name="Transaction Type Code">
+            <value description="Postsecondary Student Academic Record">PS</value>
+          </element>
+          <element code="641" name="Status Reason Code">
+            <value description=""></value>
+          </element>
+        </segment>
+        <segment code="REF" name="Reference Identification">
+          <element code="128" name="Reference Identification Qualifier">
+            <value description="Agency's Student Number. This is the number assigned by an agency other than the institution sending the record.">48</value>
+          </element>
+          <element code="127" name="Reference Identification">
+            <value>Agency's Student Number</value>
+          </element>
+        </segment>
+        <segment code="REF" name="Reference Identification">
+          <element code="128" name="Reference Identification Qualifier">
+            <value description="Local Student Identification Number">LR</value>
+          </element>
+          <element code="127" name="Reference Identification">
+            <value>Local Student Number</value>
+          </element>
+        </segment>
+        <segment code="DMG" name="Demographic Information">
+          <element code="1250" name="Date Time Period Format Qualifier">
+            <value description="Date Expressed in Format CCYYMMDD">D8</value>
+          </element>
+          <element code="1251" name="Date Time Period">
+            <value>19840619</value>
+          </element>
+          <element code="1068" name="Gender Code">
+            <value description="Female">F</value>
+          </element>
+          <element code="1067" name="Marital Status Code">
+            <value description=""></value>
+          </element>
+          <element code="1109" name="Race or Ethnicity Code">
+            <value description=""></value>
+          </element>
+          <element code="1066" name="Citizenship Status Code">
+            <value description=""></value>
+          </element>
+          <element code="26" name="Country Code">
+            <value description=""></value>
+          </element>
+          <element code="659" name="Basis of Verification Code">
+            <value description=""></value>
+          </element>
+        </segment>
+        <segment code="NTE" name="Note/Special Instruction">
+          <element code="363" name="Note Reference Code">
+            <value description=""></value>
+          </element>
+          <element code="352" name="Description">
+            <value>LEGEND         http://www.senecac.on.ca/home/academic_policy/index.htm</value>
+          </element>
+        </segment>
+        <loop code="N1" name="Name">
+          <segment code="N1" name="Name">
+            <element code="98" name="Entity Identifier Code">
+              <value description="Postsecondary Education Sender">AS</value>
+            </element>
+            <element code="93" name="Name">
+              <value>Seneca College</value>
+            </element>
+            <element code="66" name="Identification Code Qualifier">
+              <value description="Statistics Canada Canadian College Student Information System Institution Codes">CB</value>
+            </element>
+            <element code="67" name="Identification Code">
+              <value>355500</value>
+            </element>
+          </segment>
+          <segment code="N3" name="Address Information">
+            <element code="166" name="Address Information">
+              <value>60 Corporate Court</value>
+            </element>
+          </segment>
+          <segment code="N4" name="Geographic Location">
+            <element code="19" name="City Name">
+              <value>Guelph</value>
+            </element>
+            <element code="156" name="State or Province Code">
+              <value description="ON">ON</value>
+            </element>
+            <element code="116" name="Postal Code">
+              <value description="A1A 1A1">A1A 1A1</value>
+            </element>
+            <element code="26" name="Country Code">
+              <value description="CA">CA</value>
+            </element>
+            <element code="309" name="Location Qualifier">
+              <value description="Permanent Address">P</value>
+            </element>
+          </segment>
+          <segment code="PER" name="Administrative Communications Contact">
+            <element code="366" name="Contact Function Code">
+              <value description="Registrar">RG</value>
+            </element>
+            <element code="93" name="Name">
+              <value>Registrar Name</value>
+            </element>
+            <element code="365" name="Communication Number Qualifier">
+              <value description="Telephone">TE</value>
+            </element>
+            <element code="364" name="Communication Number">
+              <value>519-555-1234 x1234</value>
+            </element>
+            <element code="365" name="Communication Number Qualifier">
+              <value description="Facsimile">FX</value>
+            </element>
+            <element code="364" name="Communication Number">
+              <value>519-555-1234</value>
+            </element>
+            <element code="365" name="Communication Number Qualifier">
+              <value description="Electronic Mail">EM</value>
+            </element>
+            <element code="364" name="Communication Number">
+              <value>email@test.ocas.ca</value>
+            </element>
+          </segment>
+        </loop>
+        <loop code="IN1" name="Individual Identification">
+          <segment code="IN1" name="Individual Identification">
+            <element code="1065" name="Entity Type Qualifier">
+              <value description="Person">1</value>
+            </element>
+            <element code="1107" name="Name Type Code">
+              <value description="Name of Record">04</value>
+            </element>
+            <element code="98" name="Entity Identifier Code">
+              <value description="Student">S2</value>
+            </element>
+          </segment>
+          <segment code="IN2" name="Individual Name Structure Components">
+            <element code="1104" name="Name Component Qualifier">
+              <value description="Last Name">05</value>
+            </element>
+            <element code="93" name="Name">
+              <value>Last Name</value>
+            </element>
+          </segment>
+          <segment code="IN2" name="Individual Name Structure Components">
+            <element code="1104" name="Name Component Qualifier">
+              <value description="First Name">02</value>
+            </element>
+            <element code="93" name="Name">
+              <value>First Name</value>
+            </element>
+          </segment>
+          <segment code="IN2" name="Individual Name Structure Components">
+            <element code="1104" name="Name Component Qualifier">
+              <value description="Former Last Name">15</value>
+            </element>
+            <element code="93" name="Name">
+              <value>Former Last Name</value>
+            </element>
+          </segment>
+          <segment code="IN2" name="Individual Name Structure Components">
+            <element code="1104" name="Name Component Qualifier">
+              <value description="Middle Name">03</value>
+            </element>
+            <element code="93" name="Name">
+              <value>Middle Name</value>
+            </element>
+          </segment>
+        </loop>
+      </table>
+      <table section="detail">
+        <loop code="LX" name="Assigned Number">
+          <segment code="LX" name="Assigned Number">
+            <element code="554" name="Assigned Number">
+              <value>1</value>
+            </element>
+          </segment>
+          <loop code="SES" name="Academic Session Header">
+            <segment code="SES" name="Academic Session Header">
+              <element code="1251" name="Date Time Period">
+                <value>201101</value>
+              </element>
+              <element code="609" name="Count">
+                <value></value>
+              </element>
+              <element code="1251" name="Date Time Period">
+                <value></value>
+              </element>
+              <element code="1139" name="Session Code">
+                <value description=""></value>
+              </element>
+              <element code="93" name="Name">
+                <value>Winter 2011</value>
+              </element>
+              <element code="1250" name="Date Time Period Format Qualifier">
+                <value description="Date Expressed in Format CCYYMMDD">D8</value>
+              </element>
+              <element code="1251" name="Date Time Period">
+                <value>20110110</value>
+              </element>
+              <element code="1250" name="Date Time Period Format Qualifier">
+                <value description="Date Expressed in Format CCYYMMDD">D8</value>
+              </element>
+              <element code="1251" name="Date Time Period">
+                <value>20110421</value>
+              </element>
+              <element code="1131" name="Level of Individual, Test, or Course Code">
+                <value description=""></value>
+              </element>
+              <element code="66" name="Identification Code Qualifier">
+                <value description=""></value>
+              </element>
+              <element code="67" name="Identification Code">
+                <value></value>
+              </element>
+              <element code="93" name="Name">
+                <value></value>
+              </element>
+            </segment>
+            <loop code="SUM" name="Academic Summary">
+              <segment code="SUM" name="Academic Summary">
+                <element code="1141" name="Academic Credit Type Code">
+                  <value description="Semester Hour Credit">S</value>
+                </element>
+                <element code="1142" name="Academic Grade or Course Level Code">
+                  <value description=""></value>
+                </element>
+                <element code="1073" name="Yes/No Condition or Response Code">
+                  <value description="No">N</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>10</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>10</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>5</value>
+                </element>
+                <element code="740" name="Range Minimum">
+                  <value>0</value>
+                </element>
+                <element code="741" name="Range Maximum">
+                  <value>4</value>
+                </element>
+                <element code="1144" name="Academic Grade Point Average">
+                  <value>0</value>
+                </element>
+                <element code="1073" name="Yes/No Condition or Response Code">
+                  <value description=""></value>
+                </element>
+                <element code="1145" name="Class Rank">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="1250" name="Date Time Period Format Qualifier">
+                  <value description=""></value>
+                </element>
+                <element code="1251" name="Date Time Period">
+                  <value></value>
+                </element>
+                <element code="607" name="Number of Days">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+              </segment>
+            </loop>
+            <loop code="CRS" name="Course Record">
+              <segment code="CRS" name="Course Record">
+                <element code="1147" name="Basis for Academic Credit Code">
+                  <value description="Regular Enrollment">R</value>
+                </element>
+                <element code="1141" name="Academic Credit Type Code">
+                  <value description="Semester Hour Credit">S</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>5</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>5</value>
+                </element>
+                <element code="1148" name="Academic Grade Qualifier">
+                  <value description="">Test Qualifier</value>
+                </element>
+                <element code="1258" name="Academic Grade">
+                  <value>Test Grade</value>
+                </element>
+                <element code="1073" name="Yes/No Condition or Response Code">
+                  <value description=""></value>
+                </element>
+                <element code="1142" name="Academic Grade or Course Level Code">
+                  <value description=""></value>
+                </element>
+                <element code="1150" name="Course Repeat or No Count Indicator Code">
+                  <value description=""></value>
+                </element>
+                <element code="66" name="Identification Code Qualifier">
+                  <value description=""></value>
+                </element>
+                <element code="67" name="Identification Code">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="1131" name="Level of Individual, Test, or Course Code">
+                  <value description=""></value>
+                </element>
+                <element code="93" name="Name">
+                  <value>SWL</value>
+                </element>
+                <element code="127" name="Reference Identification">
+                  <value>118</value>
+                </element>
+                <element code="93" name="Name">
+                  <value>Interpersonal Communications</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="373" name="Date">
+                  <value></value>
+                </element>
+              </segment>
+              <segment code="CSU" name="Supplemental Course Data">
+                <element code="93" name="Name">
+                  <value></value>
+                </element>
+                <element code="127" name="Reference Identification">
+                  <value></value>
+                </element>
+                <element code="1250" name="Date Time Period Format Qualifier">
+                  <value description="Date Expressed in Format CCYYMMDD">D8</value>
+                </element>
+                <element code="1251" name="Date Time Period">
+                  <value>20110110</value>
+                </element>
+                <element code="1250" name="Date Time Period Format Qualifier">
+                  <value description="Date Expressed in Format CCYYMMDD">D8</value>
+                </element>
+                <element code="1251" name="Date Time Period">
+                  <value>20110411</value>
+                </element>
+                <element code="1132" name="Instructional Setting Code">
+                  <value description=""></value>
+                </element>
+                <element code="1141" name="Academic Credit Type Code">
+                  <value description=""></value>
+                </element>
+              </segment>
+              <loop code="MKS" name="Marks Awarded">
+                <segment code="MKS" name="Marks Awarded">
+                  <element code="1304" name="Mark Code Type">
+                    <value description="Final Mark">3</value>
+                  </element>
+                  <element code="1148" name="Academic Grade Qualifier">
+                    <value description="24">24</value>
+                  </element>
+                  <element code="1258" name="Academic Grade">
+                    <value>B+</value>
+                  </element>
+                </segment>
+              </loop>
+            </loop>
+            <loop code="CRS" name="Course Record">
+              <segment code="CRS" name="Course Record">
+                <element code="1147" name="Basis for Academic Credit Code">
+                  <value description="Regular Enrollment">R</value>
+                </element>
+                <element code="1141" name="Academic Credit Type Code">
+                  <value description="No Credit">N</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>0</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value>0</value>
+                </element>
+                <element code="1148" name="Academic Grade Qualifier">
+                  <value description="">Test Grade Qualifier</value>
+                </element>
+                <element code="1258" name="Academic Grade">
+                  <value>Test Grade</value>
+                </element>
+                <element code="1073" name="Yes/No Condition or Response Code">
+                  <value description=""></value>
+                </element>
+                <element code="1142" name="Academic Grade or Course Level Code">
+                  <value description=""></value>
+                </element>
+                <element code="1150" name="Course Repeat or No Count Indicator Code">
+                  <value description=""></value>
+                </element>
+                <element code="66" name="Identification Code Qualifier">
+                  <value description=""></value>
+                </element>
+                <element code="67" name="Identification Code">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="1131" name="Level of Individual, Test, or Course Code">
+                  <value description=""></value>
+                </element>
+                <element code="93" name="Name">
+                  <value>SOC</value>
+                </element>
+                <element code="127" name="Reference Identification">
+                  <value>600</value>
+                </element>
+                <element code="93" name="Name">
+                  <value>Introduction to Sociology</value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="380" name="Quantity">
+                  <value></value>
+                </element>
+                <element code="373" name="Date">
+                  <value></value>
+                </element>
+              </segment>
+              <segment code="CSU" name="Supplemental Course Data">
+                <element code="93" name="Name">
+                  <value></value>
+                </element>
+                <element code="127" name="Reference Identification">
+                  <value></value>
+                </element>
+                <element code="1250" name="Date Time Period Format Qualifier">
+                  <value description="Date Expressed in Format CCYYMMDD">D8</value>
+                </element>
+                <element code="1251" name="Date Time Period">
+                  <value>20110112</value>
+                </element>
+                <element code="1250" name="Date Time Period Format Qualifier">
+                  <value description="Date Expressed in Format CCYYMMDD">D8</value>
+                </element>
+                <element code="1251" name="Date Time Period">
+                  <value>20110413</value>
+                </element>
+                <element code="1132" name="Instructional Setting Code">
+                  <value description=""></value>
+                </element>
+                <element code="1141" name="Academic Credit Type Code">
+                  <value description=""></value>
+                </element>
+              </segment>
+              <loop code="MKS" name="Marks Awarded">
+                <segment code="MKS" name="Marks Awarded">
+                  <element code="1304" name="Mark Code Type">
+                    <value description="Final Mark">3</value>
+                  </element>
+                  <element code="1148" name="Academic Grade Qualifier">
+                    <value description="24">24</value>
+                  </element>
+                  <element code="1258" name="Academic Grade">
+                    <value>F</value>
+                  </element>
+                </segment>
+              </loop>
+            </loop>
+          </loop>
+        </loop>
+        <segment code="SE" name="Transaction Set Trailer">
+          <element code="96" name="Number of Included Segments">
+            <value>24</value>
+          </element>
+          <element code="329" name="Transaction Set Control Number">
+            <value>4225392</value>
+          </element>
+        </segment>
+      </table>
+    </transactionset>
+    <segment code="GE" name="Functional Group Trailer">
+      <element code="97" name="Number of Transaction Sets Included">
+        <value>1</value>
+      </element>
+      <element code="28" name="Group Control Number">
+        <value>4225392</value>
+      </element>
+    </segment>
+  </functionalgroup>
+  <segment code="IEA" name="Interchange Control Trailer">
+    <element code="I16" name="Number of Included Functional Groups">
+      <value>1</value>
+    </element>
+    <element code="I12" name="Interchange Control Number">
+      <value>004225392</value>
+    </element>
+  </segment>
+</envelope>

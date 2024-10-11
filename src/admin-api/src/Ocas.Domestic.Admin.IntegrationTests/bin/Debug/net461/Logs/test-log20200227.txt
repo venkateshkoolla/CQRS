@@ -1,0 +1,1760 @@
+2020-02-27 13:39:14.022 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 13:39:26.202 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 13:39:26.993 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:39:27.478 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:39:27.534 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:39:27.534 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:39:27.731 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:39:27.757 -05:00 [INF] Authorization was successful.
+2020-02-27 13:39:27.909 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:39:41.287 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 14286.4526ms
+2020-02-27 13:39:41.290 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 13:39:41.421 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 13:39:41.435 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 15153.2386 ms
+2020-02-27 13:39:41.483 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:39:41.498 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:39:41.502 -05:00 [INF] Request finished in 15304.2943ms 500 application/json
+2020-02-27 13:39:41.595 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10  
+2020-02-27 13:39:41.597 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:39:41.603 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:39:41.603 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:39:41.603 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:39:41.604 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:39:41.604 -05:00 [INF] Authorization was successful.
+2020-02-27 13:39:41.612 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:39:52.186 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 10592.249ms
+2020-02-27 13:39:52.186 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 13:39:52.192 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 13:39:52.192 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 10597.4315 ms
+2020-02-27 13:39:52.193 -05:00 [INF] Request finished in 10598.4216ms 500 application/json
+2020-02-27 13:39:52.193 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:39:52.193 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:50:57.937 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 13:51:13.243 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 13:51:13.843 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:51:14.193 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:51:14.235 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:51:14.236 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:51:14.426 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:51:14.460 -05:00 [INF] Authorization was successful.
+2020-02-27 13:51:14.642 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:51:33.439 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 19590.3079ms
+2020-02-27 13:51:33.442 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.get_Connection() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.cs:line 33
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.<GetCollegeTransmissions>d__0.MoveNext() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.CollegeTransmission.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 13:51:33.551 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 13:51:33.565 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 20266.750500000002 ms
+2020-02-27 13:51:33.609 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:51:33.620 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:51:33.628 -05:00 [INF] Request finished in 20388.4161ms 500 application/json
+2020-02-27 13:51:33.756 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10  
+2020-02-27 13:51:33.758 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:51:33.766 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:51:33.766 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:51:33.766 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:51:33.766 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:51:33.766 -05:00 [INF] Authorization was successful.
+2020-02-27 13:51:33.773 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:51:37.792 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 4035.1644ms
+2020-02-27 13:51:37.793 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.get_Connection() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.cs:line 33
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.<GetCollegeTransmissions>d__0.MoveNext() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.CollegeTransmission.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 13:51:37.794 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 13:51:37.795 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 4039.2492 ms
+2020-02-27 13:51:37.795 -05:00 [INF] Request finished in 4039.8212ms 500 application/json
+2020-02-27 13:51:37.795 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:51:37.795 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:52:28.167 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 13:52:40.500 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 13:52:41.147 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:52:41.563 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:52:41.610 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:52:41.612 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:52:41.798 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:52:41.823 -05:00 [INF] Authorization was successful.
+2020-02-27 13:52:41.966 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:53:11.178 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 30019.5383ms
+2020-02-27 13:53:11.304 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.get_Connection() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.cs:line 33
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.<GetCollegeTransmissions>d__0.MoveNext() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.CollegeTransmission.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 13:53:11.409 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 13:53:11.425 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 30837.572200000002 ms
+2020-02-27 13:53:11.546 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:53:11.558 -05:00 [INF] Request finished in 31062.2392ms 500 application/json
+2020-02-27 13:53:11.559 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:54:10.977 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 13:54:39.343 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants/931fbca9-11e4-4a2e-9ecc-03ec541f458e/applicant-histories?page=1&pageSize=20&applicationId=ecd1fd8a-bb0c-402e-a237-5de60fb1e7a3  
+2020-02-27 13:54:40.144 -05:00 [INF] Route matched with {action = "ApplicantHistories", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.ApplicantHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:54:45.775 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:54:45.828 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:54:45.828 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:54:46.070 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:54:46.165 -05:00 [INF] Authorization was successful.
+2020-02-27 13:54:46.397 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.ApplicantHistories (Ocas.Domestic.Admin.Api) with arguments (["931fbca9-11e4-4a2e-9ecc-03ec541f458e","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:54:58.999 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.ApplicantHistories (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12586.612000000001ms.
+2020-02-27 13:54:59.033 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-27 13:54:59.110 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.ApplicantHistories (Ocas.Domestic.Admin.Api) in 18959.1457ms
+2020-02-27 13:54:59.114 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-27 13:54:59.118 -05:00 [INF] HTTP GET /api/v1/applicants/931fbca9-11e4-4a2e-9ecc-03ec541f458e/applicant-histories responded 200 in 19709.0309 ms
+2020-02-27 13:54:59.191 -05:00 [INF] Request finished in 19851.8106ms 200 application/json; charset=utf-8
+2020-02-27 13:58:49.404 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 13:59:00.735 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 13:59:01.322 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 13:59:01.655 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 13:59:01.699 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:59:01.699 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 13:59:01.861 -05:00 [INF] Successfully validated the token.
+2020-02-27 13:59:01.882 -05:00 [INF] Authorization was successful.
+2020-02-27 13:59:02.027 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 13:59:21.572 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 20243.9286ms
+2020-02-27 13:59:21.574 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.get_Connection() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.cs:line 33
+   at Ocas.Domestic.Coltrane.Bds.Provider.ColtraneBdsProvider.<GetCollegeTransmissions>d__0.MoveNext() in C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\ColtraneBdsProvider.CollegeTransmission.cs:line 55
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 57
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 13:59:21.667 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 13:59:21.683 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 20889.951100000002 ms
+2020-02-27 13:59:21.720 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:59:21.732 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 13:59:21.741 -05:00 [INF] Request finished in 21009.7003ms 500 application/json
+2020-02-27 14:04:53.876 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 14:05:06.028 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 14:05:06.680 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 14:05:07.024 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:05:07.068 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:05:07.069 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:05:07.237 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:05:07.261 -05:00 [INF] Authorization was successful.
+2020-02-27 14:05:07.426 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 14:05:20.455 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 13769.322600000001ms
+2020-02-27 14:05:20.457 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:05:20.581 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:05:20.597 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 14507.293800000001 ms
+2020-02-27 14:05:20.640 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:05:20.657 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:05:20.674 -05:00 [INF] Request finished in 14651.1971ms 500 application/json
+2020-02-27 14:05:20.776 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10  
+2020-02-27 14:05:20.779 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 14:05:20.779 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:05:20.780 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:05:20.780 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:05:20.780 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:05:20.780 -05:00 [INF] Authorization was successful.
+2020-02-27 14:05:20.787 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 14:05:31.363 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 10583.513500000001ms
+2020-02-27 14:05:31.363 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:05:31.364 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:05:31.364 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 10586.5437 ms
+2020-02-27 14:05:31.364 -05:00 [INF] Request finished in 10587.1589ms 500 application/json
+2020-02-27 14:05:31.364 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:05:31.364 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:10:55.820 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 14:11:59.054 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost/api/v1/applications/3ea869d6-1f03-4092-bd1c-53e971e114bd/effective-date application/json; charset=utf-8 
+2020-02-27 14:11:59.636 -05:00 [INF] Route matched with {action = "EffectiveDate", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.EffectiveDate (Ocas.Domestic.Admin.Api)
+2020-02-27 14:11:59.989 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:11:59.995 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:11:59.995 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:12:00.157 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:12:00.182 -05:00 [INF] Authorization was successful.
+2020-02-27 14:12:00.352 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.EffectiveDate (Ocas.Domestic.Admin.Api) with arguments (["3ea869d6-1f03-4092-bd1c-53e971e114bd","Ocas.Domestic.Apply.Models.ApplicationEffectiveDateUpdateInfo"]) - Validation state: "Valid"
+2020-02-27 14:12:11.403 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.EffectiveDate (Ocas.Domestic.Admin.Api) in 11761.595000000001ms
+2020-02-27 14:12:11.405 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.UpdateApplicationEffectiveDateHandler.<Handle>d__5.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\UpdateApplicationEffectiveDateHandler.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<EffectiveDate>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:12:11.478 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:12:11.490 -05:00 [ERR] HTTP PUT /api/v1/applications/3ea869d6-1f03-4092-bd1c-53e971e114bd/effective-date responded 500 in 12379.3146 ms
+2020-02-27 14:12:11.503 -05:00 [FTL] HTTP REQUEST PUT to applications/3ea869d6-1f03-4092-bd1c-53e971e114bd/effective-date responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:12:11.517 -05:00 [FTL] HTTP RESPONSE PUT to applications/3ea869d6-1f03-4092-bd1c-53e971e114bd/effective-date responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:12:11.554 -05:00 [INF] Request finished in 12505.2854ms 500 application/json
+2020-02-27 14:12:11.573 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 14:12:11.593 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 14:12:11.593 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:12:11.594 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:12:11.594 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:12:11.594 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:12:11.594 -05:00 [INF] Authorization was successful.
+2020-02-27 14:12:11.604 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 14:12:22.174 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 10581.3086ms
+2020-02-27 14:12:22.174 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:12:22.176 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:12:22.176 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 10602.138200000001 ms
+2020-02-27 14:12:22.176 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:12:22.176 -05:00 [INF] Request finished in 10603.0772ms 500 application/json
+2020-02-27 14:12:22.176 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:12:22.269 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10  
+2020-02-27 14:12:22.270 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 14:12:22.271 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:12:22.271 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:12:22.271 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:12:22.271 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:12:22.271 -05:00 [INF] Authorization was successful.
+2020-02-27 14:12:22.279 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 14:12:34.550 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 12279.8382ms
+2020-02-27 14:12:34.550 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:12:34.551 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:12:34.551 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 12282.1679 ms
+2020-02-27 14:12:34.560 -05:00 [INF] Request finished in 12290.8905ms 500 application/json
+2020-02-27 14:12:34.560 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:12:34.560 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:18:15.824 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-27 14:19:19.496 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost/api/v1/applications/11e55977-6218-492b-847f-d7fa43012663/effective-date application/json; charset=utf-8 
+2020-02-27 14:19:20.074 -05:00 [INF] Route matched with {action = "EffectiveDate", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.EffectiveDate (Ocas.Domestic.Admin.Api)
+2020-02-27 14:19:20.388 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:19:20.393 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:19:20.394 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:19:20.528 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:19:20.549 -05:00 [INF] Authorization was successful.
+2020-02-27 14:19:20.699 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.EffectiveDate (Ocas.Domestic.Admin.Api) with arguments (["11e55977-6218-492b-847f-d7fa43012663","Ocas.Domestic.Apply.Models.ApplicationEffectiveDateUpdateInfo"]) - Validation state: "Valid"
+2020-02-27 14:19:31.736 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.EffectiveDate (Ocas.Domestic.Admin.Api) in 11656.4954ms
+2020-02-27 14:19:31.738 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.UpdateApplicationEffectiveDateHandler.<Handle>d__5.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\UpdateApplicationEffectiveDateHandler.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<EffectiveDate>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 42
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:19:31.814 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:19:31.826 -05:00 [ERR] HTTP PUT /api/v1/applications/11e55977-6218-492b-847f-d7fa43012663/effective-date responded 500 in 12274.6821 ms
+2020-02-27 14:19:31.838 -05:00 [FTL] HTTP REQUEST PUT to applications/11e55977-6218-492b-847f-d7fa43012663/effective-date responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:19:31.852 -05:00 [FTL] HTTP RESPONSE PUT to applications/11e55977-6218-492b-847f-d7fa43012663/effective-date responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:19:31.902 -05:00 [INF] Request finished in 12404.6504ms 500 application/json
+2020-02-27 14:19:31.919 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories  
+2020-02-27 14:19:31.937 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 14:19:31.938 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:19:31.938 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:19:31.938 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:19:31.938 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:19:31.939 -05:00 [INF] Authorization was successful.
+2020-02-27 14:19:31.949 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 14:19:42.533 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 10594.999ms
+2020-02-27 14:19:42.533 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:19:42.534 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:19:42.534 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 10614.1064 ms
+2020-02-27 14:19:42.535 -05:00 [INF] Request finished in 10615.0307ms 500 application/json
+2020-02-27 14:19:42.535 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:19:42.535 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:19:42.606 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10  
+2020-02-27 14:19:42.607 -05:00 [INF] Route matched with {action = "TransmissionHistories", controller = "Applications"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api)
+2020-02-27 14:19:42.608 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-27 14:19:42.608 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:19:42.608 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-27 14:19:42.608 -05:00 [INF] Successfully validated the token.
+2020-02-27 14:19:42.608 -05:00 [INF] Authorization was successful.
+2020-02-27 14:19:42.615 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) with arguments (["0230957e-74ae-4180-9a6a-83209432f650","Ocas.Domestic.Apply.Admin.Models.CollegeTransmissionHistoryOptions"]) - Validation state: "Valid"
+2020-02-27 14:19:54.902 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.TransmissionHistories (Ocas.Domestic.Admin.Api) in 12294.788900000001ms
+2020-02-27 14:19:54.902 -05:00 [ERR] An Exception Occurred
+Ocas.Common.Exceptions.UnhandledException: Unhandled Exception In Mediator Pipeline ---> System.Data.SqlClient.SqlException: Named Pipes Provider: Could not open a connection to SQL Server [53]. 
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__180_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext() in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 483
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Services.Handlers.GetCollegeTransmissionHistoriesHandler.<Handle>d__8.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Handlers\GetCollegeTransmissionHistoriesHandler.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.<Handle>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Services.Behavior.ValidatorBehavior`2.<Handle>d__2.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Services\Behaviors\ValidatorBehavior.cs:line 36
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 15
+   --- End of inner exception stack trace ---
+   at Ocas.Domestic.Apply.Admin.Api.ExceptionBehavior`2.<Handle>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Behaviors\ExceptionBehavior.cs:line 20
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicationsController.<TransmissionHistories>d__6.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Controllers\ApplicationsController.cs:line 95
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.AwaitableObjectResultExecutor.<Execute>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__23.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Middlewares.OcasExceptionHandlerMiddleware.<Invoke>d__3.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api\Middlewares\OcasExceptionHandlerMiddleware.cs:line 29
+2020-02-27 14:19:54.906 -05:00 [ERR] HTTP Request Body Logged in Event Properties
+2020-02-27 14:19:54.906 -05:00 [ERR] HTTP GET /api/v1/applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories responded 500 in 12300.798700000001 ms
+2020-02-27 14:19:54.907 -05:00 [INF] Request finished in 12301.2574ms 500 application/json
+2020-02-27 14:19:54.907 -05:00 [FTL] HTTP REQUEST GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236
+2020-02-27 14:19:54.907 -05:00 [FTL] HTTP RESPONSE GET to applications/0230957e-74ae-4180-9a6a-83209432f650/transmission-histories?fromDate=2019-10-09&toDate=2019-10-10 responded InternalServerError.
+Ocas.Domestic.Apply.Admin.Api.Client.StatusCodeException: ==============================================================
+Status of InternalServerError code 500
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0001 | Unhandled Exception In Mediator Pipeline
+==============================================================
+
+   at Ocas.Domestic.Apply.Admin.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 260
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Admin.Api.Client.AdminApiClient.<ThrowStatusCodeExceptionAsync>d__38.MoveNext() in C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Api.Client\AdminApiClient.cs:line 236

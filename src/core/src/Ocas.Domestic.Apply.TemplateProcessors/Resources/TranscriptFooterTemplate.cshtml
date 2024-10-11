@@ -1,0 +1,469 @@
+﻿@model Ocas.Domestic.Apply.Models.Templates.TranscriptFooterViewModel
+<html>
+<body>
+    <style>
+           /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+           /**
+        * 1. Change the default font family in all browsers (opinionated).
+        * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+        */
+
+           html {
+               font-family: sans-serif; /* 1 */
+               -ms-text-size-adjust: 100%; /* 2 */
+               -webkit-text-size-adjust: 100%; /* 2 */
+           }
+
+           /**
+        * Remove the margin in all browsers (opinionated).
+        */
+
+           body {
+               margin: 0;
+           }
+
+           /* HTML5 display definitions
+          ========================================================================== */
+
+           /**
+        * Add the correct display in IE 9-.
+        * 1. Add the correct display in Edge, IE, and Firefox.
+        * 2. Add the correct display in IE.
+        */
+
+           article,
+           aside,
+           details, /* 1 */
+           figcaption,
+           figure,
+           footer,
+           header,
+           main, /* 2 */
+           menu,
+           nav,
+           section,
+           summary { /* 1 */
+               display: block;
+           }
+
+           /**
+        * Add the correct display in IE 9-.
+        */
+
+           audio,
+           canvas,
+           progress,
+           video {
+               display: inline-block;
+           }
+
+               /**
+        * Add the correct display in iOS 4-7.
+        */
+
+               audio:not([controls]) {
+                   display: none;
+                   height: 0;
+               }
+
+           /**
+        * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+        */
+
+           progress {
+               vertical-align: baseline;
+           }
+
+           /**
+        * Add the correct display in IE 10-.
+        * 1. Add the correct display in IE.
+        */
+
+           template, /* 1 */
+           [hidden] {
+               display: none;
+           }
+
+           /* Links
+          ========================================================================== */
+
+           /**
+        * 1. Remove the gray background on active links in IE 10.
+        * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+        */
+
+           a {
+               background-color: transparent; /* 1 */
+               -webkit-text-decoration-skip: objects; /* 2 */
+           }
+
+               /**
+        * Remove the outline on focused links when they are also active or hovered
+        * in all browsers (opinionated).
+        */
+
+               a:active,
+               a:hover {
+                   outline-width: 0;
+               }
+
+           /* Text-level semantics
+          ========================================================================== */
+
+           /**
+        * 1. Remove the bottom border in Firefox 39-.
+        * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+        */
+
+           abbr[title] {
+               border-bottom: none; /* 1 */
+               text-decoration: underline; /* 2 */
+               text-decoration: underline dotted; /* 2 */
+           }
+
+           /**
+        * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+        */
+
+           b,
+           strong {
+               font-weight: inherit;
+           }
+
+           /**
+        * Add the correct font weight in Chrome, Edge, and Safari.
+        */
+
+           b,
+           strong {
+               font-weight: bolder;
+           }
+
+           /**
+        * Add the correct font style in Android 4.3-.
+        */
+
+           dfn {
+               font-style: italic;
+           }
+
+           /**
+        * Correct the font size and margin on `h1` elements within `section` and
+        * `article` contexts in Chrome, Firefox, and Safari.
+        */
+
+           h1 {
+               font-size: 2em;
+               margin: 0.67em 0;
+           }
+
+           /**
+        * Add the correct background and color in IE 9-.
+        */
+
+           mark {
+               background-color: #ff0;
+               color: #000;
+           }
+
+           /**
+        * Add the correct font size in all browsers.
+        */
+
+           small {
+               font-size: 80%;
+           }
+
+           /**
+        * Prevent `sub` and `sup` elements from affecting the line height in
+        * all browsers.
+        */
+
+           sub,
+           sup {
+               font-size: 75%;
+               line-height: 0;
+               position: relative;
+               vertical-align: baseline;
+           }
+
+           sub {
+               bottom: -0.25em;
+           }
+
+           sup {
+               top: -0.5em;
+           }
+
+           /* Embedded content
+          ========================================================================== */
+
+           /**
+        * Remove the border on images inside links in IE 10-.
+        */
+
+           img {
+               border-style: none;
+           }
+
+           /**
+        * Hide the overflow in IE.
+        */
+
+           svg:not(:root) {
+               overflow: hidden;
+           }
+
+           /* Grouping content
+          ========================================================================== */
+
+           /**
+        * 1. Correct the inheritance and scaling of font size in all browsers.
+        * 2. Correct the odd `em` font sizing in all browsers.
+        */
+
+           code,
+           kbd,
+           pre,
+           samp {
+               font-family: monospace, monospace; /* 1 */
+               font-size: 1em; /* 2 */
+           }
+
+           /**
+        * Add the correct margin in IE 8.
+        */
+
+           figure {
+               margin: 1em 40px;
+           }
+
+           /**
+        * 1. Add the correct box sizing in Firefox.
+        * 2. Show the overflow in Edge and IE.
+        */
+
+           hr {
+               box-sizing: content-box; /* 1 */
+               height: 0; /* 1 */
+               overflow: visible; /* 2 */
+           }
+
+           /* Forms
+          ========================================================================== */
+
+           /**
+        * 1. Change font properties to `inherit` in all browsers (opinionated).
+        * 2. Remove the margin in Firefox and Safari.
+        */
+
+           button,
+           input,
+           select,
+           textarea {
+               font: inherit; /* 1 */
+               margin: 0; /* 2 */
+           }
+
+           /**
+        * Restore the font weight unset by the previous rule.
+        */
+
+           optgroup {
+               font-weight: bold;
+           }
+
+           /**
+        * Show the overflow in IE.
+        * 1. Show the overflow in Edge.
+        */
+
+           button,
+           input { /* 1 */
+               overflow: visible;
+           }
+
+           /**
+        * Remove the inheritance of text transform in Edge, Firefox, and IE.
+        * 1. Remove the inheritance of text transform in Firefox.
+        */
+
+           button,
+           select { /* 1 */
+               text-transform: none;
+           }
+
+           /**
+        * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+        *    controls in Android 4.
+        * 2. Correct the inability to style clickable types in iOS and Safari.
+        */
+
+           button,
+           html [type="button"], /* 1 */
+           [type="reset"],
+           [type="submit"] {
+               -webkit-appearance: button; /* 2 */
+           }
+
+               /**
+        * Remove the inner border and padding in Firefox.
+        */
+
+               button::-moz-focus-inner,
+               [type="button"]::-moz-focus-inner,
+               [type="reset"]::-moz-focus-inner,
+               [type="submit"]::-moz-focus-inner {
+                   border-style: none;
+                   padding: 0;
+               }
+
+               /**
+        * Restore the focus styles unset by the previous rule.
+        */
+
+               button:-moz-focusring,
+               [type="button"]:-moz-focusring,
+               [type="reset"]:-moz-focusring,
+               [type="submit"]:-moz-focusring {
+                   outline: 1px dotted ButtonText;
+               }
+
+           /**
+        * Change the border, margin, and padding in all browsers (opinionated).
+        */
+
+           fieldset {
+               border: 1px solid #c0c0c0;
+               margin: 0 2px;
+               padding: 0.35em 0.625em 0.75em;
+           }
+
+           /**
+        * 1. Correct the text wrapping in Edge and IE.
+        * 2. Correct the color inheritance from `fieldset` elements in IE.
+        * 3. Remove the padding so developers are not caught out when they zero out
+        *    `fieldset` elements in all browsers.
+        */
+
+           legend {
+               box-sizing: border-box; /* 1 */
+               color: inherit; /* 2 */
+               display: table; /* 1 */
+               max-width: 100%; /* 1 */
+               padding: 0; /* 3 */
+               white-space: normal; /* 1 */
+           }
+
+           /**
+        * Remove the default vertical scrollbar in IE.
+        */
+
+           textarea {
+               overflow: auto;
+           }
+
+           /**
+        * 1. Add the correct box sizing in IE 10-.
+        * 2. Remove the padding in IE 10-.
+        */
+
+           [type="checkbox"],
+           [type="radio"] {
+               box-sizing: border-box; /* 1 */
+               padding: 0; /* 2 */
+           }
+
+           /**
+        * Correct the cursor style of increment and decrement buttons in Chrome.
+        */
+
+           [type="number"]::-webkit-inner-spin-button,
+           [type="number"]::-webkit-outer-spin-button {
+               height: auto;
+           }
+
+           /**
+        * 1. Correct the odd appearance in Chrome and Safari.
+        * 2. Correct the outline style in Safari.
+        */
+
+           [type="search"] {
+               -webkit-appearance: textfield; /* 1 */
+               outline-offset: -2px; /* 2 */
+           }
+
+               /**
+        * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+        */
+
+               [type="search"]::-webkit-search-cancel-button,
+               [type="search"]::-webkit-search-decoration {
+                   -webkit-appearance: none;
+               }
+
+           /**
+        * Correct the text style of placeholders in Chrome, Edge, and Safari.
+        */
+
+           ::-webkit-input-placeholder {
+               color: inherit;
+               opacity: 0.54;
+           }
+
+           /**
+        * 1. Correct the inability to style clickable types in iOS and Safari.
+        * 2. Change font properties to `inherit` in Safari.
+        */
+
+           ::-webkit-file-upload-button {
+               -webkit-appearance: button; /* 1 */
+               font: inherit; /* 2 */
+           }
+    </style>
+    <style>
+        /* Template specific styles */
+
+        body {
+            font-size: 10px;
+            margin: 25px;
+            line-height: 17px;
+        }
+ 
+        footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap:  nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 53px;
+            width: 240px;
+            margin-right: 15px;
+        }
+
+        .disclaimer {
+            flex-direction: row;
+            box-sizing: border-box;
+            display: flex;
+            align-content: stretch flex-start;
+            align-items: stretch;
+            flex: 1 1 0%;
+            margin-right: 1rem;
+        }
+    </style>
+    <footer>
+        <img class="logo" src="data:image/png;base64,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"/>
+        <div class="disclaimer">
+            <span>
+                @Model.Labels.GenerationMessage&nbsp;@Model.CreationDate.ToString(Model.Labels.GenerationDateFormat)<br />
+                @Model.Labels.Disclaimer
+            </span>
+        </div>
+        <div>@Model.Labels.PageNumberTitle&nbsp;&p;&nbsp;@Model.Labels.PageNumberDivider&nbsp;&P;&nbsp;</div>
+    </footer>
+</body>
+</html>

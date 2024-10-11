@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core.Extensions",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

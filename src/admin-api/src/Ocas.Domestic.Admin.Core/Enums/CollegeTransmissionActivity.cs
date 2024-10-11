@@ -1,0 +1,36 @@
+﻿namespace Ocas.Domestic.Apply.Admin.Enums
+{
+    public enum CollegeTransmissionActivity
+    {
+        ACI = 1,
+        ACN = 2,
+        ACP = 3,
+        ACR = 4,
+        ACU = 5,
+        ACX = 6,
+        ACW = 7,
+        CCD = 8,
+        CCI = 9,
+        CCN = 10,
+        CCU = 11,
+        CCY = 12,
+        ECD = 13,
+        ECI = 14,
+        ECU = 15,
+        GCD = 16,
+        GCI = 17,
+        GCU = 18,
+        ICD = 19,
+        ICI = 20,
+        ICU = 21,
+        NCD = 22,
+        NCI = 23,
+        NCU = 24,
+        SCD = 25,
+        SCI = 26,
+        SCU = 27,
+        TCD = 28,
+        TCI = 29,
+        TCU = 30,
+    }
+}

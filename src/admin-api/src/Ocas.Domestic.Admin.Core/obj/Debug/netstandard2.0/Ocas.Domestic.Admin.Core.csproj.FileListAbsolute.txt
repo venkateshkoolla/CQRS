@@ -1,0 +1,8 @@
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.deps.json
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\bin\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.Core\obj\Debug\netstandard2.0\Ocas.Domestic.Admin.Core.pdb

@@ -1,0 +1,55 @@
+2020-03-16 09:58:17.234 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 10:12:57.557 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 11:53:50.780 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 11:59:41.064 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 13:00:19.033 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 13:26:29.593 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 15:11:11.324 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 15:12:06.569 -04:00 [FTL] HTTP REQUEST PUT to applications/4c48d3fd-3ab0-44c1-b6a5-9b0c190b3abe/program-choices responded BadRequest.
+Ocas.Domestic.Apply.Api.Client.StatusCodeException: ==============================================================
+Status of BadRequest code 400
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0040 | Intake must be in the application's cycle.
+==============================================================
+
+   at Ocas.Domestic.Apply.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 269
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Api.Client.ApplyApiClient.<ThrowStatusCodeExceptionAsync>d__50.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 245
+2020-03-16 15:12:06.663 -04:00 [FTL] HTTP RESPONSE PUT to applications/4c48d3fd-3ab0-44c1-b6a5-9b0c190b3abe/program-choices responded BadRequest.
+Ocas.Domestic.Apply.Api.Client.StatusCodeException: ==============================================================
+Status of BadRequest code 400
+OcasHttpResponseMessage | Level   | Code  | Message
+OcasHttpResponseMessage | Error   | E0040 | Intake must be in the application's cycle.
+==============================================================
+
+   at Ocas.Domestic.Apply.Api.Client.HttpResponseMessageExtensions.<ThrowStatusCodeExceptionAsync>d__0.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 269
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Ocas.Domestic.Apply.Api.Client.ApplyApiClient.<ThrowStatusCodeExceptionAsync>d__50.MoveNext() in C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Api.Client\ApplyApiClient.cs:line 245
+2020-03-16 15:20:11.636 -04:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-03-16 15:21:46.110 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicants/896d5ca7-d002-4413-b2b1-5e40fb10f411  
+2020-03-16 15:21:46.841 -04:00 [INF] Route matched with {action = "Get", controller = "Applicants"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api)
+2020-03-16 15:21:47.345 -04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-03-16 15:21:47.408 -04:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-16 15:21:47.408 -04:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-03-16 15:21:47.549 -04:00 [INF] Successfully validated the token.
+2020-03-16 15:21:47.576 -04:00 [INF] Authorization was successful.
+2020-03-16 15:21:47.707 -04:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api) with arguments (["896d5ca7-d002-4413-b2b1-5e40fb10f411"]) - Validation state: "Valid"
+2020-03-16 15:25:08.813 -04:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 201091.9261ms.
+2020-03-16 15:25:08.839 -04:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.ApplicantSummary'.
+2020-03-16 15:25:08.925 -04:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantsController.Get (Ocas.Domestic.Admin.Api) in 202076.8483ms
+2020-03-16 15:25:08.929 -04:00 [INF] HTTP Request Body Logged in Event Properties
+2020-03-16 15:25:08.934 -04:00 [INF] HTTP GET /api/v1/applicants/896d5ca7-d002-4413-b2b1-5e40fb10f411 responded 200 in 202762.18430000002 ms
+2020-03-16 15:25:08.994 -04:00 [INF] Request finished in 202887.5281ms 200 application/json; charset=utf-8

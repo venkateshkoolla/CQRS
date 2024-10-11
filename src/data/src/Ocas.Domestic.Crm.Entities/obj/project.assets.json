@@ -1,0 +1,485 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "Microsoft.Build.Tasks.Git/1.0.0-beta2-19367-01": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Build.Tasks.Git.props": {},
+          "build/Microsoft.Build.Tasks.Git.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildCrossTargeting/Microsoft.Build.Tasks.Git.props": {},
+          "buildCrossTargeting/Microsoft.Build.Tasks.Git.targets": {}
+        }
+      },
+      "Microsoft.CrmSdk.CoreAssemblies/6.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel": "6.1.7600.16394"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.IdentityModel",
+          "System.Core",
+          "System.DirectoryServices",
+          "System.DirectoryServices.AccountManagement",
+          "System.IdentityModel",
+          "System.Runtime.Serialization",
+          "System.Security",
+          "System.ServiceModel",
+          "System.ServiceModel.Web",
+          "System.Web",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Crm.Sdk.Proxy.dll": {},
+          "lib/net45/Microsoft.Xrm.Sdk.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Crm.Sdk.Proxy.dll": {},
+          "lib/net45/Microsoft.Xrm.Sdk.dll": {}
+        }
+      },
+      "Microsoft.CrmSdk.Deployment/6.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CrmSdk.CoreAssemblies": "6.0.2"
+        },
+        "frameworkAssemblies": [
+          "System.Web.Services"
+        ],
+        "compile": {
+          "lib/net40/Microsoft.Xrm.Sdk.Deployment.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Xrm.Sdk.Deployment.dll": {}
+        }
+      },
+      "Microsoft.CrmSdk.Extensions/6.0.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CrmSdk.CoreAssemblies": "6.0.4",
+          "Microsoft.CrmSdk.Deployment": "6.0.4",
+          "WindowsAzure.ServiceBus": "2.1.2"
+        },
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Configuration",
+          "System.Data",
+          "System.Data.Services",
+          "System.Data.Services.Client",
+          "System.Design",
+          "System.Drawing",
+          "System.Runtime.Caching",
+          "System.Security",
+          "System.ServiceModel.Activation",
+          "System.ServiceModel.Web",
+          "System.Web",
+          "System.Web.ApplicationServices",
+          "System.Web.Extensions",
+          "System.Web.Services",
+          "System.Xml.Linq",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net40/AntiXSSLibrary.dll": {},
+          "lib/net40/Microsoft.Xrm.Client.CodeGeneration.dll": {},
+          "lib/net40/Microsoft.Xrm.Client.dll": {},
+          "lib/net40/Microsoft.Xrm.Portal.Files.dll": {},
+          "lib/net40/Microsoft.Xrm.Portal.dll": {}
+        },
+        "runtime": {
+          "lib/net40/AntiXSSLibrary.dll": {},
+          "lib/net40/Microsoft.Xrm.Client.CodeGeneration.dll": {},
+          "lib/net40/Microsoft.Xrm.Client.dll": {},
+          "lib/net40/Microsoft.Xrm.Portal.Files.dll": {},
+          "lib/net40/Microsoft.Xrm.Portal.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel/6.1.7600.16394": {
+        "type": "package",
+        "compile": {
+          "lib/net35/Microsoft.IdentityModel.dll": {}
+        },
+        "runtime": {
+          "lib/net35/Microsoft.IdentityModel.dll": {}
+        }
+      },
+      "Microsoft.SourceLink.Common/1.0.0-beta2-19367-01": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.SourceLink.Common.props": {},
+          "build/Microsoft.SourceLink.Common.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildCrossTargeting/Microsoft.SourceLink.Common.props": {},
+          "buildCrossTargeting/Microsoft.SourceLink.Common.targets": {}
+        }
+      },
+      "Microsoft.SourceLink.Vsts.Git/1.0.0-beta2-19367-01": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.0.0-beta2-19367-01",
+          "Microsoft.SourceLink.Common": "1.0.0-beta2-19367-01"
+        },
+        "build": {
+          "build/Microsoft.SourceLink.Vsts.Git.props": {},
+          "build/Microsoft.SourceLink.Vsts.Git.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.props": {},
+          "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.targets": {}
+        }
+      },
+      "Microsoft.WindowsAzure.ConfigurationManager/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.WindowsAzure.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.WindowsAzure.Configuration.dll": {}
+        }
+      },
+      "WindowsAzure.ServiceBus/2.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.WindowsAzure.ConfigurationManager": "2.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Runtime.Serialization",
+          "System.ServiceModel",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net40-full/Microsoft.ServiceBus.dll": {}
+        },
+        "runtime": {
+          "lib/net40-full/Microsoft.ServiceBus.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Build.Tasks.Git/1.0.0-beta2-19367-01": {
+      "sha512": "3kbkb7aUF41YuJnQzoCJRbjb6bgYY3KHlJ9GGJZ30Y5ytdFusLAC5o3/kfE+Vm6slvu4EBgIwMUknL6U+Pu9uA==",
+      "type": "package",
+      "path": "microsoft.build.tasks.git/1.0.0-beta2-19367-01",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.Build.Tasks.Git.props",
+        "build/Microsoft.Build.Tasks.Git.targets",
+        "buildCrossTargeting/Microsoft.Build.Tasks.Git.props",
+        "buildCrossTargeting/Microsoft.Build.Tasks.Git.targets",
+        "microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+        "microsoft.build.tasks.git.nuspec",
+        "tools/net461/Microsoft.Build.Tasks.Git.dll",
+        "tools/net461/Microsoft.Build.Tasks.Git.pdb",
+        "tools/net461/System.Collections.Immutable.dll",
+        "tools/net461/cs/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/de/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/es/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/fr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/it/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/ja/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/ko/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/pl/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/pt-BR/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/ru/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/tr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/zh-Hans/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/zh-Hant/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/Microsoft.Build.Tasks.Git.dll",
+        "tools/netcoreapp2.0/Microsoft.Build.Tasks.Git.pdb",
+        "tools/netcoreapp2.0/cs/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/de/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/es/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/fr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/it/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/ja/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/ko/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/pl/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/pt-BR/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/ru/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/tr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hans/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hant/Microsoft.Build.Tasks.Git.resources.dll"
+      ]
+    },
+    "Microsoft.CrmSdk.CoreAssemblies/6.1.2": {
+      "sha512": "2kwUqXj3/hmhVqM90JfSpNvGpkvfG5p1VWrtb3bSDMvkiodoJI+rNXT+vxoCrOaYVCm19wXBiwH15bd/41ULYg==",
+      "type": "package",
+      "path": "microsoft.crmsdk.coreassemblies/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/bin/coretools/CrmSvcUtil.exe",
+        "content/bin/coretools/CrmSvcUtil.xml",
+        "content/bin/coretools/Microsoft.Xrm.Sdk.dll",
+        "content/bin/coretools/SolutionPackager.exe",
+        "lib/net40/LicenseTerms.docx",
+        "lib/net40/Microsoft.Crm.Sdk.Proxy.dll",
+        "lib/net40/Microsoft.Crm.Sdk.Proxy.xml",
+        "lib/net40/Microsoft.Xrm.Sdk.dll",
+        "lib/net40/Microsoft.Xrm.Sdk.xml",
+        "lib/net40/Other Redistributable.txt",
+        "lib/net40/Third Party Notices for CRM 2013 SDK.docx",
+        "lib/net45/LicenseTerms.docx",
+        "lib/net45/Microsoft.Crm.Sdk.Proxy.dll",
+        "lib/net45/Microsoft.Crm.Sdk.Proxy.xml",
+        "lib/net45/Microsoft.Xrm.Sdk.dll",
+        "lib/net45/Microsoft.Xrm.Sdk.xml",
+        "lib/net45/Other Redistributable.txt",
+        "lib/net45/Third Party Notices for CRM 2013 SDK.docx",
+        "microsoft.crmsdk.coreassemblies.6.1.2.nupkg.sha512",
+        "microsoft.crmsdk.coreassemblies.nuspec"
+      ]
+    },
+    "Microsoft.CrmSdk.Deployment/6.0.4": {
+      "sha512": "uS+R3XzhdveRHHmhZvJN6jY+RxY3aB5UIUyuN4uHreqtyrccbm2ClDBJQ8FR1a/NOC6F9tfjfFeXECcPOzEPtg==",
+      "type": "package",
+      "path": "microsoft.crmsdk.deployment/6.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LicenseTerms.docx",
+        "lib/net40/Microsoft.Xrm.Sdk.Deployment.dll",
+        "lib/net40/Microsoft.Xrm.Sdk.Deployment.xml",
+        "lib/net40/Other Redistributable.txt",
+        "lib/net40/Third Party Notices for CRM 2013 SDK.docx",
+        "microsoft.crmsdk.deployment.6.0.4.nupkg.sha512",
+        "microsoft.crmsdk.deployment.nuspec"
+      ]
+    },
+    "Microsoft.CrmSdk.Extensions/6.0.4.1": {
+      "sha512": "Fezq5OhVyv6AbpO2G/Q4KxFosAqocdx0Fb7DPtuUzf1ga+McDnbcwjJRtqd7PXsviOI/QclaKkuyKRIIRE2jQA==",
+      "type": "package",
+      "path": "microsoft.crmsdk.extensions/6.0.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/bin/tools/CrmSvcUtil.exe",
+        "content/bin/tools/CrmSvcUtil.xml",
+        "content/bin/tools/Microsoft.Crm.Sdk.Proxy.dll",
+        "content/bin/tools/Microsoft.Xrm.Client.dll",
+        "content/bin/tools/Microsoft.Xrm.Sdk.dll",
+        "content/bin/tools/WebsiteCopy.exe",
+        "lib/net40/AntiXSSLibrary.dll",
+        "lib/net40/LicenseTerms.docx",
+        "lib/net40/Microsoft.Xrm.Client.CodeGeneration.dll",
+        "lib/net40/Microsoft.Xrm.Client.dll",
+        "lib/net40/Microsoft.Xrm.Client.xml",
+        "lib/net40/Microsoft.Xrm.Portal.Files.dll",
+        "lib/net40/Microsoft.Xrm.Portal.dll",
+        "lib/net40/Microsoft.Xrm.Portal.xml",
+        "lib/net40/Other Redistributable.txt",
+        "lib/net40/Third Party Notices for CRM 2013 SDK.docx",
+        "microsoft.crmsdk.extensions.6.0.4.1.nupkg.sha512",
+        "microsoft.crmsdk.extensions.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel/6.1.7600.16394": {
+      "sha512": "qsst2HALUxXdDVmOEk6GJ8U7LNbrQIpIiPesdD+k99TuRc5zy+J4zK4fNpiX+hiMd4cCGoY9WIT3f021Syocdw==",
+      "type": "package",
+      "path": "microsoft.identitymodel/6.1.7600.16394",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Microsoft.IdentityModel.dll",
+        "microsoft.identitymodel.6.1.7600.16394.nupkg.sha512",
+        "microsoft.identitymodel.nuspec"
+      ]
+    },
+    "Microsoft.SourceLink.Common/1.0.0-beta2-19367-01": {
+      "sha512": "T6ZEkbRgqcmDoTQDn0ES4FcXiq6uOiqPmbb+hCnKQ/i45W3WjM1+hfNGmsXvTK/e/AqEGiqtXJIi9ZtmbHnzHQ==",
+      "type": "package",
+      "path": "microsoft.sourcelink.common/1.0.0-beta2-19367-01",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/InitializeSourceControlInformation.targets",
+        "build/Microsoft.SourceLink.Common.props",
+        "build/Microsoft.SourceLink.Common.targets",
+        "buildCrossTargeting/Microsoft.SourceLink.Common.props",
+        "buildCrossTargeting/Microsoft.SourceLink.Common.targets",
+        "microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+        "microsoft.sourcelink.common.nuspec",
+        "tools/net461/Microsoft.SourceLink.Common.dll",
+        "tools/net461/Microsoft.SourceLink.Common.pdb",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Common.dll",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Common.pdb",
+        "tools/netcoreapp2.0/cs/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/de/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/es/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/fr/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/it/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/ja/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/ko/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/pl/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/pt-BR/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/ru/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/tr/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/zh-Hans/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/zh-Hant/Microsoft.SourceLink.Common.resources.dll"
+      ]
+    },
+    "Microsoft.SourceLink.Vsts.Git/1.0.0-beta2-19367-01": {
+      "sha512": "vfYRwh2jIQ5XFmqk9BebaGnj3tL9p1hkZ270NMXutiE7jCGH1zMB+3HCPec6DpnC4V3XX1oWlwAXoxNtXB90pQ==",
+      "type": "package",
+      "path": "microsoft.sourcelink.vsts.git/1.0.0-beta2-19367-01",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.SourceLink.Vsts.Git.props",
+        "build/Microsoft.SourceLink.Vsts.Git.targets",
+        "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.props",
+        "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.targets",
+        "microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+        "microsoft.sourcelink.vsts.git.nuspec",
+        "tools/net461/Microsoft.SourceLink.Vsts.Git.dll",
+        "tools/net461/Microsoft.SourceLink.Vsts.Git.pdb",
+        "tools/net461/cs/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/de/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/es/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/fr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/it/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/ja/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/ko/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/pl/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/pt-BR/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/ru/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/tr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/zh-Hans/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/zh-Hant/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Vsts.Git.dll",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Vsts.Git.pdb",
+        "tools/netcoreapp2.0/cs/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/de/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/es/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/fr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/it/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/ja/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/ko/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/pl/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/pt-BR/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/ru/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/tr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hans/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hant/Microsoft.SourceLink.Vsts.Git.resources.dll"
+      ]
+    },
+    "Microsoft.WindowsAzure.ConfigurationManager/2.0.0": {
+      "sha512": "ginHXqd4cmzn5rVD5uGKKRdRVDkFHLpdKpT9bEOadUSlZULdIaacOGeoNzWVB8HT3s53LN62jKM5Nh9+yH0i+A==",
+      "type": "package",
+      "path": "microsoft.windowsazure.configurationmanager/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.WindowsAzure.Configuration.dll",
+        "microsoft.windowsazure.configurationmanager.2.0.0.nupkg.sha512",
+        "microsoft.windowsazure.configurationmanager.nuspec"
+      ]
+    },
+    "WindowsAzure.ServiceBus/2.1.2": {
+      "sha512": "3+J+vfCxYTS1zbJvZgwpO4agus4T3FVJ5sVH9SL2UKsi/sdzR816T0vK1bEyoJUeTP+QqTDrmdJ6S01OvJrmQA==",
+      "type": "package",
+      "path": "windowsazure.servicebus/2.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/app.config.transform",
+        "content/web.config.transform",
+        "lib/net40-full/Microsoft.ServiceBus.dll",
+        "lib/net40-full/Microsoft.ServiceBus.xml",
+        "windowsazure.servicebus.2.1.2.nupkg.sha512",
+        "windowsazure.servicebus.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "Microsoft.CrmSdk.CoreAssemblies >= 6.1.2",
+      "Microsoft.CrmSdk.Extensions >= 6.0.4.1",
+      "Microsoft.SourceLink.Vsts.Git >= 1.0.0-*",
+      "Ocas.Analyzers >= 0.1.18"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\vishw\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj",
+      "projectName": "Ocas.Domestic.Crm.Entities",
+      "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj",
+      "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+        "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "Microsoft.CrmSdk.CoreAssemblies": {
+            "target": "Package",
+            "version": "[6.1.2, )"
+          },
+          "Microsoft.CrmSdk.Extensions": {
+            "target": "Package",
+            "version": "[6.0.4.1, )"
+          },
+          "Microsoft.SourceLink.Vsts.Git": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.0-*, )"
+          },
+          "Ocas.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[0.1.18, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Ocas.Analyzers. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Ocas.Analyzers",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "NormingGroup": "AUDIOLOGIST",
+  "ApplicationCycle": "2019",
+  "TestType": "PSB/HOAE Occupations Aptitude Examination",
+  "TestTypeCode": "CAC",
+  "Country": "Canada",
+  "ProvinceState": "Ontario",
+  "City": "Guelph",
+  "DateTestTaken": "2019/08/01",
+  "TestDescription": "Dolor ut voluptate harum culpa.",
+  "Details": [
+    {
+      "Description": "VERBAL",
+      "RawScore": "75",
+      "Percentile": null
+    },
+    {
+      "Description": "ARITHMETIC",
+      "RawScore": null,
+      "Percentile": null
+    },
+    {
+      "Description": "NONVERBAL",
+      "RawScore": null,
+      "Percentile": null
+    },
+    {
+      "Description": "ACADEMIC APTITUDE",
+      "RawScore": "85",
+      "Percentile": null
+    },
+    {
+      "Description": "SPELLING",
+      "RawScore": null,
+      "Percentile": null
+    },
+    {
+      "Description": "READING COMPREHENSION",
+      "RawScore": null,
+      "Percentile": null
+    },
+    {
+      "Description": "INFORMATION IN THE NATURAL SCIENCE",
+      "RawScore": "25",
+      "Percentile": null
+    },
+    {
+      "Description": "VOCATIONAL ADJUSTMENT INDEX",
+      "RawScore": null,
+      "Percentile": null
+    }
+  ],
+  "Labels": null
+}

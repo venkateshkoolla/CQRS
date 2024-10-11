@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Mappers\ApiMapper.*.cs">
+      <DependentUpon>ApiMapper.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.4" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="CacheManager.Core" Version="1.2.0" />
+    <PackageReference Include="CacheManager.Microsoft.Extensions.Caching.Memory" Version="1.2.0" />
+    <PackageReference Include="CacheManager.Microsoft.Extensions.Logging" Version="1.2.0" />
+    <PackageReference Include="CacheManager.Serialization.Json" Version="1.2.0" />
+    <PackageReference Include="CacheManager.SystemRuntimeCaching" Version="1.2.0" />
+    <PackageReference Include="FluentValidation" Version="8.5.1" />
+    <PackageReference Include="IdentityModel" Version="3.10.6" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Ocas.Analyzers" Version="0.1.18" PrivateAssets="All" />
+    <PackageReference Include="Ocas.Common" Version="1.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\core\src\Ocas.Domestic.Apply.Common.Services\Ocas.Domestic.Apply.Common.Services.csproj" />
+    <ProjectReference Include="..\..\..\core\src\Ocas.Domestic.Apply.Core.Extensions\Ocas.Domestic.Apply.Core.Extensions.csproj" />
+    <ProjectReference Include="..\..\..\core\src\Ocas.Domestic.Apply.Core\Ocas.Domestic.Apply.Core.csproj" />
+    <ProjectReference Include="..\..\..\data\src\Ocas.Domestic.Coltrane.Bds.Provider\Ocas.Domestic.Coltrane.Bds.Provider.csproj" />
+    <ProjectReference Include="..\..\..\data\src\Ocas.Domestic.Data.Extras\Ocas.Domestic.Data.Extras.csproj" />
+    <ProjectReference Include="..\..\..\data\src\Ocas.Domestic.Data\Ocas.Domestic.Data.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Apply.Core.Extras\Ocas.Domestic.Apply.Core.Extras.csproj" />
+  </ItemGroup>
+  
+</Project>

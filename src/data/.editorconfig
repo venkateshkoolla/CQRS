@@ -1,0 +1,19 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+
+[*]
+indent_style = space
+indent_size = 4
+#charset = utf-8 until they fix https://developercommunity.visualstudio.com/content/problem/100735/since-153-breakpoints-dont-work-when-the-charset-o.html
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[*.config]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false

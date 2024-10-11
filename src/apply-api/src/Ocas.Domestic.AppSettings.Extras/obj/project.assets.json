@@ -1,0 +1,717 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "FluentAssertions.Analyzers/0.11.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System"
+        ]
+      },
+      "MediatR/7.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System"
+        ],
+        "compile": {
+          "lib/net461/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/net461/MediatR.dll": {}
+        }
+      },
+      "Microsoft.Build.Tasks.Git/1.0.0-beta2-19367-01": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Build.Tasks.Git.props": {},
+          "build/Microsoft.Build.Tasks.Git.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildCrossTargeting/Microsoft.Build.Tasks.Git.props": {},
+          "buildCrossTargeting/Microsoft.Build.Tasks.Git.targets": {}
+        }
+      },
+      "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeQuality.Analyzers": "[2.6.3]",
+          "Microsoft.NetCore.Analyzers": "[2.6.3]",
+          "Microsoft.NetFramework.Analyzers": "[2.6.3]",
+          "Text.Analyzers": "[2.6.3]"
+        },
+        "build": {
+          "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props": {}
+        }
+      },
+      "Microsoft.CodeQuality.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CodeQuality.Analyzers.props": {}
+        }
+      },
+      "Microsoft.NetCore.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetCore.Analyzers.props": {}
+        }
+      },
+      "Microsoft.NetFramework.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NetFramework.Analyzers.props": {}
+        }
+      },
+      "Microsoft.SourceLink.Common/1.0.0-beta2-19367-01": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.SourceLink.Common.props": {},
+          "build/Microsoft.SourceLink.Common.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildCrossTargeting/Microsoft.SourceLink.Common.props": {},
+          "buildCrossTargeting/Microsoft.SourceLink.Common.targets": {}
+        }
+      },
+      "Microsoft.SourceLink.Vsts.Git/1.0.0-beta2-19367-01": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.0.0-beta2-19367-01",
+          "Microsoft.SourceLink.Common": "1.0.0-beta2-19367-01"
+        },
+        "build": {
+          "build/Microsoft.SourceLink.Vsts.Git.props": {},
+          "build/Microsoft.SourceLink.Vsts.Git.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.props": {},
+          "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Ocas.Analyzers/0.1.18": {
+        "type": "package",
+        "dependencies": {
+          "FluentAssertions.Analyzers": "0.11.4",
+          "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.6.3",
+          "Roslynator.Analyzers": "2.0.0",
+          "StyleCop.Analyzers": "1.0.2",
+          "xunit.analyzers": "0.10.0"
+        },
+        "build": {
+          "build/Ocas.Analyzers.props": {}
+        }
+      },
+      "Ocas.Common/1.4.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Configuration",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net461/Ocas.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Ocas.Common.dll": {}
+        }
+      },
+      "Roslynator.Analyzers/2.0.0": {
+        "type": "package"
+      },
+      "StyleCop.Analyzers/1.0.2": {
+        "type": "package"
+      },
+      "Text.Analyzers/2.6.3": {
+        "type": "package",
+        "build": {
+          "build/Text.Analyzers.props": {}
+        }
+      },
+      "xunit.analyzers/0.10.0": {
+        "type": "package"
+      },
+      "Ocas.Domestic.Apply.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "Ocas.Common": "1.4.4",
+          "Ocas.Domestic.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ocas.Domestic.Apply.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ocas.Domestic.Apply.Core.dll": {}
+        }
+      },
+      "Ocas.Domestic.Apply.Core.Extras/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "MediatR": "7.0.0",
+          "Ocas.Common": "1.4.4",
+          "Ocas.Domestic.Apply.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ocas.Domestic.Apply.Core.Extras.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ocas.Domestic.Apply.Core.Extras.dll": {}
+        }
+      },
+      "Ocas.Domestic.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "compile": {
+          "bin/placeholder/Ocas.Domestic.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ocas.Domestic.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentAssertions.Analyzers/0.11.4": {
+      "sha512": "zSCkwOgc5OyfMfEeMr9x0K7WCDf8i6VdF2RtCLN/4m6iebTtJQdeoJ9IS4/RyYHuLUYjrm0sd+siWbaSvSzRYQ==",
+      "type": "package",
+      "path": "fluentassertions.analyzers/0.11.4",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/FluentAssertions.Analyzers.dll",
+        "fluentassertions.analyzers.0.11.4.nupkg.sha512",
+        "fluentassertions.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "MediatR/7.0.0": {
+      "sha512": "sgfHxkBsmMlHOD564SnLqTvSbAuGlFiZfc6ybxBSI1wYV/2u+Y5TXtFoIhCISFg5/s/6aMvB338QC2JseHsjTA==",
+      "type": "package",
+      "path": "mediatr/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/MediatR.dll",
+        "lib/netstandard2.0/MediatR.dll",
+        "mediatr.7.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "Microsoft.Build.Tasks.Git/1.0.0-beta2-19367-01": {
+      "sha512": "3kbkb7aUF41YuJnQzoCJRbjb6bgYY3KHlJ9GGJZ30Y5ytdFusLAC5o3/kfE+Vm6slvu4EBgIwMUknL6U+Pu9uA==",
+      "type": "package",
+      "path": "microsoft.build.tasks.git/1.0.0-beta2-19367-01",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.Build.Tasks.Git.props",
+        "build/Microsoft.Build.Tasks.Git.targets",
+        "buildCrossTargeting/Microsoft.Build.Tasks.Git.props",
+        "buildCrossTargeting/Microsoft.Build.Tasks.Git.targets",
+        "microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+        "microsoft.build.tasks.git.nuspec",
+        "tools/net461/Microsoft.Build.Tasks.Git.dll",
+        "tools/net461/Microsoft.Build.Tasks.Git.pdb",
+        "tools/net461/System.Collections.Immutable.dll",
+        "tools/net461/cs/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/de/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/es/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/fr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/it/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/ja/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/ko/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/pl/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/pt-BR/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/ru/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/tr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/zh-Hans/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/net461/zh-Hant/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/Microsoft.Build.Tasks.Git.dll",
+        "tools/netcoreapp2.0/Microsoft.Build.Tasks.Git.pdb",
+        "tools/netcoreapp2.0/cs/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/de/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/es/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/fr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/it/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/ja/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/ko/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/pl/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/pt-BR/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/ru/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/tr/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hans/Microsoft.Build.Tasks.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hant/Microsoft.Build.Tasks.Git.resources.dll"
+      ]
+    },
+    "Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3": {
+      "sha512": "E/kXJSnsacm1KIN+6sj9R5/gH6XpOvghxWNCS0SQP5xCXfCwz2EHFLp+27GTHyBLYisEm8XLLcex2dD2Zf89wA==",
+      "type": "package",
+      "path": "microsoft.codeanalysis.fxcopanalyzers/2.6.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "build/Microsoft.CodeAnalysis.FxCopAnalyzers.props",
+        "microsoft.codeanalysis.fxcopanalyzers.2.6.3.nupkg.sha512",
+        "microsoft.codeanalysis.fxcopanalyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/DocumentationRulesDefault.ruleset",
+        "rulesets/DocumentationRulesEnabled.ruleset",
+        "rulesets/GlobalizationRulesDefault.ruleset",
+        "rulesets/GlobalizationRulesEnabled.ruleset",
+        "rulesets/InteroperabilityRulesDefault.ruleset",
+        "rulesets/InteroperabilityRulesEnabled.ruleset",
+        "rulesets/MaintainabilityRulesDefault.ruleset",
+        "rulesets/MaintainabilityRulesEnabled.ruleset",
+        "rulesets/NamingRulesDefault.ruleset",
+        "rulesets/NamingRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "rulesets/legacy/AllRules.ruleset",
+        "rulesets/legacy/BasicCorrectnessRules.ruleset",
+        "rulesets/legacy/BasicDesignGuidelineRules.ruleset",
+        "rulesets/legacy/ExtendedCorrectnessRules.ruleset",
+        "rulesets/legacy/ExtendedDesignGuidelineRules.ruleset",
+        "rulesets/legacy/GlobalizationRules.ruleset",
+        "rulesets/legacy/ManagedMinimumRules.ruleset",
+        "rulesets/legacy/MinimumRecommendedRules.ruleset",
+        "rulesets/legacy/Sdl-7.1.Recommended.ruleset",
+        "rulesets/legacy/Sdl-7.1.Required.ruleset",
+        "rulesets/legacy/SecurityRules.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.CodeQuality.Analyzers/2.6.3": {
+      "sha512": "U/MAQFehzMrN59yaSb9fEq/7itgwoG4NrQXy7EL61Ln7KV/qOJ8VZh4ts+d3N3w6HH2RDQ4xVjhycgqYm+Gj0A==",
+      "type": "package",
+      "path": "microsoft.codequality.analyzers/2.6.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Humanizer.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeQuality.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.CodeQuality.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Humanizer.dll",
+        "analyzers/dotnet/vb/Microsoft.CodeQuality.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.CodeQuality.VisualBasic.Analyzers.dll",
+        "build/Microsoft.CodeQuality.Analyzers.props",
+        "microsoft.codequality.analyzers.2.6.3.nupkg.sha512",
+        "microsoft.codequality.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/DocumentationRulesDefault.ruleset",
+        "rulesets/DocumentationRulesEnabled.ruleset",
+        "rulesets/MaintainabilityRulesDefault.ruleset",
+        "rulesets/MaintainabilityRulesEnabled.ruleset",
+        "rulesets/NamingRulesDefault.ruleset",
+        "rulesets/NamingRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.NetCore.Analyzers/2.6.3": {
+      "sha512": "L0Fy52hZn6Rd0C6ZSgBcNRoIc4KSbwYQSF/Hs3ILl0Vf1ZsCZq1slU3Sxo3bACE+aIKvWpyJkyIOQRO6PH1mRw==",
+      "type": "package",
+      "path": "microsoft.netcore.analyzers/2.6.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Microsoft.NetCore.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.NetCore.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetCore.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetCore.VisualBasic.Analyzers.dll",
+        "build/Microsoft.NetCore.Analyzers.props",
+        "microsoft.netcore.analyzers.2.6.3.nupkg.sha512",
+        "microsoft.netcore.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/GlobalizationRulesDefault.ruleset",
+        "rulesets/GlobalizationRulesEnabled.ruleset",
+        "rulesets/InteroperabilityRulesDefault.ruleset",
+        "rulesets/InteroperabilityRulesEnabled.ruleset",
+        "rulesets/PerformanceRulesDefault.ruleset",
+        "rulesets/PerformanceRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.NetFramework.Analyzers/2.6.3": {
+      "sha512": "K+QctdrsnYl2f56e4UfQ9/Pp8ZfqYIngDTPfNSFaNLY7P+awkRJqUBov+tfeI3krzFMQ4TfWAsPM3YPUQS/HLw==",
+      "type": "package",
+      "path": "microsoft.netframework.analyzers/2.6.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Microsoft.NetFramework.Analyzers.dll",
+        "analyzers/dotnet/cs/Microsoft.NetFramework.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetFramework.Analyzers.dll",
+        "analyzers/dotnet/vb/Microsoft.NetFramework.VisualBasic.Analyzers.dll",
+        "build/Microsoft.NetFramework.Analyzers.props",
+        "microsoft.netframework.analyzers.2.6.3.nupkg.sha512",
+        "microsoft.netframework.analyzers.nuspec",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "rulesets/DesignRulesDefault.ruleset",
+        "rulesets/DesignRulesEnabled.ruleset",
+        "rulesets/ReliabilityRulesDefault.ruleset",
+        "rulesets/ReliabilityRulesEnabled.ruleset",
+        "rulesets/SecurityRulesDefault.ruleset",
+        "rulesets/SecurityRulesEnabled.ruleset",
+        "rulesets/UsageRulesDefault.ruleset",
+        "rulesets/UsageRulesEnabled.ruleset",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.SourceLink.Common/1.0.0-beta2-19367-01": {
+      "sha512": "T6ZEkbRgqcmDoTQDn0ES4FcXiq6uOiqPmbb+hCnKQ/i45W3WjM1+hfNGmsXvTK/e/AqEGiqtXJIi9ZtmbHnzHQ==",
+      "type": "package",
+      "path": "microsoft.sourcelink.common/1.0.0-beta2-19367-01",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/InitializeSourceControlInformation.targets",
+        "build/Microsoft.SourceLink.Common.props",
+        "build/Microsoft.SourceLink.Common.targets",
+        "buildCrossTargeting/Microsoft.SourceLink.Common.props",
+        "buildCrossTargeting/Microsoft.SourceLink.Common.targets",
+        "microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+        "microsoft.sourcelink.common.nuspec",
+        "tools/net461/Microsoft.SourceLink.Common.dll",
+        "tools/net461/Microsoft.SourceLink.Common.pdb",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Common.dll",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Common.pdb",
+        "tools/netcoreapp2.0/cs/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/de/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/es/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/fr/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/it/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/ja/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/ko/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/pl/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/pt-BR/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/ru/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/tr/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/zh-Hans/Microsoft.SourceLink.Common.resources.dll",
+        "tools/netcoreapp2.0/zh-Hant/Microsoft.SourceLink.Common.resources.dll"
+      ]
+    },
+    "Microsoft.SourceLink.Vsts.Git/1.0.0-beta2-19367-01": {
+      "sha512": "vfYRwh2jIQ5XFmqk9BebaGnj3tL9p1hkZ270NMXutiE7jCGH1zMB+3HCPec6DpnC4V3XX1oWlwAXoxNtXB90pQ==",
+      "type": "package",
+      "path": "microsoft.sourcelink.vsts.git/1.0.0-beta2-19367-01",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.SourceLink.Vsts.Git.props",
+        "build/Microsoft.SourceLink.Vsts.Git.targets",
+        "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.props",
+        "buildCrossTargeting/Microsoft.SourceLink.Vsts.Git.targets",
+        "microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+        "microsoft.sourcelink.vsts.git.nuspec",
+        "tools/net461/Microsoft.SourceLink.Vsts.Git.dll",
+        "tools/net461/Microsoft.SourceLink.Vsts.Git.pdb",
+        "tools/net461/cs/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/de/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/es/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/fr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/it/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/ja/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/ko/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/pl/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/pt-BR/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/ru/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/tr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/zh-Hans/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/net461/zh-Hant/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Vsts.Git.dll",
+        "tools/netcoreapp2.0/Microsoft.SourceLink.Vsts.Git.pdb",
+        "tools/netcoreapp2.0/cs/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/de/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/es/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/fr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/it/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/ja/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/ko/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/pl/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/pt-BR/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/ru/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/tr/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hans/Microsoft.SourceLink.Vsts.Git.resources.dll",
+        "tools/netcoreapp2.0/zh-Hant/Microsoft.SourceLink.Vsts.Git.resources.dll"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Ocas.Analyzers/0.1.18": {
+      "sha512": "X40tPdc5LdhTYhAeTzPor4IV9Q6vCSscYlCE+j8OgdNNyNk9IoCv2y3Rv7pP3rMzErQTQ3WgnnmOkp91gzQ6wg==",
+      "type": "package",
+      "path": "ocas.analyzers/0.1.18",
+      "files": [
+        ".nupkg.metadata",
+        "Ocas.Analyzers.ruleset",
+        "build/Ocas.Analyzers.props",
+        "ocas.analyzers.0.1.18.nupkg.sha512",
+        "ocas.analyzers.nuspec",
+        "stylecop.json"
+      ]
+    },
+    "Ocas.Common/1.4.4": {
+      "sha512": "YQ5eJa1QaNDdMVxjVJI6Kcg9DiZCQOycq08yLt8zESZ2MfE/CmiamgLdQXKQdv8R0mLdd9rLQ7oMBhQ0Jwr8Sg==",
+      "type": "package",
+      "path": "ocas.common/1.4.4",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net461/Ocas.Common.dll",
+        "lib/netstandard2.0/Ocas.Common.dll",
+        "ocas.common.1.4.4.nupkg.sha512",
+        "ocas.common.nuspec"
+      ]
+    },
+    "Roslynator.Analyzers/2.0.0": {
+      "sha512": "0jqZEJDkEMbp15W8bDTkvCzjJ/KpIYm0bM4PiE/7EO7iZNgXIOWolfFShPQR8ZNwRMU4RQD9lJvKLyhXdUZzng==",
+      "type": "package",
+      "path": "roslynator.analyzers/2.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Workspaces.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.dll",
+        "analyzers/dotnet/cs/Roslynator.Common.Workspaces.dll",
+        "analyzers/dotnet/cs/Roslynator.Common.dll",
+        "roslynator.analyzers.2.0.0.nupkg.sha512",
+        "roslynator.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "StyleCop.Analyzers/1.0.2": {
+      "sha512": "3xD87lafnVhsSEtJKk50G7FGutvaXkFz4XrrLrxnk/DhZU42dnCGWUsvKuBv4mTS0XdIgTY88tLhxW/8Vi3Pow==",
+      "type": "package",
+      "path": "stylecop.analyzers/1.0.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.dll",
+        "stylecop.analyzers.1.0.2.nupkg.sha512",
+        "stylecop.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Text.Analyzers/2.6.3": {
+      "sha512": "6XuOLRMw2oBb1umBBXert8g2XBxeZiA4gVAK0UuytnJ9f7e6ZXkgop7JL52vCrx/qWAtxaeUiJBvx3cWaAC3mg==",
+      "type": "package",
+      "path": "text.analyzers/2.6.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.rtf",
+        "analyzers/dotnet/cs/Text.Analyzers.dll",
+        "analyzers/dotnet/cs/Text.CSharp.Analyzers.dll",
+        "analyzers/dotnet/vb/Text.Analyzers.dll",
+        "analyzers/dotnet/vb/Text.VisualBasic.Analyzers.dll",
+        "build/Text.Analyzers.props",
+        "rulesets/AllRulesDefault.ruleset",
+        "rulesets/AllRulesDisabled.ruleset",
+        "rulesets/AllRulesEnabled.ruleset",
+        "text.analyzers.2.6.3.nupkg.sha512",
+        "text.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "xunit.analyzers/0.10.0": {
+      "sha512": "4/IDFCJfIeg6bix9apmUtIMwvOsiwqdEexeO/R2D4GReIGPLIRODTpId/l4LRSrAJk9lEO3Zx1H0Zx6uohJDNg==",
+      "type": "package",
+      "path": "xunit.analyzers/0.10.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/xunit.analyzers.dll",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "xunit.analyzers.0.10.0.nupkg.sha512",
+        "xunit.analyzers.nuspec"
+      ]
+    },
+    "Ocas.Domestic.Apply.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../core/src/Ocas.Domestic.Apply.Core/Ocas.Domestic.Apply.Core.csproj",
+      "msbuildProject": "../../../core/src/Ocas.Domestic.Apply.Core/Ocas.Domestic.Apply.Core.csproj"
+    },
+    "Ocas.Domestic.Apply.Core.Extras/1.0.0": {
+      "type": "project",
+      "path": "../Ocas.Domestic.Apply.Core.Extras/Ocas.Domestic.Apply.Core.Extras.csproj",
+      "msbuildProject": "../Ocas.Domestic.Apply.Core.Extras/Ocas.Domestic.Apply.Core.Extras.csproj"
+    },
+    "Ocas.Domestic.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../data/src/Ocas.Domestic.Core/Ocas.Domestic.Core.csproj",
+      "msbuildProject": "../../../data/src/Ocas.Domestic.Core/Ocas.Domestic.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "Microsoft.SourceLink.Vsts.Git >= 1.0.0-*",
+      "Ocas.Analyzers >= 0.1.18",
+      "Ocas.Domestic.Apply.Core >= 1.0.0",
+      "Ocas.Domestic.Apply.Core.Extras >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\koolla\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj",
+      "projectName": "Ocas.Domestic.AppSettings.Extras",
+      "projectPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj",
+      "packagesPath": "C:\\Users\\koolla\\.nuget\\packages\\",
+      "outputPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.AppSettings.Extras\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\OcasProjects\\apply-api\\NuGet.Config",
+        "C:\\Users\\koolla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/ocas/_packaging/Domestic/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/ocas/_packaging/OcasLibs/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj": {
+              "projectPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj"
+            },
+            "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+              "projectPath": "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "Microsoft.SourceLink.Vsts.Git": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.0-*, )"
+          },
+          "Ocas.Analyzers": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[0.1.18, )"
+          }
+        }
+      }
+    }
+  }
+}

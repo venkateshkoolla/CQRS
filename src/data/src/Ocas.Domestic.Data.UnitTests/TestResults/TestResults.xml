@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b8fb3fc3-59dd-484c-89ae-f305cbdfce46" name="koolla@VISHWA-KOOLLA 2019-10-16 14:20:29" runUser="VISHWA-KOOLLA\koolla" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2019-10-16T14:20:29.9878295-04:00" queuing="2019-10-16T14:20:29.9878295-04:00" start="2019-10-16T14:20:22.8861331-04:00" finish="2019-10-16T14:20:29.9977348-04:00" />
+  <TestSettings name="default" id="1eb4ea63-ac99-4e35-bc2e-93fe216c333d">
+    <Deployment runDeploymentRoot="koolla_VISHWA-KOOLLA_2019-10-16_14_20_29" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f025f99a-e114-4fec-aa72-c3efb418bab2" testId="b397787d-97ed-36d6-0d26-a4f18d570618" testName="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapEducationBase_ShouldReturnCrmEntity_WhenInternationalEducation" computerName="VISHWA-KOOLLA" duration="00:00:00.0190000" startTime="2019-10-16T14:20:29.6357613-04:00" endTime="2019-10-16T14:20:29.6357613-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f025f99a-e114-4fec-aa72-c3efb418bab2" />
+    <UnitTestResult executionId="f780f36d-910d-4a4e-a0a9-128ac8b135e4" testId="37c9efe1-9f25-3f08-5772-6a8e507481cd" testName="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapProgram_Should_ReturnCrmEntity" computerName="VISHWA-KOOLLA" duration="00:00:00.1080000" startTime="2019-10-16T14:20:29.6188061-04:00" endTime="2019-10-16T14:20:29.6188061-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f780f36d-910d-4a4e-a0a9-128ac8b135e4" />
+    <UnitTestResult executionId="1ea26cfc-64ea-4492-b7bb-cfdb65931bf4" testId="c5c858e4-ab05-08e4-fb66-58acd51268a0" testName="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Should_ReturnNull" computerName="VISHWA-KOOLLA" duration="00:00:00.0010000" startTime="2019-10-16T14:20:29.7584371-04:00" endTime="2019-10-16T14:20:29.7584371-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ea26cfc-64ea-4492-b7bb-cfdb65931bf4" />
+    <UnitTestResult executionId="66081277-32fc-42a9-8b08-ee3596839b32" testId="b70756ed-f35e-8f98-a0f0-c92065d47b1b" testName="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapProgramBase_Should_ReturnCrmEntity" computerName="VISHWA-KOOLLA" duration="00:00:00.0020000" startTime="2019-10-16T14:20:29.7554442-04:00" endTime="2019-10-16T14:20:29.7554442-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66081277-32fc-42a9-8b08-ee3596839b32" />
+    <UnitTestResult executionId="2aeaf9e6-4a3d-4712-a3f8-d53aa8ac6bc8" testId="248aeca1-caad-6a55-e169-42bb813ba5eb" testName="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Nullable_Should_ReturnEntityReference" computerName="VISHWA-KOOLLA" duration="00:00:00.0010000" startTime="2019-10-16T14:20:29.7594339-04:00" endTime="2019-10-16T14:20:29.7594339-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2aeaf9e6-4a3d-4712-a3f8-d53aa8ac6bc8" />
+    <UnitTestResult executionId="ad6c3327-540a-407a-854e-a0d13ece6c89" testId="20913c76-941f-d685-6cdc-734e4f3034b5" testName="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapContactBase_Should_ReturnCrmEntity" computerName="VISHWA-KOOLLA" duration="00:00:00.1170000" startTime="2019-10-16T14:20:29.7534206-04:00" endTime="2019-10-16T14:20:29.7534206-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad6c3327-540a-407a-854e-a0d13ece6c89" />
+    <UnitTestResult executionId="28656593-301c-4e18-be96-6c8f2f154f0f" testId="0af0d0a7-b2c7-79ba-ffbe-056610de2a52" testName="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Should_ReturnEntityReference" computerName="VISHWA-KOOLLA" duration="00:00:00.0010000" startTime="2019-10-16T14:20:29.7614290-04:00" endTime="2019-10-16T14:20:29.7614290-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28656593-301c-4e18-be96-6c8f2f154f0f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapContactBase_Should_ReturnCrmEntity" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="20913c76-941f-d685-6cdc-734e4f3034b5">
+      <Execution id="ad6c3327-540a-407a-854e-a0d13ece6c89" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapContactBase_Should_ReturnCrmEntity" />
+    </UnitTest>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapProgram_Should_ReturnCrmEntity" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="37c9efe1-9f25-3f08-5772-6a8e507481cd">
+      <Execution id="f780f36d-910d-4a4e-a0a9-128ac8b135e4" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapProgram_Should_ReturnCrmEntity" />
+    </UnitTest>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Should_ReturnEntityReference" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="0af0d0a7-b2c7-79ba-ffbe-056610de2a52">
+      <Execution id="28656593-301c-4e18-be96-6c8f2f154f0f" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Should_ReturnEntityReference" />
+    </UnitTest>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Nullable_Should_ReturnEntityReference" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="248aeca1-caad-6a55-e169-42bb813ba5eb">
+      <Execution id="2aeaf9e6-4a3d-4712-a3f8-d53aa8ac6bc8" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Nullable_Should_ReturnEntityReference" />
+    </UnitTest>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapProgramBase_Should_ReturnCrmEntity" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="b70756ed-f35e-8f98-a0f0-c92065d47b1b">
+      <Execution id="66081277-32fc-42a9-8b08-ee3596839b32" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapProgramBase_Should_ReturnCrmEntity" />
+    </UnitTest>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapEducationBase_ShouldReturnCrmEntity_WhenInternationalEducation" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="b397787d-97ed-36d6-0d26-a4f18d570618">
+      <Execution id="f025f99a-e114-4fec-aa72-c3efb418bab2" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.CrmMapperTest.MapEducationBase_ShouldReturnCrmEntity_WhenInternationalEducation" />
+    </UnitTest>
+    <UnitTest name="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Should_ReturnNull" storage="c:\ocasprojects\apply-api\src\data\src\ocas.domestic.data.unittests\bin\release\net461\ocas.domestic.data.unittests.dll" id="c5c858e4-ab05-08e4-fb66-58acd51268a0">
+      <Execution id="1ea26cfc-64ea-4492-b7bb-cfdb65931bf4" />
+      <TestMethod codeBase="C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Data.UnitTests\bin\Release\net461\Ocas.Domestic.Data.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/net" className="Ocas.Domestic.Data.UnitTests" name="Ocas.Domestic.Data.UnitTests.Mappers.EntityReferenceMapperTest.ToEntityReference_Should_ReturnNull" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="b397787d-97ed-36d6-0d26-a4f18d570618" executionId="f025f99a-e114-4fec-aa72-c3efb418bab2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37c9efe1-9f25-3f08-5772-6a8e507481cd" executionId="f780f36d-910d-4a4e-a0a9-128ac8b135e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5c858e4-ab05-08e4-fb66-58acd51268a0" executionId="1ea26cfc-64ea-4492-b7bb-cfdb65931bf4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b70756ed-f35e-8f98-a0f0-c92065d47b1b" executionId="66081277-32fc-42a9-8b08-ee3596839b32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="248aeca1-caad-6a55-e169-42bb813ba5eb" executionId="2aeaf9e6-4a3d-4712-a3f8-d53aa8ac6bc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20913c76-941f-d685-6cdc-734e4f3034b5" executionId="ad6c3327-540a-407a-854e-a0d13ece6c89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0af0d0a7-b2c7-79ba-ffbe-056610de2a52" executionId="28656593-301c-4e18-be96-6c8f2f154f0f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.1 (32-bit Desktop .NET 4.0.30319.42000)[xUnit.net 00:00:03.72]   Discovering: Ocas.Domestic.Data.UnitTests[xUnit.net 00:00:03.86]   Discovered:  Ocas.Domestic.Data.UnitTests[xUnit.net 00:00:03.86]   Starting:    Ocas.Domestic.Data.UnitTests[xUnit.net 00:00:06.04]   Finished:    Ocas.Domestic.Data.UnitTests</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

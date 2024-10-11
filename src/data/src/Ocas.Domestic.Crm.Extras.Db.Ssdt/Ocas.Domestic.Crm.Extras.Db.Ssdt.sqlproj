@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Ocas.Domestic.Crm.Extras.Db.Ssdt</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{174fc21d-d05b-4833-b755-c7c1052b4d4f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Ocas.Domestic.Crm.Extras.Db.Ssdt</RootNamespace>
+    <AssemblyName>Ocas.Domestic.Crm.Extras.Db.Ssdt</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetDatabase>Ocas.Domestic.Crm.Db.Ssdt</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="security" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="server" />
+    <Folder Include="server\linked_objects" />
+    <Folder Include="dbo\Types" />
+    <Folder Include="dbo\Types\User-Defined Table Types" />
+    <Folder Include="dbo\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeploy.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="security\db_executor.sql" />
+    <None Include="StaticCodeAnalysis.SuppressMessages.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="Environment">
+      <DefaultValue>none</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="SERVER">
+      <DefaultValue>OCASINTSQL</DefaultValue>
+      <Value>$(SqlCmdVar__6)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Stored Procedures\usp_Programs_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramLanguages_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AdultTrainings_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OfferStudyMethods_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_UnitOfMeasures_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_McuCodes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Credentials_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_EntryLevels_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_StudyAreas_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HighlyCompetitives_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramLevels_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Promotions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramSpecialCodes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_MinistryApprovals_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramCategories_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramSubCategories_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Accounts_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApplicationCycles_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApplicationCycleStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CollegeApplicationCycles_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Cities_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AccountStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AboriginalStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SchoolStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SchoolTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AddressTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Languages_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TestTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_FirstGenerationApplicants_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_FirstLanguages_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Genders_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApplicationStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BasisForAdmissions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CanadianStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramIntakeAvailabilities_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramIntakeStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TranscriptTransmissions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InternationalCreditAssessmentStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CollegeInformations_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Countries_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CourseDeliveries_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CourseLanguages_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CourseStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CourseTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CredentialEvaluationAgencies_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Currencies_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Currents_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HighSchools_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InstituteTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LastGradeCompleteds_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LevelAchieveds_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LevelOfStudies_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Products_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OfferStates_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OfferStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OfferTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PaymentMethods_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PaymentResults_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PreferredCorrespondenceMethods_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PreferredSponsorAgencies_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PrivacyStatements_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProvinceStates_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Sources_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Titles_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TranscriptRequestStatuses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_StatusOfVisas_Get.sql" />
+    <None Include="server\linked_objects\OCASINTSQL.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contacts_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_PreferredLanguages_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AcceptedPrivacyStatements_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_GetCompletedSteps.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_IsDuplicateDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_IsDuplicateEmail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Educations_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Universities_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_GetSubjectId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_IsDuplicateOen.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InternationalCreditAssessments_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Tests_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApplicantMessages_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Applications_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Offers_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramChoices_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramIntakes_Get.sql" />
+    <Build Include="dbo\Types\User-Defined Table Types\udtt_UniqueIdentifierList.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShoppingCarts_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Orders_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TranscriptRequests_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TranscriptRequestLogs_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Vouchers_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_FinancialTransactions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Receipts_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OrderDetails_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_EtmsTranscriptRequests_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_EtmsTranscriptRequestProcesses_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TranscriptRequestExceptions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AcademicRecords_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SupportingDocuments_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Transcripts_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DocumentTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_SupportingDocumentBinaryData_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Officials_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Institutes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_IsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OntarioStudentCourseCredits_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GradeTypes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HighestEducations_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LiteracyTests_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CommunityInvolvements_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_HighSkillsMajors_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OstNotes_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CustomAudits_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CustomAuditDetails_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OfferAcceptances_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ExpiryActions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramEntryLevels_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramIntakeEntrySemesters_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShsmCompletions_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Contact_UserHasAccess.sql" />
+    <Build Include="dbo\Stored Procedures\usp_TranscriptSources_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ShoppingCartDetails_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DocumentDistributionRecords_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DocumentPrints_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Programs_GetApplications.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OntarioHighSchoolCourseCodes_Get.sql" />
+    <Build Include="dbo\Views\view_Offers.sql" />
+    <Build Include="dbo\Views\view_ProgramChoices.sql" />
+    <Build Include="dbo\Views\view_ShoppingCartDetails.sql" />
+    <Build Include="dbo\Views\view_TranscriptRequests.sql" />
+    <Build Include="dbo\Views\view_Contacts.sql" />
+    <Build Include="dbo\Views\view_Applications.sql" />
+    <Build Include="dbo\Views\view_FinancialTransactions.sql" />
+    <Build Include="dbo\Views\view_Receipts.sql" />
+    <Build Include="dbo\Views\view_Orders.sql" />
+    <Build Include="dbo\Views\view_OrderDetails.sql" />
+    <Build Include="dbo\Views\view_CustomAudits.sql" />
+    <Build Include="dbo\Views\view_CustomAuditDetails.sql" />
+    <Build Include="dbo\Views\view_Educations.sql" />
+    <Build Include="dbo\Views\view_SupportingDocuments.sql" />
+    <Build Include="dbo\Views\view_Transcripts.sql" />
+    <Build Include="dbo\Views\view_Tests.sql" />
+    <Build Include="dbo\Views\view_TestDetails.sql" />
+    <Build Include="dbo\Views\view_AcademicRecords.sql" />
+    <Build Include="dbo\Views\view_ProgramIntakes.sql" />
+    <Build Include="dbo\Views\view_Programs.sql" />
+    <Build Include="dbo\Views\view_ProgramIntakes.sql" />
+    <Build Include="dbo\Views\view_ProgramApplications.sql" />
+    <Build Include="dbo\Views\view_OntarioStudentCourseCredits.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApplicantBriefs_Get.sql" />
+    <Build Include="dbo\Views\view_Applicants_HighSchool.sql" />
+    <Build Include="dbo\Views\view_Applicants_College.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProgramChoices_Any.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Script.PreDeploy.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="..\..\dacpacs\master.dacpac">
+      <HintPath>..\..\dacpacs\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="..\..\dacpacs\OCAS_MSCRM.dacpac">
+      <HintPath>..\..\dacpacs\OCAS_MSCRM.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>OCAS_MSCRM</DatabaseVariableLiteralValue>
+      <ServerSqlCmdVariable>SERVER</ServerSqlCmdVariable>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

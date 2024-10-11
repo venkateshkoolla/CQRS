@@ -1,0 +1,17 @@
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Domestic.Apply.Core.Extras.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Domestic.Apply.Core.Extras.pdb
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\MediatR.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Newtonsoft.Json.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Common.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Domestic.Apply.Core.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Domestic.Apply.Core.pdb
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\bin\Release\net461\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.csprojAssemblyReference.cache
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.sourcelink.json
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.csproj.CopyComplete
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.dll
+C:\OcasProjects\apply-api\src\apply-api\src\Ocas.Domestic.Apply.Core.Extras\obj\Release\net461\Ocas.Domestic.Apply.Core.Extras.pdb

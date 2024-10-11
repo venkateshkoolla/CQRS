@@ -1,0 +1,14 @@
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\bin\Release\net461\Ocas.Domestic.Crm.Extras.Provider.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\bin\Release\net461\Ocas.Domestic.Crm.Extras.Provider.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\bin\Release\net461\Dapper.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\bin\Release\net461\System.Data.SqlClient.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\bin\Release\net461\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\bin\Release\net461\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.csprojAssemblyReference.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.sourcelink.json
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.csproj.CopyComplete
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Crm.Extras.Provider\obj\Release\net461\Ocas.Domestic.Crm.Extras.Provider.pdb

@@ -1,0 +1,247 @@
+2020-02-24 09:59:38.385 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 10:04:01.567 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 10:08:18.382 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 11:25:39.950 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 14:16:48.632 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 15:35:59.683 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 15:45:44.419 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 15:58:35.539 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 15:58:47.454 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 15:58:48.117 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 15:58:48.445 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 15:58:48.490 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 15:58:48.491 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 15:58:48.612 -05:00 [INF] Successfully validated the token.
+2020-02-24 15:58:48.636 -05:00 [INF] Authorization was successful.
+2020-02-24 15:58:48.787 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 15:59:10.224 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21419.8237ms.
+2020-02-24 15:59:13.258 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 15:59:17.055 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 28929.0691ms
+2020-02-24 15:59:17.061 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 15:59:17.067 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 29530.9461 ms
+2020-02-24 15:59:17.261 -05:00 [INF] Request finished in 29810.5105ms 200 application/json; charset=utf-8
+2020-02-24 16:02:17.330 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:02:28.414 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 16:02:29.046 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:02:29.457 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:02:29.494 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:02:29.495 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:02:29.697 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:02:29.717 -05:00 [INF] Authorization was successful.
+2020-02-24 16:02:29.852 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:02:36.393 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6527.8943ms.
+2020-02-24 16:02:36.418 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:02:36.511 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 7459.0109ms
+2020-02-24 16:02:36.515 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:02:36.518 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 8052.4291 ms
+2020-02-24 16:02:36.578 -05:00 [INF] Request finished in 8167.8422ms 200 application/json; charset=utf-8
+2020-02-24 16:04:33.097 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:05:22.254 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 16:05:22.865 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:05:23.214 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:05:23.261 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:05:23.262 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:05:23.467 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:05:23.491 -05:00 [INF] Authorization was successful.
+2020-02-24 16:05:23.638 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:06:22.496 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 58842.679000000004ms.
+2020-02-24 16:06:22.524 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:06:22.617 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 59742.864400000006ms
+2020-02-24 16:06:22.623 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:06:22.628 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 60310.7926 ms
+2020-02-24 16:07:05.252 -05:00 [INF] Request finished in 103002.3175ms 200 application/json; charset=utf-8
+2020-02-24 16:08:02.046 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:08:11.868 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 16:08:12.412 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:08:12.744 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:08:12.781 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:08:12.781 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:08:12.954 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:08:12.974 -05:00 [INF] Authorization was successful.
+2020-02-24 16:08:13.100 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:08:18.494 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5382.1945000000005ms.
+2020-02-24 16:08:18.517 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:08:18.592 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 6174.6525ms
+2020-02-24 16:08:18.596 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:08:18.599 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 6686.3599 ms
+2020-02-24 16:08:18.662 -05:00 [INF] Request finished in 6799.2878ms 200 application/json; charset=utf-8
+2020-02-24 16:09:44.471 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:10:00.299 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 16:10:00.838 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:10:01.217 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:10:01.252 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:10:01.252 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:10:01.479 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:10:01.500 -05:00 [INF] Authorization was successful.
+2020-02-24 16:10:01.632 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:10:08.754 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7110.7734ms.
+2020-02-24 16:10:08.778 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:10:08.855 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 8009.2299ms
+2020-02-24 16:10:08.859 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:10:08.862 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 8519.8676 ms
+2020-02-24 16:10:08.925 -05:00 [INF] Request finished in 8629.7943ms 200 application/json; charset=utf-8
+2020-02-24 16:16:47.140 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:17:00.948 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20&fromDate=2018-01-01&toDate=2019-01-01  
+2020-02-24 16:17:01.482 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:17:01.820 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:17:01.856 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:17:01.856 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:17:02.042 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:17:02.061 -05:00 [INF] Authorization was successful.
+2020-02-24 16:17:02.184 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:17:07.970 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5774.3200000000006ms.
+2020-02-24 16:17:07.992 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:17:08.063 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 6575.8912ms
+2020-02-24 16:17:08.066 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:17:08.070 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 7076.7914 ms
+2020-02-24 16:17:08.131 -05:00 [INF] Request finished in 7186.5365ms 200 application/json; charset=utf-8
+2020-02-24 16:19:47.090 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:20:00.067 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20&fromDate=2012-01-01&toDate=2019-01-01  
+2020-02-24 16:20:00.646 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:20:01.000 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:20:01.041 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:20:01.041 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:20:01.265 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:20:01.287 -05:00 [INF] Authorization was successful.
+2020-02-24 16:20:01.427 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:20:08.563 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7121.1138ms.
+2020-02-24 16:20:08.634 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:20:08.762 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 8109.7102ms
+2020-02-24 16:20:08.766 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:20:08.771 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 8645.4880000000012 ms
+2020-02-24 16:20:08.863 -05:00 [INF] Request finished in 8801.8486ms 200 application/json; charset=utf-8
+2020-02-24 16:20:55.614 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:21:09.516 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 16:21:10.140 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:21:10.503 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:21:10.547 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:21:10.549 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:21:10.689 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:21:10.730 -05:00 [INF] Authorization was successful.
+2020-02-24 16:21:10.892 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:21:23.169 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12261.8952ms.
+2020-02-24 16:21:23.196 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:21:23.288 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 13139.2734ms
+2020-02-24 16:21:23.293 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:21:23.299 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 13709.127900000001 ms
+2020-02-24 16:22:33.683 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:22:57.891 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20&fromDate=2018-01-01&toDate=2020-01-01  
+2020-02-24 16:22:58.475 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:22:58.810 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:22:58.853 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:22:58.855 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:22:59.101 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:22:59.125 -05:00 [INF] Authorization was successful.
+2020-02-24 16:22:59.276 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:23:24.295 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25002.342ms.
+2020-02-24 16:23:24.325 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:23:24.428 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 25944.7222ms
+2020-02-24 16:23:24.434 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:23:24.439 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 26485.6997 ms
+2020-02-24 16:23:26.933 -05:00 [INF] Request finished in 29044.6131ms 200 application/json; charset=utf-8
+2020-02-24 16:25:43.896 -05:00 [INF] User profile is available. Using 'C:\Users\koolla\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-24 16:26:02.538 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20&fromDate=2018-01-01&toDate=2020-01-01  
+2020-02-24 16:26:02.876 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:26:03.418 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:26:03.512 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:26:03.512 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:26:03.838 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:26:03.907 -05:00 [INF] Authorization was successful.
+2020-02-24 16:26:04.149 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:26:11.390 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7217.0478ms.
+2020-02-24 16:26:11.419 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:26:11.542 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 8657.167300000001ms
+2020-02-24 16:26:11.548 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:26:11.560 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 8972.3684000000012 ms
+2020-02-24 16:26:11.664 -05:00 [INF] Request finished in 9131.4211ms 200 application/json; charset=utf-8
+2020-02-24 16:26:11.879 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/applicant-histories?applicationId=08c312db-1842-4e08-8d5d-e3463b27ec7b&page=1&pageSize=20  
+2020-02-24 16:26:11.889 -05:00 [INF] Route matched with {action = "Get", controller = "ApplicantHistories"}. Executing action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api)
+2020-02-24 16:26:11.890 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2020-02-24 16:26:11.891 -05:00 [INF] AdfsSchemeIdentityServerAuthenticationJwt was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:26:11.891 -05:00 [INF] AdfsScheme was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match keys: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]', 
+token: '[PII is hidden by default. Set the 'ShowPII' flag in IdentityModelEventSource.cs to true to reveal it.]'.
+2020-02-24 16:26:11.891 -05:00 [INF] Successfully validated the token.
+2020-02-24 16:26:11.892 -05:00 [INF] Authorization was successful.
+2020-02-24 16:26:11.894 -05:00 [INF] Executing action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) with arguments (["08c312db-1842-4e08-8d5d-e3463b27ec7b","Ocas.Domestic.Apply.Admin.Models.GetApplicantHistoryOptions"]) - Validation state: "Valid"
+2020-02-24 16:26:14.505 -05:00 [INF] Executed action method Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2611.7726000000002ms.
+2020-02-24 16:26:14.506 -05:00 [INF] Executing ObjectResult, writing value of type 'Ocas.Domestic.Apply.Admin.Models.PagedResult`1[[Ocas.Domestic.Apply.Admin.Models.ApplicantHistory, Ocas.Domestic.Admin.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-02-24 16:26:14.506 -05:00 [INF] Executed action Ocas.Domestic.Apply.Admin.Api.Controllers.ApplicantHistoriesController.Get (Ocas.Domestic.Admin.Api) in 2616.7965ms
+2020-02-24 16:26:14.506 -05:00 [INF] HTTP Request Body Logged in Event Properties
+2020-02-24 16:26:14.506 -05:00 [INF] HTTP GET /api/v1/applicant-histories responded 200 in 2619.8954000000003 ms
+2020-02-24 16:26:14.507 -05:00 [INF] Request finished in 2627.3195ms 200 application/json; charset=utf-8

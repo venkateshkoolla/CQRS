@@ -1,0 +1,1089 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Api.Services\\Ocas.Domestic.Apply.Api.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Api.Services\\Ocas.Domestic.Apply.Api.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Api.Services\\Ocas.Domestic.Apply.Api.Services.csproj",
+        "projectName": "Ocas.Domestic.Apply.Api.Services",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Api.Services\\Ocas.Domestic.Apply.Api.Services.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Api.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Common.Services\\Ocas.Domestic.Apply.Common.Services.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Common.Services\\Ocas.Domestic.Apply.Common.Services.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Coltrane.Bds.Provider\\Ocas.Domestic.Coltrane.Bds.Provider.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Coltrane.Bds.Provider\\Ocas.Domestic.Coltrane.Bds.Provider.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.4, )"
+            },
+            "CacheManager.Core": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "CacheManager.Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "CacheManager.Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "CacheManager.Serialization.Json": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "CacheManager.SystemRuntimeCaching": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.5.1, )"
+            },
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[3.10.6, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core.Extras",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Common.Services\\Ocas.Domestic.Apply.Common.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Common.Services\\Ocas.Domestic.Apply.Common.Services.csproj",
+        "projectName": "Ocas.Domestic.Apply.Common.Services",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Common.Services\\Ocas.Domestic.Apply.Common.Services.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Common.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\Ocas.Domestic.Apply.TemplateProcessors.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\Ocas.Domestic.Apply.TemplateProcessors.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.4, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.5.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            },
+            "Ocas.eSELECTplus_dotNet_API": {
+              "target": "Package",
+              "version": "[1.0.17, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core.Extensions",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\Ocas.Domestic.Apply.TemplateProcessors.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\Ocas.Domestic.Apply.TemplateProcessors.csproj",
+        "projectName": "Ocas.Domestic.Apply.TemplateProcessors",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\Ocas.Domestic.Apply.TemplateProcessors.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EvoHtmlToPdf_Azure_Client": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "EvoPDF": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "RazorEngine": {
+              "target": "Package",
+              "version": "[3.10.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj",
+        "projectName": "Ocas.Domestic.AppSettings.Extras",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.AppSettings.Extras\\Ocas.Domestic.AppSettings.Extras.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.AppSettings.Extras\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core.Extensions\\Ocas.Domestic.Apply.Core.Extensions.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Coltrane.Bds.Provider\\Ocas.Domestic.Coltrane.Bds.Provider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Coltrane.Bds.Provider\\Ocas.Domestic.Coltrane.Bds.Provider.csproj",
+        "projectName": "Ocas.Domestic.Coltrane.Bds.Provider",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Coltrane.Bds.Provider\\Ocas.Domestic.Coltrane.Bds.Provider.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Coltrane.Bds.Provider\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj",
+        "projectName": "Ocas.Domestic.Core",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          },
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj",
+        "projectName": "Ocas.Domestic.Crm.Entities",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.CrmSdk.CoreAssemblies": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
+            "Microsoft.CrmSdk.Extensions": {
+              "target": "Package",
+              "version": "[6.0.4.1, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\Ocas.Domestic.Crm.Extras.Provider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\Ocas.Domestic.Crm.Extras.Provider.csproj",
+        "projectName": "Ocas.Domestic.Crm.Extras.Provider",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\Ocas.Domestic.Crm.Extras.Provider.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj"
+              }
+            }
+          },
+          "netstandard2.0": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        },
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.30, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Provider\\Ocas.Domestic.Crm.Provider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Provider\\Ocas.Domestic.Crm.Provider.csproj",
+        "projectName": "Ocas.Domestic.Crm.Provider",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Provider\\Ocas.Domestic.Crm.Provider.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Provider\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Core\\Ocas.Domestic.Core.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Entities\\Ocas.Domestic.Crm.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.CrmSdk.CoreAssemblies": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
+            "Microsoft.CrmSdk.Extensions": {
+              "target": "Package",
+              "version": "[6.0.4.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj",
+        "projectName": "Ocas.Domestic.Data.Extras",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj",
+        "projectName": "Ocas.Domestic.Data",
+        "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\Ocas.Domestic.Data.csproj",
+        "packagesPath": "C:\\Users\\vishw\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Projects\\Ocas-ApplyApi\\apply-api\\NuGet.Config",
+          "C:\\Users\\vishw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\Ocas.Domestic.Crm.Extras.Provider.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\Ocas.Domestic.Crm.Extras.Provider.csproj"
+              },
+              "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Provider\\Ocas.Domestic.Crm.Provider.csproj": {
+                "projectPath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Provider\\Ocas.Domestic.Crm.Provider.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Microsoft.SourceLink.Vsts.Git": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.0-*, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

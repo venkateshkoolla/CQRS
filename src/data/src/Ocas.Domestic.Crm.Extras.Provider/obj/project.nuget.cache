@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "dgSpecHash": "WTl++XBnPpUZ31+/6xRZwOKKcdG41sebqOVHG+MqREuhvBJJGxAXNi+bwKYCAUvwvm/80emFVHgw6Kiuax7EoA==",
+  "success": false,
+  "projectFilePath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Provider\\Ocas.Domestic.Crm.Extras.Provider.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vishw\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0-beta2-19367-01\\microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0-beta2-19367-01\\microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.vsts.git\\1.0.0-beta2-19367-01\\microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.win32.registry\\4.6.0\\microsoft.win32.registry.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.6.0\\runtime.native.system.data.sqlclient.sni.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.data.sqlclient\\4.7.0\\system.data.sqlclient.4.7.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.6.0\\system.reflection.emit.ilgeneration.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.reflection.emit.lightweight\\4.6.0\\system.reflection.emit.lightweight.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.security.accesscontrol\\4.6.0\\system.security.accesscontrol.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.security.principal.windows\\4.6.0\\system.security.principal.windows.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.text.encoding.codepages\\4.6.0\\system.text.encoding.codepages.4.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Ocas.Analyzers. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Ocas.Analyzers",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

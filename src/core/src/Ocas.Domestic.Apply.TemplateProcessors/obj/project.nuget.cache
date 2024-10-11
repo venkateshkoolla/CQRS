@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "dgSpecHash": "62vUpthdoXgyNx18+GmKXZMWCpKa9LR2DcmjkLG90ZnU5rj0t1CJMY1L1pzgFU4IX18V8ZtmsGpJz7sP6zw1Ag==",
+  "success": false,
+  "projectFilePath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.TemplateProcessors\\Ocas.Domestic.Apply.TemplateProcessors.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vishw\\.nuget\\packages\\evohtmltopdf_azure_client\\8.0.0\\evohtmltopdf_azure_client.8.0.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\evopdf\\8.0.0\\evopdf.8.0.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.aspnet.razor\\3.0.0\\microsoft.aspnet.razor.3.0.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0-beta2-19367-01\\microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0-beta2-19367-01\\microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.vsts.git\\1.0.0-beta2-19367-01\\microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\ocas.common\\1.4.7\\ocas.common.1.4.7.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\razorengine\\3.10.0\\razorengine.3.10.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ocas.Domestic.Apply.Core depends on Ocas.Common (>= 1.4.4) but Ocas.Common 1.4.4 was not found. An approximate best match of Ocas.Common 1.4.7 was resolved.",
+      "libraryId": "Ocas.Common",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Ocas.Analyzers. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Ocas.Analyzers",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
+}

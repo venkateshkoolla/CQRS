@@ -1,0 +1,230 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras.UnitTests\\Ocas.Domestic.Apply.Core.Extras.UnitTests.csproj": {}
+  },
+  "projects": {
+    "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras.UnitTests\\Ocas.Domestic.Apply.Core.Extras.UnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras.UnitTests\\Ocas.Domestic.Apply.Core.Extras.UnitTests.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core.Extras.UnitTests",
+        "projectPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras.UnitTests\\Ocas.Domestic.Apply.Core.Extras.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\koolla\\.nuget\\packages\\",
+        "outputPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras.UnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\OcasProjects\\apply-api\\NuGet.Config",
+          "C:\\Users\\koolla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/Domestic/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/OcasLibs/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj": {
+                "projectPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Bogus": {
+              "target": "Package",
+              "version": "[28.0.2, )"
+            },
+            "CacheManager.Core": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "CacheManager.SystemRuntimeCaching": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.7.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Microsoft.Net.Compilers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.17, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.categories": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core.Extras",
+        "projectPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\Ocas.Domestic.Apply.Core.Extras.csproj",
+        "packagesPath": "C:\\Users\\koolla\\.nuget\\packages\\",
+        "outputPath": "C:\\OcasProjects\\apply-api\\src\\apply-api\\src\\Ocas.Domestic.Apply.Core.Extras\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\OcasProjects\\apply-api\\NuGet.Config",
+          "C:\\Users\\koolla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/Domestic/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/OcasLibs/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+                "projectPath": "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Ocas.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.17, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj",
+        "projectName": "Ocas.Domestic.Apply.Core",
+        "projectPath": "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\Ocas.Domestic.Apply.Core.csproj",
+        "packagesPath": "C:\\Users\\koolla\\.nuget\\packages\\",
+        "outputPath": "C:\\OcasProjects\\apply-api\\src\\core\\src\\Ocas.Domestic.Apply.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\OcasProjects\\apply-api\\NuGet.Config",
+          "C:\\Users\\koolla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/Domestic/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/OcasLibs/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.4, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

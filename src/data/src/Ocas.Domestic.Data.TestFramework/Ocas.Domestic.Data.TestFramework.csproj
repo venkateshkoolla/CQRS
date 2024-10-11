@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\GlobalSuppressionsTests.cs" Link="GlobalSuppressionsTests.cs" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="28.4.1" />
+    <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ocas.Domestic.Core\Ocas.Domestic.Core.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Crm.Entities\Ocas.Domestic.Crm.Entities.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Data.TestFramework.SeedData\Ocas.Domestic.Data.TestFramework.SeedData.csproj" />
+    <ProjectReference Include="..\Ocas.Domestic.Data\Ocas.Domestic.Data.csproj" />
+  </ItemGroup>
+
+</Project>

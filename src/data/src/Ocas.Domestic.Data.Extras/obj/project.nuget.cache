@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "dgSpecHash": "hd8HQML42qQdkd2N3QNvzGnHi+6iQCoK6+D/W4kNxB0ArNLBfTzE9lE5RHBkLo9yS1k+dC7rdxRqz/2GjA9zMQ==",
+  "success": false,
+  "projectFilePath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Data.Extras\\Ocas.Domestic.Data.Extras.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vishw\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0-beta2-19367-01\\microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.crmsdk.coreassemblies\\6.1.2\\microsoft.crmsdk.coreassemblies.6.1.2.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.crmsdk.deployment\\6.0.4\\microsoft.crmsdk.deployment.6.0.4.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.crmsdk.extensions\\6.0.4.1\\microsoft.crmsdk.extensions.6.0.4.1.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.configuration\\2.2.0\\microsoft.extensions.configuration.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.configuration.binder\\2.2.0\\microsoft.extensions.configuration.binder.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.2.0\\microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.logging\\2.2.0\\microsoft.extensions.logging.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.2.0\\microsoft.extensions.logging.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.options\\2.2.0\\microsoft.extensions.options.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.identitymodel\\6.1.7600.16394\\microsoft.identitymodel.6.1.7600.16394.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0-beta2-19367-01\\microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.vsts.git\\1.0.0-beta2-19367-01\\microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.windowsazure.configurationmanager\\2.0.0\\microsoft.windowsazure.configurationmanager.2.0.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\ocas.common\\1.4.7\\ocas.common.1.4.7.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\polly\\7.1.1\\polly.7.1.1.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.data.sqlclient\\4.7.0\\system.data.sqlclient.4.7.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\windowsazure.servicebus\\2.1.2\\windowsazure.servicebus.2.1.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Ocas.Domestic.Data.Extras depends on Ocas.Common (>= 1.4.4) but Ocas.Common 1.4.4 was not found. An approximate best match of Ocas.Common 1.4.7 was resolved.",
+      "libraryId": "Ocas.Common",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Ocas.Analyzers. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Ocas.Analyzers",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
+}

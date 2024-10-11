@@ -1,0 +1,48 @@
+{
+  "Literacy": "English",
+  "CommunityInvolvement": "Not Reported",
+  "HighestEducation": "OSSC",
+  "DateCredentialAchieved": "3/1/2019",
+  "SchoolsAttended": [ "Cathedral High School - 695343", "Bluevale Collegiate Institute - 895458", "Cameron Heights Collegiate Institute - 898090", "Forest Heights Collegiate Institute - 910350" ],
+  "HighSkillsMajor": "Non-Profit",
+  "TotalCredits": "3.5",
+  "Grades": [
+    {
+      "CourseCode": "AAM3G",
+      "CompletedDate": "202005",
+      "Mark": "49",
+      "MarkType": "Midterm",
+      "Credit": "1",
+      "CourseStatus": "Repeated",
+      "DeliveryType": "Day",
+      "CourseType": "Regular",
+      "Notes": "C",
+      "MidentCode": "910350"
+    },
+    {
+      "CourseCode": "BDB3G",
+      "CompletedDate": "201905",
+      "Mark": "85",
+      "MarkType": "Final",
+      "Credit": "1",
+      "CourseStatus": null,
+      "DeliveryType": "Day",
+      "CourseType": "Regular",
+      "Notes": null,
+      "MidentCode": "898090"
+    },
+    {
+      "CourseCode": "DEC1Y",
+      "CompletedDate": "201805",
+      "Mark": "99",
+      "MarkType": "Final",
+      "Credit": "1.5",
+      "CourseStatus": null,
+      "DeliveryType": "Day",
+      "CourseType": "Regular",
+      "Notes": null,
+      "MidentCode": "895458"
+    }
+  ],
+  "Labels": null
+}

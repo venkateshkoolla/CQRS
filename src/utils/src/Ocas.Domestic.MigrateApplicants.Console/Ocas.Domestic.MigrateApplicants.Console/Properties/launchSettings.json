@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ocas.Domestic.MigrateApplicants.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "Local"
+    }
+  }
+}

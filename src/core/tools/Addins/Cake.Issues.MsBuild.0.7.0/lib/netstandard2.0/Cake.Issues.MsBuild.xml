@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Issues.MsBuild</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat">
+            <summary>
+            Base class for all MSBuild log file format.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat.#ctor(Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat"/> class.
+            </summary>
+            <param name="log">The Cake log instance.</param>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat.ValidateFilePath(System.String,Cake.Issues.RepositorySettings)">
+            <summary>
+            Validates a file path.
+            </summary>
+            <param name="filePath">Full file path.</param>
+            <param name="repositorySettings">Repository settings.</param>
+            <returns>Tuple containing a value if validation was successful, and file path relative to repository root.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat.CheckIfFileIsInRepository(System.String,Cake.Issues.RepositorySettings)">
+            <summary>
+            Checks if a file is part of the repository.
+            </summary>
+            <param name="filePath">Full file path.</param>
+            <param name="repositorySettings">Repository settings.</param>
+            <returns>True if file is in repository, false otherwise.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat.MakeFilePathRelativeToRepositoryRoot(System.String,Cake.Issues.RepositorySettings)">
+            <summary>
+            Make path relative to repository root.
+            </summary>
+            <param name="filePath">Full file path.</param>
+            <param name="repositorySettings">Repository settings.</param>
+            <returns>File path relative to the repository root.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.BaseMsBuildLogFileFormat.RemoveLeadingDirectorySeparator(System.String)">
+            <summary>
+            Remove the leading directory separator from a file path.
+            </summary>
+            <param name="filePath">Full file path.</param>
+            <returns>File path without leading directory separator.</returns>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat">
+            <summary>
+            MsBuild binary log file format.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat.#ctor(Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat"/> class.
+            </summary>
+            <param name="log">The Cake log instance.</param>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat.ReadIssues(Cake.Issues.MsBuild.MsBuildIssuesProvider,Cake.Issues.IssueCommentFormat,Cake.Issues.RepositorySettings,Cake.Issues.MsBuild.MsBuildIssuesSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat.GetLine(Microsoft.Build.Framework.BuildWarningEventArgs)">
+            <summary>
+            Reads the affected line from a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from MsBuild log.</param>
+            <returns>Line number or null if warning is not related to a file.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat.GetProject(Microsoft.Build.Framework.BuildWarningEventArgs,Cake.Issues.RepositorySettings)">
+            <summary>
+            Determines the project for a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from the MsBuild log.</param>
+            <param name="repositorySettings">Repository settings to use.</param>
+            <returns>Relative path to the project.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat.TryGetFile(Microsoft.Build.Framework.BuildWarningEventArgs,Cake.Issues.RepositorySettings,System.String@)">
+            <summary>
+            Reads the affected file path from a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from MsBuild log.</param>
+            <param name="repositorySettings">Repository settings to use.</param>
+            <param name="fileName">Returns the full path to the affected file.</param>
+            <returns>True if the file path could be parsed.</returns>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat">
+            <summary>
+            MsBuild log format as written by the <c>XmlFileLogger</c> class from MSBuild Extension Pack.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat.#ctor(Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat"/> class.
+            </summary>
+            <param name="log">The Cake log instance.</param>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat.ReadIssues(Cake.Issues.MsBuild.MsBuildIssuesProvider,Cake.Issues.IssueCommentFormat,Cake.Issues.RepositorySettings,Cake.Issues.MsBuild.MsBuildIssuesSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat.TryGetLine(System.Xml.Linq.XElement,System.Nullable{System.Int32}@)">
+            <summary>
+            Reads the affected line from a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from MsBuild log.</param>
+            <param name="line">Returns line.</param>
+            <returns>True if the line could be parsed.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat.TryGetRule(System.Xml.Linq.XElement,System.String@)">
+            <summary>
+            Reads the rule code from a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from MsBuild log.</param>
+            <param name="rule">Returns the code of the rule.</param>
+            <returns>True if the rule code could be parsed.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat.TryGetProject(System.Xml.Linq.XElement,Cake.Issues.RepositorySettings,System.String@)">
+            <summary>
+            Determines the project for a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from MsBuild log.</param>
+            <param name="repositorySettings">Repository settings to use.</param>
+            <param name="project">Returns project.</param>
+            <returns>True if the project could be parsed.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat.TryGetFile(System.Xml.Linq.XElement,Cake.Issues.RepositorySettings,System.String@)">
+            <summary>
+            Reads the affected file path from a warning logged in a MsBuild log.
+            </summary>
+            <param name="warning">Warning element from MsBuild log.</param>
+            <param name="repositorySettings">Repository settings to use.</param>
+            <param name="fileName">Returns the full path to the affected file.</param>
+            <returns>True if the file path could be parsed.</returns>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.LogFileFormat.MsBuildIssuesAliases">
+            <content>
+            Contains functionality related to <see cref="T:Cake.Issues.MsBuild.LogFileFormat.XmlFileLoggerLogFileFormat"/>.
+            </content>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.LogFileFormat.MsBuildIssuesAliases.MsBuildXmlFileLoggerFormat(Cake.Core.ICakeContext)">
+            <summary>
+            <para>
+            Gets an instance for the MsBuild log format as written by the <c>XmlFileLogger</c> class
+            from MSBuild Extension Pack.
+            </para>
+            <para>
+            You can add the logger to the MSBuildSettings like this:
+            <code>
+            var settings = new MSBuildSettings()
+                .WithLogger(
+                    Context.Tools.Resolve("MSBuild.ExtensionPack.Loggers.dll").FullPath,
+                    "XmlFileLogger",
+                    string.Format(
+                        "logfile=\"{0}\";verbosity=Detailed;encoding=UTF-8",
+                        @"c:\build\msbuild.log")
+                );
+            </code>
+            </para>
+            <para>
+            In order to use the above logger, include the following in your build.cake file to download and
+            install from NuGet.org:
+            <code>
+            #tool "nuget:?package=MSBuild.Extension.Pack"
+            </code>
+            </para>
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Instance for the MsBuild log format.</returns>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.MsBuildIssuesAliases">
+            <content>
+            Contains functionality related to <see cref="T:Cake.Issues.MsBuild.LogFileFormat.BinaryLogFileFormat"/>.
+            </content>
+            <summary>
+            Contains functionality for reading warnings from MSBuild log files.
+            </summary>
+            <content>
+            Contains functionality related to <see cref="T:Cake.Issues.MsBuild.MsBuildIssuesProvider"/>.
+            </content>
+            <content>
+            Contains functionality related to rule url resolving.
+            </content>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildBinaryLogFileFormat(Cake.Core.ICakeContext)">
+            <summary>
+            Gets an instance for the MsBuild binary log format.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Instance for the MsBuild binary log format.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildIssuesProviderTypeName(Cake.Core.ICakeContext)">
+            <summary>
+            Gets the name of the MsBuild issue provider.
+            This name can be used to identify issues based on the <see cref="P:Cake.Issues.IIssue.ProviderType"/> property.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Name of the MsBuild issue provider.</returns>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildIssuesFromFilePath(Cake.Core.ICakeContext,Cake.Core.IO.FilePath,Cake.Issues.MsBuild.BaseMsBuildLogFileFormat)">
+            <summary>
+            Gets an instance of a provider for issues reported as MsBuild warnings using a log file from disk.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="logFilePath">Path to the the MsBuild log file.
+            The log file needs to be in the format as defined by the <paramref name="format"/> parameter.</param>
+            <param name="format">Format of the provided MsBuild log file.</param>
+            <returns>Instance of a provider for issues reported as MsBuild warnings.</returns>
+            <example>
+            <para>Read issues reported as MsBuild warnings:</para>
+            <code>
+            <![CDATA[
+                var issues =
+                    ReadIssues(
+                        MsBuildIssuesFromFilePath(
+                            @"c:\build\msbuild.xml",
+                            MsBuildXmlFileLoggerFormat),
+                        @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildIssuesFromContent(Cake.Core.ICakeContext,System.String,Cake.Issues.MsBuild.BaseMsBuildLogFileFormat)">
+            <summary>
+            Gets an instance of a provider for issues reported as MsBuild warnings using log content.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="logFileContent">Content of the the MsBuild log file.
+            The log file needs to be in the format as defined by the <paramref name="format"/> parameter.</param>
+            <param name="format">Format of the provided MsBuild log file.</param>
+            <returns>Instance of a provider for issues reported as MsBuild warnings.</returns>
+            <example>
+            <para>Read issues reported as MsBuild warnings:</para>
+            <code>
+            <![CDATA[
+                var issues =
+                    ReadIssues(
+                        MsBuildIssuesFromContent(
+                            logFileContent,
+                            MsBuildXmlFileLoggerFormat)),
+                        @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildIssues(Cake.Core.ICakeContext,Cake.Issues.MsBuild.MsBuildIssuesSettings)">
+             <summary>
+             Gets an instance of a provider for issues reported as MsBuild warnings using specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for reading the MSBuild log.</param>
+             <returns>Instance of a provider for issues reported as MsBuild warnings.</returns>
+             <example>
+             <para>Read issues reported as MsBuild warnings:</para>
+             <code>
+             <![CDATA[
+                 var settings =
+                     new MsBuildIssuesSettings(
+                         @"c:\build\msbuild.xml",
+                         MsBuildXmlFileLoggerFormat);
+            
+                 var issues =
+                     ReadIssues(
+                         MsBuildIssues(settings),
+                         @"c:\repo");
+             ]]>
+             </code>
+             </example>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildAddRuleUrlResolver(Cake.Core.ICakeContext,System.Func{Cake.Issues.MsBuild.MsBuildRuleDescription,System.Uri})">
+            <summary>
+            Registers a new URL resolver with default priority of 0.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="resolver">Resolver which returns an <see cref="T:System.Uri"/> linking to a site
+            containing help for a specific <see cref="T:Cake.Issues.MsBuild.MsBuildRuleDescription"/>.</param>
+            <example>
+            <para>Adds a provider with default priority of 0 returning a link for all rules of the category <c>CA</c> to
+            search <c>msdn.microsoft.com</c> with Google for the rule:</para>
+            <code>
+            <![CDATA[
+            MsBuildAddRuleUrlResolver(x =>
+                x.Category.ToUpperInvariant() == "CA" ?
+                new Uri("https://www.google.com/search?q=%22" + x.Rule + ":%22+site:msdn.microsoft.com") :
+                null)
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesAliases.MsBuildAddRuleUrlResolver(Cake.Core.ICakeContext,System.Func{Cake.Issues.MsBuild.MsBuildRuleDescription,System.Uri},System.Int32)">
+            <summary>
+            Registers a new URL resolver with a specific priority.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="resolver">Resolver which returns an <see cref="T:System.Uri"/> linking to a site
+            containing help for a specific <see cref="T:Cake.Issues.MsBuild.MsBuildRuleDescription"/>.</param>
+            <param name="priority">Priority of the resolver. Resolver with a higher priority are considered
+            first during resolving of the URL.</param>
+            <example>
+            <para>Adds a provider of priority 5 returning a link for all rules of the category <c>CA</c> to
+            search <c>msdn.microsoft.com</c> with Google for the rule:</para>
+            <code>
+            <![CDATA[
+            MsBuildAddRuleUrlResolver(x =>
+                x.Category.ToUpperInvariant() == "CA" ?
+                new Uri("https://www.google.com/search?q=%22" + x.Rule + ":%22+site:msdn.microsoft.com") :
+                null,
+                5)
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.MsBuildIssuesProvider">
+            <summary>
+            Provider for issues reported as MsBuild warnings.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesProvider.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.MsBuild.MsBuildIssuesSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.MsBuildIssuesProvider"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for reading the log file.</param>
+        </member>
+        <member name="P:Cake.Issues.MsBuild.MsBuildIssuesProvider.ProviderName">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.MsBuild.MsBuildIssuesSettings">
+            <summary>
+            Settings for <see cref="T:Cake.Issues.MsBuild.MsBuildIssuesAliases"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesSettings.#ctor(Cake.Core.IO.FilePath,Cake.Issues.MsBuild.BaseMsBuildLogFileFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.MsBuildIssuesSettings"/> class
+            for reading a log file on disk.
+            </summary>
+            <param name="logFilePath">Path to the MSBuild log file.
+            The log file needs to be in the format as defined by the <paramref name="format"/> parameter.</param>
+            <param name="format">Format of the provided MSBuild log file.</param>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildIssuesSettings.#ctor(System.Byte[],Cake.Issues.MsBuild.BaseMsBuildLogFileFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.MsBuildIssuesSettings"/> class
+            for a log file content in memory.
+            </summary>
+            <param name="logFileContent">Content of the MSBuild log file.
+            The log file needs to be in the format as defined by the <paramref name="format"/> parameter.</param>
+            <param name="format">Format of the provided MSBuild log file.</param>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.MsBuildRuleDescription">
+            <summary>
+            Class describing rules appearing in MsBuild logs.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.MsBuild.MsBuildRuleDescription.Category">
+            <summary>
+            Gets or sets the category of the rule.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.MsBuild.MsBuildRuleDescription.RuleId">
+            <summary>
+            Gets or sets the identifier of the rule.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.MsBuild.MsBuildRuleUrlResolver">
+            <summary>
+            Class for retrieving an URL linking to a site describing a rule.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildRuleUrlResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.MsBuild.MsBuildRuleUrlResolver"/> class.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.MsBuild.MsBuildRuleUrlResolver.Instance">
+            <summary>
+            Gets the instance of the rule resolver.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.MsBuild.MsBuildRuleUrlResolver.TryGetRuleDescription(System.String,Cake.Issues.MsBuild.MsBuildRuleDescription)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

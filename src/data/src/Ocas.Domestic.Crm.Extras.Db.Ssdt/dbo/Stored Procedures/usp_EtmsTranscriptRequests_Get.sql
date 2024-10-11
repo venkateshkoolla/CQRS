@@ -1,0 +1,36 @@
+﻿CREATE PROCEDURE [dbo].[usp_EtmsTranscriptRequests_Get]
+    @Id UNIQUEIDENTIFIER = NULL
+AS
+SET NOCOUNT ON;
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+SELECT [Ocaslr_etmstranscriptrequestId] AS [Id]
+     , [Ocaslr_RequestType] AS [EtmsRequestType]
+     , [Ocaslr_AccountNumber] AS [AccountNumber]
+     , [Ocaslr_ApplicationNumber] AS [ApplicationNumber]
+     , [Ocaslr_InstitutionName] AS [InstitutionName]
+     , [Ocaslr_CampusName] AS [CampusName]
+     , [Ocaslr_DateLastAttended] AS [DateLastAttended]
+     , [Ocaslr_Graduated] AS [Graduated]
+     , [Ocaslr_LegalFirstNameinFinalYearofHighSchool] AS [LegalFirstNameInFinalYearOfHighSchool]
+     , [Ocaslr_LegalSurnameinFinalYearofHighSchool] AS [LegalSurnameInFinalYearOfHighSchool]
+     , [Ocaslr_StudentNumber] AS [StudentNumber]
+     , [ocaslr_languageofinstruction] AS [LanguageOfInstruction]
+     , [Ocaslr_LastGradeCompleted] AS [LastGradeCompleted]
+     , [Ocaslr_LevelofStudy] AS [LevelOfStudy]
+     , [Ocaslr_DateofBirth] AS [DateOfBirth]
+     , [Ocaslr_Email] AS [Email]
+     , [Ocaslr_FormerSurname] AS [FormerSurname]
+     , [Ocaslr_GenderId] AS [GenderId]
+     , [Ocaslr_LegalFirstGivenName] AS [LegalFirstGivenName]
+     , [Ocaslr_LegalLastFamilyName] AS [LegalLastFamilyName]
+     , [Ocaslr_MiddleName] AS [MiddleName]
+     , [Ocaslr_OEN] AS [OEN]
+     , [Ocaslr_PhoneNumber] AS [PhoneNumber]
+     , [Ocaslr_ProgramName] AS [ProgramName]
+     , [Ocaslr_Title] AS [Title]
+     , [CreatedOn] AS [CreatedOn]
+     , [ModifiedOn] AS [ModifiedOn]
+     , [Ocaslr_LastModifiedBy] AS [ModifiedBy]
+FROM [$(SERVER)].[OCAS_MSCRM].[dbo].[Ocaslr_etmstranscriptrequestBase]
+WHERE (@Id IS NULL OR [ocaslr_etmstranscriptrequestId] = @Id)

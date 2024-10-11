@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StaticCodeAnalysis version="2" xmlns="urn:Microsoft.Data.Tools.Schema.StaticCodeAnalysis">
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_AcademicRecords_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_CollegeApplicationCycles_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Educations_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_HighSchools_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0004" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_CustomAuditDetails_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Contact_GetSubjectId.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Programs_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_DocumentTypes_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_AcceptedPrivacyStatements_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_FinancialTransactions_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Transcripts_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_OfferAcceptances_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProgramEntryLevels_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Tests_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Offers_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProgramChoices_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_SupportingDocuments_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_PrivacyStatements_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_EtmsTranscriptRequestProcesses_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Orders_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Contact_IsDuplicateEmail.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_TranscriptRequests_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0004" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_TranscriptRequestLogs_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Countries_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_InternationalCreditAssessments_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Accounts_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0004" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Contact_IsDuplicateDetails.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Contact_IsActive.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_CustomAudits_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ApplicantMessages_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProgramIntakeEntrySemesters_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Applications_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Universities_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0004" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Products_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_CredentialEvaluationAgencies_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Vouchers_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_OntarioStudentCourseCredits_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProgramSubCategories_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProgramIntakes_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0004" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ExpiryActions_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Contact_IsDuplicateOen.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProvinceStates_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_TranscriptRequestExceptions_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Officials_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ProgramSpecialCodes_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_Institutes_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_ShsmCompletions_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_CollegeInformations_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+  <SuppressedFile FilePath="dbo\Stored Procedures\usp_SupportingDocumentBinaryData_Get.sql">
+    <SuppressedRule Category="Microsoft.Rules.Data" RuleId="SR0007" />
+  </SuppressedFile>
+</StaticCodeAnalysis>

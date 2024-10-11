@@ -1,0 +1,14 @@
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\bin\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\bin\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\bin\Release\net461\Dapper.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\bin\Release\net461\System.Data.SqlClient.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\bin\Release\net461\Ocas.Domestic.Core.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\bin\Release\net461\Ocas.Domestic.Core.pdb
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.csprojAssemblyReference.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.sourcelink.json
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.csproj.CopyComplete
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.dll
+C:\OcasProjects\apply-api\src\data\src\Ocas.Domestic.Coltrane.Bds.Provider\obj\Release\net461\Ocas.Domestic.Coltrane.Bds.Provider.pdb

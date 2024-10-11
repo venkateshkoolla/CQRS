@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "dgSpecHash": "tFIYa2lqWERihQ7iXN8mpdX8baHupTgqeYfeLKN48wudS5Yz9YbwC7ftwJaxBsQWTxbLRZqOijHXORJYD0TWrQ==",
+  "success": false,
+  "projectFilePath": "C:\\Projects\\Ocas-ApplyApi\\apply-api\\src\\data\\src\\Ocas.Domestic.Crm.Extras.Db.Cli\\Ocas.Domestic.Crm.Extras.Db.Cli.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vishw\\.nuget\\packages\\manyconsole\\2.0.1\\manyconsole.2.0.1.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0-beta2-19367-01\\microsoft.build.tasks.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0-beta2-19367-01\\microsoft.sourcelink.common.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\microsoft.sourcelink.vsts.git\\1.0.0-beta2-19367-01\\microsoft.sourcelink.vsts.git.1.0.0-beta2-19367-01.nupkg.sha512",
+    "C:\\Users\\vishw\\.nuget\\packages\\mono.options\\5.3.0\\mono.options.5.3.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Ocas.Analyzers. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "Ocas.Analyzers",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win7-x86"
+      ]
+    },
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.SqlServer.Dac with version (>= 14.0.3811.2)\r\n  - Found 4 version(s) in nuget.org [ Nearest version: 1.0.3 ]\r\n  - Found 0 version(s) in Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.SqlServer.Dac",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1",
+        ".NETFramework,Version=v4.6.1/win7-x86"
+      ]
+    }
+  ]
+}

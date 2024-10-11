@@ -1,0 +1,24 @@
+{
+  "$schema": "http://cachemanager.michaco.net/schemas/cachemanager.json#",
+  "cacheManagers": [
+    {
+      "maxRetries": 3,
+      "name": "distributedCache",
+      "retryTimeout": 60000,
+      "updateMode": "Up",
+      "loggerFactory": {
+        "knownType": "Microsoft"
+      },
+      "handles": [
+        {
+          "knownType": "MsMemory",
+          "enablePerformanceCounters": true,
+          "enableStatistics": true,
+          "expirationMode": "None",
+          "isBackplaneSource": false,
+          "name": "memoryCache"
+        }
+      ]
+    }
+  ]
+}

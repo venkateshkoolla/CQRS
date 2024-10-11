@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Cake.Issues.PullRequests</id>
+    <version>0.7.0</version>
+    <title>Cake.Issues.PullRequests</title>
+    <authors>BBT Software AG and contributors</authors>
+    <owners>bbtsoftware, pascalberger, cake-contrib</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>http://cake-contrib.github.io/Cake.Issues.Website/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/cake-contrib/graphics@a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</iconUrl>
+    <description>The pull requests issues addin for Cake allows you to write issue from any code analyzer or linter as comments to pull requests.
+
+This addin provides the aliases for writing issues to pull requests.
+It requires the core Cake.Issues addin, addins for reading issues and an addin for the specific pull request system.
+
+See the Project Site for an overview of the whole ecosystem of addins for working with issues in Cake scripts.</description>
+    <summary>Addin for the Cake build automation system for writing code analyzer or linter issues as comments to pull requests</summary>
+    <releaseNotes>https://github.com/cake-contrib/Cake.Issues.PullRequests/releases/tag/0.7.0</releaseNotes>
+    <copyright>Copyright © BBT Software AG and contributors</copyright>
+    <tags>Cake Script Cake-Issues CodeAnalysis Linting Issues Pull-Requests</tags>
+    <repository type="git" url="https://github.com/cake-contrib/Cake.Issues.PullRequests.git" />
+  </metadata>
+</package>

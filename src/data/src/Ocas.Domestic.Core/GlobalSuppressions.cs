@@ -1,0 +1,25 @@
+﻿// This file is used by Code Analysis to maintain SuppressMessage
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given
+// a specific target and scoped to a namespace, type, member, etc.
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CA2227:Collection properties should be read only", Justification = "The property is part of a Data Transfer Object (DTO) class")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:Element must begin with upper-case letter", Justification = "Naming defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.PrivacyStatementCategory")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1717", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.CompletedSteps")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.CompletedSteps")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.ContactAddressType")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1717:Only FlagsAttribute enums should have plural names", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.Status")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1717", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.ApplicationCompletedSteps")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.ApplicationCompletedSteps")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1717", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.OrderPaymentStatus")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.OrderPaymentStatus")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1717", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.VoucherState")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.VoucherState")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.ApplicationCompletedSteps")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1717:Only FlagsAttribute enums should have plural names", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.ProcessStatus")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1717", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.TransactionType")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.TransactionType")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1707", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.TransactionType")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1717", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.OrderProcessingStatus")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "RCS1154", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.OrderProcessingStatus")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.NamingRules", "CA1707", Justification = "OptionSet defined in CRM. Should not be changed.", Scope = "type", Target = "~T:Ocas.Domestic.Enums.OrderProcessingStatus")]

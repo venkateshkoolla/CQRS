@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Admin.Services\\Ocas.Domestic.Admin.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Admin.Services\\Ocas.Domestic.Admin.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Admin.Services\\Ocas.Domestic.Admin.Services.csproj",
+        "projectName": "Ocas.Domestic.Admin.Services",
+        "projectPath": "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Admin.Services\\Ocas.Domestic.Admin.Services.csproj",
+        "packagesPath": "C:\\Users\\koolla\\.nuget\\packages\\",
+        "outputPath": "C:\\OcasProjects\\apply-api\\src\\admin-api\\src\\Ocas.Domestic.Admin.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\OcasProjects\\apply-api\\NuGet.Config",
+          "C:\\Users\\koolla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/Domestic/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ocas/_packaging/OcasLibs/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.4, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Ocas.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.1.18, )"
+            },
+            "Ocas.Common": {
+              "target": "Package",
+              "version": "[1.4.6, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

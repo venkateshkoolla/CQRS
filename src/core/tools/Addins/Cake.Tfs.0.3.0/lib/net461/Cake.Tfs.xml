@@ -1,0 +1,1232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Tfs</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Tfs.ArgumentChecks">
+            <summary>
+            Common runtime checks that throw <see cref="T:System.ArgumentException"/> upon failure.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.ArgumentChecks.NotNull``1(``0,System.String)">
+            <summary>
+            Throws an exception if the specified parameter's value is null.
+            </summary>
+            <typeparam name="T">The type of the parameter.</typeparam>
+            <param name="value">The value of the argument.</param>
+            <param name="parameterName">The name of the parameter to include in any thrown exception.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c></exception>
+        </member>
+        <member name="M:Cake.Tfs.ArgumentChecks.NotNullOrWhiteSpace(System.String,System.String)">
+            <summary>
+            Throws an exception if the specified parameter's value is null, empty or consists only of white-space characters.
+            </summary>
+            <param name="value">The value of the argument.</param>
+            <param name="parameterName">The name of the parameter to include in any thrown exception.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="value"/> is <c>null</c></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="value"/> is empty or consists only of white-space characters</exception>
+        </member>
+        <member name="M:Cake.Tfs.ArgumentChecks.NotNegativeOrZero(System.Int32,System.String)">
+            <summary>
+            Throws an exception if the specified parameter's value is negative or zero.
+            </summary>
+            <param name="value">The value of the argument.</param>
+            <param name="parameterName">The name of the parameter to include in any thrown exception.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if <paramref name="value"/> is negative or zero.</exception>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.AuthenticationProvider">
+            <summary>
+            Class providing credentials for different authentication schemas.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.AuthenticationProvider.AuthenticationNtlm">
+            <summary>
+            Returns credentials for integrated / NTLM authentication.
+            Can only be used for on-premise Team Foundation Server.
+            </summary>
+            <returns>Credentials for integrated / NTLM authentication.</returns>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.AuthenticationProvider.AuthenticationBasic(System.String,System.String)">
+            <summary>
+            Returns credentials for basic authentication.
+            Can only be used for on-premise Team Foundation Server configured for basic authentication.
+            See https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for basic authentication.</returns>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.AuthenticationProvider.AuthenticationPersonalAccessToken(System.String)">
+            <summary>
+            Returns credentials for authentication with a personal access token.
+            Can be used for Team Foundation Server and Azure DevOps.
+            </summary>
+            <param name="personalAccessToken">Personal access token.</param>
+            <returns>Credentials for authentication with a personal access token.</returns>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.AuthenticationProvider.AuthenticationOAuth(System.String)">
+            <summary>
+            Returns credentials for OAuth authentication.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="accessToken">OAuth access token.</param>
+            <returns>Credentials for OAuth authentication.</returns>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.AuthenticationProvider.AuthenticationAzureActiveDirectory(System.String,System.String)">
+            <summary>
+            Returns credentials for authentication with an Azure Active Directory.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for authentication with an Azure Active Directory.</returns>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.ITfsCredentials">
+            <summary>
+            Interface for different credential types.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.TfsAadCredentials">
+            <summary>
+            Credentials for authentication with an Azure Active Directory.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.TfsAadCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.Authentication.TfsAadCredentials"/> class.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.TfsBasicCredentials">
+            <summary>
+            Credentials for basic authentication.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.TfsBasicCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.Authentication.TfsBasicCredentials"/> class.
+            </summary>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+        </member>
+        <member name="P:Cake.Tfs.Authentication.TfsBasicCredentials.UserName">
+            <summary>
+            Gets the user name.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.Authentication.TfsBasicCredentials.Password">
+            <summary>
+            Gets the password.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.TfsCredentialsExtensions">
+            <summary>
+            Extensions for the <see cref="T:Cake.Tfs.Authentication.ITfsCredentials"/> interface.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.TfsCredentialsExtensions.ToVssCredentials(Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Returns the <see cref="T:Microsoft.VisualStudio.Services.Common.VssCredentials"/> corresponding to a <see cref="T:Cake.Tfs.Authentication.ITfsCredentials"/> object.
+            </summary>
+            <param name="credentials"><see cref="T:Cake.Tfs.Authentication.ITfsCredentials"/> credential instance.</param>
+            <returns><see cref="T:Microsoft.VisualStudio.Services.Common.VssCredentials"/> instance.</returns>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.TfsNtlmCredentials">
+            <summary>
+            Credentials for integrated / NTLM authentication.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.Authentication.TfsOAuthCredentials">
+            <summary>
+            Credentials for OAuth authentication.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.Authentication.TfsOAuthCredentials.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.Authentication.TfsOAuthCredentials"/> class.
+            </summary>
+            <param name="accessToken">OAuth access token.</param>
+        </member>
+        <member name="P:Cake.Tfs.Authentication.TfsOAuthCredentials.AccessToken">
+            <summary>
+            Gets the OAuth access token.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings">
+            <summary>
+            Base class for settings for aliases handling pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.#ctor(System.Uri,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.#ctor(System.Uri,System.String,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceRefName">Branch for which the pull request is made.
+            <see cref="T:System.ArgumentException"/> if <see langword="null"/> or <see cref="F:System.String.Empty"/>.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.
+            <see cref="T:System.ArgumentException"/> if <see langword="null"/>.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.#ctor(Cake.Tfs.PullRequest.BaseTfsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings"/> class
+            based on the instance of a <see cref="T:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.
+            <see cref="T:System.ArgumentException"/> if <see langword="null"/>.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.#ctor(Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings"/> class using environment variables
+            as set by a Azure Pipelines or Team Foundation Server build.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.RepositoryUrl">
+            <summary>
+            Gets the full URL of the Git repository, eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.SourceBranch">
+            <summary>
+            Gets the branch for which the pull request is made.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.SourceRefName">
+            <summary>
+            Gets the branch for which the pull request is made.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.Credentials">
+            <summary>
+            Gets the credentials used to authenticate against Team Foundation Server or
+            Azure DevOps.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.CommentThread.TfsComment">
+            <summary>
+            Class representing a comment in the pull request comment thread.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsComment.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsComment"/> class.
+            </summary>
+            <param name="content">The content of the comment.</param>
+            <param name="isDeleted">Equals 'true' if a comment is deleted. Otherwise, 'false'.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsComment.#ctor(System.String,System.Boolean,Microsoft.TeamFoundation.SourceControl.WebApi.CommentType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsComment"/> class.
+            </summary>
+            <param name="content">The content of the comment.</param>
+            <param name="isDeleted">Equals 'true' if a comment is deleted. Otherwise, 'false'.</param>
+            <param name="commentType">The type of the comment.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsComment.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsComment"/> class with empty Git comment.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsComment.#ctor(Microsoft.TeamFoundation.SourceControl.WebApi.Comment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsComment"/> class with real Git comment.
+            </summary>
+            <param name="comment">The original TFS or Azure DevOps pull request comment.</param>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsComment.Content">
+            <summary>
+            Gets or sets the content of the pull request comment.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsComment.IsDeleted">
+            <summary>
+            Gets or sets a value indicating whether the comment is deleted.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsComment.CommentType">
+            <summary>
+            Gets or sets the comment type.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus">
+            <summary>
+            The wrapper around the native TFS API comment thread status
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.Active">
+            <summary>
+            The comment thread is active.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.ByDesign">
+            <summary>
+            The comment thread status is by design.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.Closed">
+            <summary>
+            The comment thread is closed.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.Fixed">
+            <summary>
+            The comment thread is fixed.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.Pending">
+            <summary>
+            The comment thread is pending.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.Unknown">
+            <summary>
+            Unknown comment thread status.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus.WontFix">
+            <summary>
+            The comment thread won't be fixed.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.CommentThread.TfsCommentType">
+            <summary>
+            The wrapper around the native TFS API comment type
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentType.Unknown">
+            <summary>
+            Unknown comment type.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentType.Text">
+            <summary>
+            The comment is text.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentType.CodeChange">
+            <summary>
+            The comment is a code change.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.CommentThread.TfsCommentType.System">
+            <summary>
+            System comment.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread">
+            <summary>
+            Class for dealing with comments in pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.#ctor(Microsoft.TeamFoundation.SourceControl.WebApi.GitPullRequestCommentThread)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread"/> class.
+            </summary>
+            <param name="thread">The original comment thread in TFS or Azue DevOps pull request.</param>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.Id">
+            <summary>
+            Gets or sets the Id of the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.Status">
+            <summary>
+            Gets or sets the status of the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.FilePath">
+            <summary>
+            Gets or sets the path of the modified file the pull request comment thread belongs to.
+            Returns 'null' for the comment threads not related to any particular file.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.Comments">
+            <summary>
+            Gets or sets the collection of comments in the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.Properties">
+            <summary>
+            Gets or sets the collection of properties of the pull request comment thread.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.InnerThread">
+            <summary>
+            Gets the inner Git comment thread object. Intended for the internal use only.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.GetValue``1(System.String)">
+            <summary>
+            Gets the value of the thread property.
+            </summary>
+            <typeparam name="T">Type of the value.</typeparam>
+            <param name="propertyName">Name of the property.</param>
+            <returns>Value of the property or default value for <typeparamref name="T"/> if property does not exist.</returns>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread.SetValue``1(System.String,``0)">
+            <summary>
+            Sets a value in the thread properties.
+            </summary>
+            <typeparam name="T">Type of the value.</typeparam>
+            <param name="propertyName">Name of the property.</param>
+            <param name="value">Value to set.</param>
+            <exception cref="T:System.InvalidOperationException">If properties collection is not created.</exception>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.PullRequestStatusExtensions">
+            <summary>
+            Extensions for the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.PullRequestStatus"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.PullRequestStatusExtensions.ToTfsPullRequestState(Microsoft.TeamFoundation.SourceControl.WebApi.PullRequestStatus)">
+            <summary>
+            Converts a <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.PullRequestStatus"/> to a <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestState"/>.
+            </summary>
+            <param name="state">State to convert.</param>
+            <returns>Converted state.</returns>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsBranchNotFoundException">
+            <summary>
+            Represents an error if a branch was not found.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsBranchNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsBranchNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsBranchNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsBranchNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsBranchNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsBranchNotFoundException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsBranchNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsBranchNotFoundException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsCreatePullRequestSettings">
+            <summary>
+            Settings for aliases creating pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsCreatePullRequestSettings.#ctor(System.Uri,System.String,System.String,System.String,System.String,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsCreatePullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceRefName">Branch for which the pull request is made.</param>
+            <param name="targetRefName">Target branch of the pull request.
+            If <see langword="null"/> or <see cref="F:System.String.Empty"/> the default branch of the repository will be used.</param>
+            <param name="title">Title of the pull request.</param>
+            <param name="description">Description of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsCreatePullRequestSettings.TargetRefName">
+            <summary>
+            Gets the target branch of the pull request.
+            If <see langword="null"/> or <see cref="F:System.String.Empty"/> the default branch of the repository will be used.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsCreatePullRequestSettings.Title">
+            <summary>
+            Gets the title of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsCreatePullRequestSettings.Description">
+            <summary>
+            Gets the description of the pull request.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequest">
+            <summary>
+            Class for writing issues to Team Foundation Server or Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Tfs.PullRequest.TfsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequest"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing TFS.</param>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            is set to <c>true</c> and no pull request could be found.</exception>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Tfs.PullRequest.TfsPullRequestSettings,Cake.Tfs.IGitClientFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequest"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing TFS.</param>
+            <param name="gitClientFactory">A factory to communicate with Git client.</param>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            is set to <c>true</c> and no pull request could be found.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.HasPullRequestLoaded">
+            <summary>
+            Gets a value indicating whether a pull request has been successfully loaded.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.ServerUrl">
+            <summary>
+            Gets the Url of the Team Foundation Server or Azure DevOps.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.CollectionName">
+            <summary>
+            Gets the name of the Team Foundation Server or Azure DevOps collection.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.CollectionUrl">
+            <summary>
+            Gets the URL for accessing the web portal of the Team Foundation Server or
+            Azure DevOps collection.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.ProjectName">
+            <summary>
+            Gets the name of the Team Foundation Server or Azure DevOps project.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.RepositoryName">
+            <summary>
+            Gets the name of the Git repository.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.RepositoryId">
+            <summary>
+            Gets the ID of the repository.
+            Returns <see cref="F:System.Guid.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.PullRequestId">
+            <summary>
+            Gets the ID of the pull request.
+            Returns 0 if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.PullRequestStatus">
+            <summary>
+            Gets the status of the pull request.
+            Returns <see cref="F:Cake.Tfs.PullRequest.TfsPullRequestState.NotSet"/> if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.CodeReviewId">
+            <summary>
+            Gets the ID of the code review.
+            Returns 0 if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.SourceRefName">
+            <summary>
+            Gets the name of the source branch from the pull request
+            </summary>
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.TargetRefName">
+            <summary>
+            Gets the name of the target branch.
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.LastSourceCommitId">
+            <summary>
+            Gets the commit at the head of the source branch at the time of the last pull request merge.
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequest.LastTargetCommitId">
+            <summary>
+            Gets the commit at the head of the target branch at the time of the last pull request merge.
+            Returns <see cref="F:System.String.Empty"/> if no pull request could be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.
+            </summary>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.Create(Cake.Core.Diagnostics.ICakeLog,Cake.Tfs.IGitClientFactory,Cake.Tfs.PullRequest.TfsCreatePullRequestSettings)">
+            <summary>
+            Create a pull request.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="gitClientFactory">Git client factory.</param>
+            <param name="settings">Settings for accessing TFS.</param>
+            <returns>Instance of the created pull request.</returns>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.Vote(Cake.Tfs.PullRequest.TfsPullRequestVote)">
+            <summary>
+            Votes for the pullrequest.
+            </summary>
+            <param name="vote">The vote for the pull request.</param>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.SetStatus(Cake.Tfs.PullRequest.TfsPullRequestStatus)">
+            <summary>
+            Sets a status on the pull request.
+            </summary>
+            <param name="status">The description of the status which should be set.</param>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.GetModifiedFiles">
+            <summary>
+            Gets the files modified by the pull request.
+            </summary>
+            <returns>The collection of the modified files paths.</returns>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.GetCommentThreads">
+            <summary>
+            Gets the pull request comment threads.
+            </summary>
+            <returns>The list of comment threads of the pull request.</returns>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.ResolveCommentThread(System.Int32)">
+            <summary>
+            Sets the pull request comment thread status to <see cref="F:Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus.Fixed"/>.
+            </summary>
+            <param name="threadId">The Id of the comment thread.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.ActivateCommentThread(System.Int32)">
+            <summary>
+            Sets the pull request comment thread to <see cref="F:Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus.Active"/>.
+            </summary>
+            <param name="threadId">The Id of the comment thread.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.CreateCommentThread(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread)">
+            <summary>
+            Creates a new comment thread in the pull request.
+            </summary>
+            <param name="thread">The instance of the thread.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.GetLatestIterationId">
+            <summary>
+            Gets the Id of the latest pull request iteration.
+            </summary>
+            <returns>The Id of the pull request iteration. Returns -1 in case the pull request is not valid.</returns>
+            <exception cref="T:Cake.Tfs.TfsException">If it is not possible to obtain a collection of <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitPullRequestIteration"/>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.GetIterationChanges(System.Int32)">
+            <summary>
+            Gets all the pull request changes of the given iteration.
+            </summary>
+            <param name="iterationId">The id of the iteration.</param>
+            <returns>The colletion of the iteration changes of the given id. Returns <code>null</code> if pull request is not valid.</returns>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.SetCommentThreadStatus(System.Int32,Microsoft.TeamFoundation.SourceControl.WebApi.CommentThreadStatus)">
+            <summary>
+            Sets the pull request comment thread status.
+            </summary>
+            <param name="threadId">The Id of the comment thread.</param>
+            <param name="status">The comment thread status.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequest.ValidatePullRequest">
+            <summary>
+            Validates if a pull request could be found.
+            Depending on <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            the pull request instance can be null for subsequent calls.
+            </summary>
+            <returns>True if a valid pull request instance exists.</returns>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            is set to <c>true</c> and no pull request could be found.</exception>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestIterationChange">
+            <summary>
+            Class representing an iteration change of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestIterationChange.ItemPath">
+            <summary>
+            Gets or sets the file path the iteration change is associated with.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestIterationChange.ChangeId">
+            <summary>
+            Gets or sets the id of the iteration change.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestIterationChange.ChangeTrackingId">
+            <summary>
+            Gets or sets the tracking id of the iteration change.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">
+            <summary>
+            Represents an error if a pull request was not found.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException.#ctor(System.Guid,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException"/> class.
+            </summary>
+            <param name="repositoryId">ID of the repository where the pull request was searched.</param>
+            <param name="pullRequestId">ID of the pull request which could not be found.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestSettings">
+            <summary>
+            Settings for aliases handling pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestSettings.#ctor(System.Uri,System.String,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceBranch">Branch for which the pull request is made.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestSettings.#ctor(System.Uri,System.Int32,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="pullRequestId">ID of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestSettings.#ctor(Cake.Tfs.PullRequest.TfsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class
+            based on the instance of a <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.</param>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestSettings.#ctor(Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class using environment variables
+            as set by a Azure Pipelines or Team Foundation Server build.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.PullRequestId">
+            <summary>
+            Gets the ID of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound">
+            <summary>
+            Gets or sets a value indicating whether an exception should be thrown if
+            pull request for <see cref="P:Cake.Tfs.PullRequest.BaseTfsPullRequestSettings.SourceRefName"/> or <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.PullRequestId"/> could not be found.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestSettings.UsingTfsBuildOAuthToken">
+            <summary>
+            Constructs the settings object using the access token provided by a Azure Pipelines or Team Foundation Server build.
+            </summary>
+            <returns>The instance of <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class.</returns>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestState">
+            <summary>
+            Possible states of a pull request.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestState.NotSet">
+            <summary>
+            Status is not set.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestState.Active">
+            <summary>
+            Pull request is active.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestState.Abandoned">
+            <summary>
+            Pull request is abandoned.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestState.Completed">
+            <summary>
+            Pull request is completed.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestStatus">
+            <summary>
+            Description of a pull request status.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestStatus.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestStatus"/> class.
+            </summary>
+            <param name="name">Name of the status.</param>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestStatus.Name">
+            <summary>
+            Gets the name of the status.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestStatus.Genre">
+            <summary>
+            Gets or sets the genre of the status.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestStatus.State">
+            <summary>
+            Gets or sets the state of the pull request.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestStatus.Description">
+            <summary>
+            Gets or sets the description of the status.
+            </summary>
+        </member>
+        <member name="P:Cake.Tfs.PullRequest.TfsPullRequestStatus.TargetUrl">
+            <summary>
+            Gets or sets the URL of the status.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestStatusState">
+            <summary>
+            Possible states for a pull request status.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestStatusState.NotSet">
+            <summary>
+            Status is not set.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestStatusState.Pending">
+            <summary>
+            Status is pending.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestStatusState.Succeeded">
+            <summary>
+            Status is successful.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestStatusState.Failed">
+            <summary>
+            Status failed.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestStatusState.Error">
+            <summary>
+            Status showing an error.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestStatusStateExtensions">
+            <summary>
+            Extensions for the <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestStatusState"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.PullRequest.TfsPullRequestStatusStateExtensions.ToGitStatusState(Cake.Tfs.PullRequest.TfsPullRequestStatusState)">
+            <summary>
+            Converts a <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestStatusState"/> to an <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitStatusState"/>.
+            </summary>
+            <param name="state">State to convert.</param>
+            <returns>Converted state.</returns>
+        </member>
+        <member name="T:Cake.Tfs.PullRequest.TfsPullRequestVote">
+            <summary>
+            Defines the vote for a Team Foundation Server or Azure DevOps pull request.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestVote.Rejected">
+            <summary>
+            The changes aren't acceptable.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestVote.WaitingForAuthor">
+            <summary>
+            Do not approve the changes, the author should take some actions.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestVote.ResetFeedback">
+            <summary>
+            Reset a previous vote.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestVote.ApprovedWithSuggestions">
+            <summary>
+            Approve the changes but let the author know there are some suggestions.
+            </summary>
+        </member>
+        <member name="F:Cake.Tfs.PullRequest.TfsPullRequestVote.Approved">
+            <summary>
+            Approve the changes.
+            </summary>
+        </member>
+        <member name="T:Cake.Tfs.GitClientFactory">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Tfs.GitClientFactory.CreateGitClient(System.Uri,Cake.Tfs.Authentication.ITfsCredentials,Microsoft.VisualStudio.Services.Identity.Identity@)">
+            <summary>
+            Creates a client object for communicating with Team Foundation Server or Azure DevOps.
+            </summary>
+            <param name="collectionUrl">The URL of the TFS/Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to TFS/Azure DevOps.</param>
+            <param name="authorizedIdentity">Returns identity which is authorized.</param>
+            <returns>Client object for communicating with Team Foundation Server or Azure DevOps</returns>
+        </member>
+        <member name="M:Cake.Tfs.GitClientFactory.CreateGitClient(System.Uri,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Creates a client object for communicating with Team Foundation Server or Azure DevOps.
+            </summary>
+            <param name="collectionUrl">The URL of the TFS/Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to TFS/Azure DevOps.</param>
+            <returns>Client object for communicating with Team Foundation Server or Azure DevOps</returns>
+        </member>
+        <member name="T:Cake.Tfs.IGitClientFactory">
+            <summary>
+            The interface for a Git client factory
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.IGitClientFactory.CreateGitClient(System.Uri,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Creates the instance of the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.
+            </summary>
+            <param name="collectionUrl">The URL of the TFS/Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to TFS/Azure DevOps.</param>
+            <returns>The instance of <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.</returns>
+        </member>
+        <member name="M:Cake.Tfs.IGitClientFactory.CreateGitClient(System.Uri,Cake.Tfs.Authentication.ITfsCredentials,Microsoft.VisualStudio.Services.Identity.Identity@)">
+            <summary>
+            Creates the instance of the <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.
+            </summary>
+            <param name="collectionUrl">The URL of the TFS/Azure DevOps team project collection.</param>
+            <param name="credentials">The credentials to connect to TFS/Azure DevOps.</param>
+            <param name="identity">Returns identity which is authorized.</param>
+            <returns>The instance of <see cref="T:Microsoft.TeamFoundation.SourceControl.WebApi.GitHttpClient"/> class.</returns>
+        </member>
+        <member name="T:Cake.Tfs.TfsAliases">
+            <content>
+            Contains functionality related to authenticating to Team Foundation Server or Azure DevOps.
+            </content>
+            <summary>
+            Contains functionality related to Team Foundation Server or Azure DevOps.
+            </summary>
+            <content>
+            Contains functionality related to Team Foundation Server or Azure DevOps pull requests.
+            </content>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsAuthenticationNtlm(Cake.Core.ICakeContext)">
+            <summary>
+            Returns credentials for integrated / NTLM authentication.
+            Can only be used for on-premise Team Foundation Server.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Credentials for integrated / NTLM authentication</returns>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsAuthenticationBasic(Cake.Core.ICakeContext,System.String,System.String)">
+            <summary>
+            Returns credentials for basic authentication.
+            Can only be used for on-premise Team Foundation Server configured for basic authentication.
+            See https://www.visualstudio.com/en-us/docs/integrate/get-started/auth/tfs-basic-auth.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for basic authentication.</returns>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsAuthenticationPersonalAccessToken(Cake.Core.ICakeContext,System.String)">
+            <summary>
+            Returns credentials for authentication with a personal access token.
+            Can be used for Team Foundation Server and Azure DevOps.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="personalAccessToken">Personal access token.</param>
+            <returns>Credentials for authentication with a personal access token.</returns>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsAuthenticationOAuth(Cake.Core.ICakeContext,System.String)">
+            <summary>
+            Returns credentials for OAuth authentication.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="accessToken">OAuth access token.</param>
+            <returns>Credentials for OAuth authentication.</returns>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsAuthenticationAzureActiveDirectory(Cake.Core.ICakeContext,System.String,System.String)">
+            <summary>
+            Returns credentials for authentication with an Azure Active Directory.
+            Can only be used with Azure DevOps.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="userName">User name.</param>
+            <param name="password">Password.</param>
+            <returns>Credentials for authentication with an Azure Active Directory.</returns>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsPullRequest(Cake.Core.ICakeContext,Cake.Tfs.PullRequest.TfsPullRequestSettings)">
+             <summary>
+             Gets a Team Foundation Server or Azure DevOps pull request using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for getting the pull request.</param>
+             <example>
+             <para>Get a pull request based on the source branch:</para>
+             <code>
+             <![CDATA[
+                 var pullRequestSettings =
+                     new TfsPullRequestSettings(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm());
+            
+                 var pullRequest =
+                     TfsPullRequest(
+                         pullRequestSettings);
+             ]]>
+             </code>
+             </example>
+             <returns>Description of the pull request.
+             Returns null if pull request could not be found and
+             <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.</returns>
+             <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsPullRequestUsingTfsBuildOAuthToken(Cake.Core.ICakeContext)">
+            <summary>
+            Gets a Team Foundation Server or Azure DevOps pull request using the settings provided by an
+            Azure Pipelines or Team Foundation Server build.
+            Make sure the build has the 'Allow Scripts to access OAuth token' option enabled.
+            </summary>
+            <param name="context">The context.</param>
+            <example>
+            <para>Get a pull request:</para>
+            <code>
+            <![CDATA[
+                var pullRequest =
+                    TfsPullRequestUsingTfsBuildOAuthToken();
+            ]]>
+            </code>
+            </example>
+            <returns>Description of the pull request.
+            Returns null if pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>false</c>.</returns>
+            <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+            <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+            <exception cref="T:System.InvalidOperationException">If build is not running in Azure Pipelines or Team Foundation Server build or
+            'Allow Scripts to access OAuth token' option is not enabled on the build definition.</exception>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsVotePullRequest(Cake.Core.ICakeContext,Cake.Tfs.PullRequest.TfsPullRequestSettings,Cake.Tfs.PullRequest.TfsPullRequestVote)">
+             <summary>
+             Votes for the Team Foundation Server or Azure DevOps pull request
+             using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request.</param>
+             <param name="vote">The vote for the pull request.</param>
+             <example>
+             <para>Vote 'Approved' to a Team Foundation Server pull request:</para>
+             <code>
+             <![CDATA[
+                 var pullRequestSettings =
+                     new TfsPullRequestSettings(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm());
+            
+                 TfsVotePullRequest(
+                     pullRequestSettings,
+                     TfsVotePullRequest.Approved);
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsSetPullRequestStatus(Cake.Core.ICakeContext,Cake.Tfs.PullRequest.TfsPullRequestSettings,Cake.Tfs.PullRequest.TfsPullRequestStatus)">
+             <summary>
+             Sets a status on a Team Foundation Server or Azure DevOps pull request
+             using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request.</param>
+             <param name="status">Description of the status which should be set.</param>
+             <example>
+             <para>Set a custom status on the pull request:</para>
+             <code>
+             <![CDATA[
+                 var pullRequestSettings =
+                     new TfsPullRequestSettings(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm());
+            
+                 var pullRequstStatus =
+                     new TfsPullRequestStatus("MyStatus")
+                     {
+                         Genre = "MyGenre",
+                         State = TfsPullRequestStatusState.Succeeded,
+                         Description = "My custom status is successful"
+                     }
+            
+                 TfsSetPullRequestStatus(
+                     pullRequestSettings,
+                     pullRequstStatus);
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.Tfs.PullRequest.TfsPullRequestNotFoundException">If pull request could not be found and
+             <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/> is set to <c>true</c>.</exception>
+        </member>
+        <member name="M:Cake.Tfs.TfsAliases.TfsCreatePullRequest(Cake.Core.ICakeContext,Cake.Tfs.PullRequest.TfsCreatePullRequestSettings)">
+             <summary>
+             Creates a pull request in Team Foundation Server or Azure DevOps
+             using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for creating the pull request.</param>
+             <returns>Returns a <see cref="T:Cake.Tfs.PullRequest.TfsPullRequest" /> initialized with the
+             created pull request.</returns>
+             <example>
+             <para>Creates a pull request:</para>
+             <code>
+             <![CDATA[
+                 var pullRequestSettings =
+                     new TfsCreatePullRequestSettings(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         "refs/heads/develop",
+                         "Merge my feature from myfeature",
+                         "Merge my feature from myfeature",
+                         TfsAuthenticationNtlm());
+            
+                 TfsCreatePullRequest(pullRequestSettings);
+             ]]>
+             </code>
+             </example>
+             <exception cref="T:Cake.Tfs.PullRequest.TfsBranchNotFoundException">If the target branch could not be found.</exception>
+        </member>
+        <member name="T:Cake.Tfs.TfsException">
+            <summary>
+            Represents errors that occur during connecting to Team Foundation Server or Azure DevOps.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.TfsException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.TfsException"/> class.
+            </summary>
+        </member>
+        <member name="M:Cake.Tfs.TfsException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.TfsException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Cake.Tfs.TfsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.TfsException"/> class with a specified error message
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null
+            reference if no inner exception is specified.</param>
+        </member>
+        <member name="M:Cake.Tfs.TfsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Tfs.TfsException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about
+            the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about
+            the source or destination. </param>
+        </member>
+        <member name="T:Cake.Tfs.ValidatedNotNullAttribute">
+            <summary>
+            Indicates to code analysis that a method validates a particular parameter.
+            </summary>
+        </member>
+    </members>
+</doc>

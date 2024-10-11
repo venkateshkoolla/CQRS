@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Cake.Issues.PullRequests.AzureDevOps</id>
+    <version>0.8.0</version>
+    <title>Cake.Issues.PullRequests.AzureDevOps</title>
+    <authors>BBT Software AG and contributors</authors>
+    <owners>BBT Software AG and contributors</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>icon.png</icon>
+    <projectUrl>https://cakeissues.net/</projectUrl>
+    <description>The Azure DevOps support for the Cake.Issues addin for Cake allows you to
+write found issues as comments to Azure DevOps pull requests.
+
+This addin provides the aliases for writing to Azure DevOps pull requests.
+It also requires the core Cake.Issues and Cake.Issues.PullRequests addins and one or more issue providers.
+
+See the Project Site for an overview of the whole ecosystem of addins for working with issues in Cake scripts.</description>
+    <releaseNotes>https://github.com/cake-contrib/Cake.Issues.PullRequests.AzureDevOps/releases/tag/0.8.0</releaseNotes>
+    <copyright>Copyright © BBT Software AG and contributors</copyright>
+    <tags>Cake Script Cake-Issues Cake-PullRequestSystem Issues PullRequest TFS Azure-DevOps Azure-DevOps-Server</tags>
+    <repository type="git" url="https://github.com/cake-contrib/Cake.Issues.PullRequests.AzureDevOps.git" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

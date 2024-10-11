@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net461</TargetFramework>
+        <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
+        <DebugType>Full</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Update="Mappers\CrmMapper.*.cs">
+            <DependentUpon>CrmMapper.cs</DependentUpon>
+        </Compile>
+        <Compile Update="DomesticContext.*.cs">
+            <DependentUpon>DomesticContext.cs</DependentUpon>
+        </Compile>
+        <Compile Update="IDomesticContext.*.cs">
+            <DependentUpon>IDomesticContext.cs</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
+        <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Ocas.Domestic.Crm.Extras.Provider\Ocas.Domestic.Crm.Extras.Provider.csproj" />
+      <ProjectReference Include="..\Ocas.Domestic.Crm.Provider\Ocas.Domestic.Crm.Provider.csproj" />
+    </ItemGroup>
+
+</Project>

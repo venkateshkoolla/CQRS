@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Issues.PullRequests.AzureDevOps</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem">
+            <summary>
+            Class for writing issues to Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem"/> class.
+            Connects to the Azure DevOps server using NTLM authentication.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing Azure DevOps Server.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem.Cake#Issues#PullRequests#AzureDevOps#IAzureDevOpsPullRequestSystem#AzureDevOpsPullRequest">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem.Initialize(Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem.Cake#Issues#PullRequests#AzureDevOps#IAzureDevOpsPullRequestSystem#ValidatePullRequest">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem.InternalPostDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem.ValidatePullRequest">
+            <summary>
+            Validates if a pull request could be found.
+            Depending on <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            the pull request instance can not be successfully loaded.
+            </summary>
+            <returns>True if a valid pull request instance exists.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases">
+            <summary>
+            Contains functionality related to writing code analysis issues to Azure DevOps pull requests.
+            </summary>
+            <content>
+            Contains functionality related to <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem"/>.
+            </content>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases.AzureDevOpsPullRequests(Cake.Core.ICakeContext,System.Uri,System.String,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Gets an object for writing issues to Azure DevOps pull request in a specific repository and for a
+            specific source branch.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceBranch">Branch for which the pull request is made.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+            <returns>Object for writing issues to Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to an Azure DevOps pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    AzureDevOpsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        "refs/heads/feature/myfeature",
+                        AzureDevOpsAuthenticationNtlm()),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases.AzureDevOpsPullRequests(Cake.Core.ICakeContext,System.Uri,System.Int32,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Gets an object for writing issues to Azure DevOps pull request in a specific repository and with a specific ID.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="pullRequestId">ID of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+            <returns>Object for writing issues to Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to an Azure DevOps Server pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    AzureDevOpsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        5,
+                        AzureDevOpsAuthenticationNtlm()),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases.AzureDevOpsPullRequests(Cake.Core.ICakeContext,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Gets an object for writing issues to Azure DevOps pull request where all required data is taken
+            from the environment variables set by Azure Pipelines.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+            <returns>Object for writing issues to Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to an Azure DevOps Server pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    AzureDevOpsPullRequests(
+                        AzureDevOpsAuthenticationNtlm()),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases.AzureDevOpsPullRequests(Cake.Core.ICakeContext)">
+            <summary>
+            Gets an object for writing issues to Azure DevOps pull request where all required data (including authentication token)
+            is taken from the environment variables set by Azure Pipelines.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Object for writing issues to Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to an Azure DevOps pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    AzureDevOpsPullRequests(),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases.AzureDevOpsPullRequests(Cake.Core.ICakeContext,Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings)">
+             <summary>
+             Gets an object for writing issues to Azure DevOps pull request using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request system.</param>
+             <returns>Object for writing issues to Azure DevOps pull request.</returns>
+             <example>
+             <para>Report code analysis issues reported as MsBuild warnings to an Azure DevOps Server pull request:</para>
+             <code>
+             <![CDATA[
+                 var pullRequestSettings =
+                     new AzureDevOpsPullRequestSettings(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         AzureDevOpsAuthenticationNtlm());
+            
+                 ReportCodeAnalysisIssuesToPullRequest(
+                     MsBuildCodeAnalysis(
+                         @"c:\build\msbuild.log",
+                         MsBuildXmlFileLoggerFormat),
+                     AzureDevOpsPullRequests(pullRequestSettings),
+                     @"c:\repo");
+             ]]>
+             </code>
+             </example>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings">
+            <summary>
+            Settings for <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemAliases"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.#ctor(System.Uri,System.String,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceBranch">Branch for which the pull request is made.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.#ctor(System.Uri,System.Int32,Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="pullRequestId">ID of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.#ctor(Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings"/> class
+            based on the instance of a <see cref="T:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.#ctor(Cake.AzureDevOps.Authentication.IAzureDevOpsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings"/> class
+            based on the environment variables set by the Azure Pipelines.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings"/> class
+            based on the environment variables set by the Azure Pipelines using the build authentication token.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.CheckCommitId">
+            <summary>
+            Gets or sets a value indicating whether pull request system should check if commit Id
+            is still up to date before posting comments.
+            Default value is <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.ManageDiscussionThreadStatus">
+            <summary>
+            Gets or sets a value indicating whether discussion threads should automatically be
+            resolved oder reopened.
+            Default value is <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystemSettings.ReportIssuesNotRelatedToAFile">
+            <summary>
+            Gets or sets a value indicating whether issues not related to a file should be posted
+            as comments or not.
+            Default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCheckingCommitIdCapability">
+            <summary>
+            Implementation of a <see cref="T:Cake.Issues.PullRequests.BaseCheckingCommitIdCapability`1"/> for <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCheckingCommitIdCapability.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.AzureDevOps.IAzureDevOpsPullRequestSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCheckingCommitIdCapability"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCheckingCommitIdCapability.GetLastSourceCommitId">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCommentExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCommentExtensions.ToPullRequestDiscussionComment(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment)">
+            <summary>
+            Converts a <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsComment"/> from Azure DevOps to a <see cref="T:Cake.Issues.PullRequests.IPullRequestDiscussionComment"/> as used in this addin.
+            </summary>
+            <param name="comment">Azure DevOps comment to convert.</param>
+            <returns>Converted comment.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCommentThreadStatusExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus"/> enumeration.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCommentThreadStatusExtensions.ToPullRequestDiscussionStatus(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus)">
+            <summary>
+            Converts a <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus"/> from Azure DevOps to a <see cref="T:Cake.Issues.PullRequests.PullRequestDiscussionStatus"/> as used in this addin.
+            </summary>
+            <param name="status">Azure DevOps status to convert.</param>
+            <returns>Converted status.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsCommentThreadStatusExtensions.ToPullRequestDiscussionResolution(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus)">
+            <summary>
+            Converts a <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsCommentThreadStatus"/> from Azure DevOps to a <see cref="T:Cake.Issues.PullRequests.PullRequestDiscussionResolution"/> as used in this addin.
+            </summary>
+            <param name="status">Azure DevOps status to convert.</param>
+            <returns>Converted status.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsDiscussionThreadsCapability">
+            <summary>
+            Implementation of a <see cref="T:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1"/> for <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsDiscussionThreadsCapability.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.AzureDevOps.IAzureDevOpsPullRequestSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsDiscussionThreadsCapability"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsDiscussionThreadsCapability.InternalFetchDiscussionThreads(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsDiscussionThreadsCapability.InternalResolveDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsDiscussionThreadsCapability.InternalReopenDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsFilteringByModifiedFilesCapability">
+            <summary>
+            Implementation of a <see cref="T:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1"/> for <see cref="T:Cake.Issues.PullRequests.AzureDevOps.AzureDevOpsPullRequestSystem"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsFilteringByModifiedFilesCapability.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.AzureDevOps.IAzureDevOpsPullRequestSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsFilteringByModifiedFilesCapability"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsFilteringByModifiedFilesCapability.InternalGetModifiedFilesInPullRequest">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions.ToPullRequestDiscussionThread(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread)">
+            <summary>
+            Converts a <see cref="T:Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread"/> from Azure DevOps to a <see cref="T:Cake.Issues.PullRequests.IPullRequestDiscussionThread"/> as used in this addin.
+            </summary>
+            <param name="thread">Azure DevOps thread to convert.</param>
+            <returns>Converted thread.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions.GetCommentSource(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread)">
+            <summary>
+            Gets the comment source value used to decorate comments created by this addin.
+            </summary>
+            <param name="thread">Thread to get the value from.</param>
+            <returns>Comment source value.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions.SetCommentSource(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread,System.String)">
+            <summary>
+            Sets the comment sourc e value used to decorate comments created by this addin.
+            </summary>
+            <param name="thread">Thread for which the value should be set.</param>
+            <param name="value">Value to set as comment source.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions.IsCommentSource(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread,System.String)">
+            <summary>
+            Checks if the custom comment source value used to decorate comments created by this addin
+            has a specific value.
+            </summary>
+            <param name="thread">Thread to check.</param>
+            <param name="value">Value to check for.</param>
+            <returns><c>True</c> if the value is identical, <c>False</c> otherwise.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions.GetIssueMessage(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread)">
+            <summary>
+            Gets the original message of the issue as provided by Cake.Issues.PullRequests,
+            without any formatting done by this addin.
+            </summary>
+            <param name="thread">Thread to get the value from.</param>
+            <returns>Original message of the issue.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.Capabilities.AzureDevOpsPullRequestCommentThreadExtensions.SetIssueMessage(Cake.AzureDevOps.PullRequest.CommentThread.AzureDevOpsPullRequestCommentThread,System.String)">
+            <summary>
+            Sets the original message of the issue as provided by Cake.Issues.PullRequests.
+            </summary>
+            <param name="thread">Thread for which the value should be set.</param>
+            <param name="value">Value to set as the original message.</param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.ContentProvider">
+            <summary>
+            Class for providing the content for a pull request comment.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.ContentProvider.GetContent(Cake.Issues.IIssue)">
+            <summary>
+            Returns the content for an issue.
+            </summary>
+            <param name="issue">Issue for which the content should be returned.</param>
+            <returns>Comment content for the issue.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.AzureDevOps.IAzureDevOpsPullRequestSystem">
+            <summary>
+            Interface for writing issues to Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.AzureDevOps.IAzureDevOpsPullRequestSystem.AzureDevOpsPullRequest">
+            <summary>
+            Gets information about the pull request.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.AzureDevOps.IAzureDevOpsPullRequestSystem.ValidatePullRequest">
+            <summary>
+            Validates if a pull request could be found.
+            Depending on <see cref="P:Cake.AzureDevOps.PullRequest.AzureDevOpsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            the pull request instance can be null for subsequent calls.
+            </summary>
+            <returns>True if a valid pull request instance exists.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Cake.AzureDevOps</id>
+    <version>0.4.4</version>
+    <title>Cake.AzureDevOps</title>
+    <authors>Pascal Berger</authors>
+    <owners>Pascal Berger</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>icon.png</icon>
+    <projectUrl>http://cake-contrib.github.io/Cake.AzureDevOps/</projectUrl>
+    <description>Addin for the Cake build automation system for working with Azure DevOps.</description>
+    <releaseNotes>https://github.com/cake-contrib/Cake.AzureDevOps/releases/tag/0.4.4</releaseNotes>
+    <copyright>Copyright © Pascal Berger</copyright>
+    <tags>Cake Script Azure-DevOps Azure-DevOps-Server</tags>
+    <repository type="git" url="https://github.com/cake-contrib/Cake.AzureDevOps.git" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

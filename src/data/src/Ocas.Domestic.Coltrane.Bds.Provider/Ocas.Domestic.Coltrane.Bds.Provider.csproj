@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Update="ColtraneBdsProvider.*.cs">
+            <DependentUpon>ColtraneBdsProvider.cs</DependentUpon>
+        </Compile>
+        <Compile Update="IColtraneBdsProvider.*.cs">
+            <DependentUpon>IColtraneBdsProvider.cs</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Ocas.Domestic.Core\Ocas.Domestic.Core.csproj" />
+    </ItemGroup>
+
+    <!-- Common NuGet packages that affect all target frameworks -->
+    <ItemGroup>
+        <PackageReference Include="Dapper" Version="2.0.30" />
+        <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    </ItemGroup>
+
+    <!-- .NET Standard 2.0 references, compilation flags, build options, and packages -->
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+        <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+    </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    </ItemGroup>
+
+    <!-- .NET 4.5 references, compilation flags, build options, and packages -->
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+        <Reference Include="mscorlib" />
+        <Reference Include="System" />
+        <Reference Include="System.Data" />
+    </ItemGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'net461'">
+        <DefineConstants>NET461;NETFULL</DefineConstants>
+    </PropertyGroup>
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net461'">
+    </ItemGroup>
+
+</Project>

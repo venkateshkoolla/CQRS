@@ -1,0 +1,7 @@
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\bin\Debug\net48\Ocas.Domestic.Admin.TestFramework.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\bin\Debug\net48\Ocas.Domestic.Admin.TestFramework.pdb
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\obj\Debug\net48\Ocas.Domestic.Admin.TestFramework.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\obj\Debug\net48\Ocas.Domestic.Admin.TestFramework.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\obj\Debug\net48\Ocas.Domestic.Admin.TestFramework.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\obj\Debug\net48\Ocas.Domestic.Admin.TestFramework.dll
+C:\OcasProjects\apply-api\src\admin-api\src\Ocas.Domestic.Admin.TestFramework\obj\Debug\net48\Ocas.Domestic.Admin.TestFramework.pdb

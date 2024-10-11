@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Ocas.Domestic.Crm.Extras.Db.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "deploy --file=\"..\\..\\..\\..\\Ocas.Domestic.Crm.Extras.Db.Ssdt\\bin\\Debug\\Ocas.Domestic.Crm.Extras.Db.Ssdt.dacpac\" -v -e \"dev\"  -i \"OCASINTSQL\" -d \"OCAS_MSCRM\""
+    }
+  }
+}

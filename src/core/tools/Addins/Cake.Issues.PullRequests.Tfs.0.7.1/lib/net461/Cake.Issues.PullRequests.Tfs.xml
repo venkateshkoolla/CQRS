@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Issues.PullRequests.Tfs</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCommentExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsComment"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCommentExtensions.ToPullRequestDiscussionComment(Cake.Tfs.PullRequest.CommentThread.TfsComment)">
+            <summary>
+            Converts a <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsComment"/> from TFS to a <see cref="T:Cake.Issues.PullRequests.IPullRequestDiscussionComment"/> as used in this addin.
+            </summary>
+            <param name="comment">TFS comment to convert.</param>
+            <returns>Converted comment.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCommentThreadStatusExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus"/> enumeration.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCommentThreadStatusExtensions.ToPullRequestDiscussionStatus(Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus)">
+            <summary>
+            Converts a <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus"/> from TFS to a <see cref="T:Cake.Issues.PullRequests.PullRequestDiscussionStatus"/> as used in this addin.
+            </summary>
+            <param name="status">TFS status to convert.</param>
+            <returns>Converted status.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCommentThreadStatusExtensions.ToPullRequestDiscussionResolution(Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus)">
+            <summary>
+            Converts a <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsCommentThreadStatus"/> from TFS to a <see cref="T:Cake.Issues.PullRequests.PullRequestDiscussionResolution"/> as used in this addin.
+            </summary>
+            <param name="status">TFS status to convert.</param>
+            <returns>Converted status.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions">
+            <summary>
+            Extensions for <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions.ToPullRequestDiscussionThread(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread)">
+            <summary>
+            Converts a <see cref="T:Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread"/> from TFS to a <see cref="T:Cake.Issues.PullRequests.IPullRequestDiscussionThread"/> as used in this addin.
+            </summary>
+            <param name="thread">TFS thread to convert.</param>
+            <returns>Converted thread.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions.GetCommentSource(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread)">
+            <summary>
+            Gets the comment source value used to decorate comments created by this addin.
+            </summary>
+            <param name="thread">Thread to get the value from.</param>
+            <returns>Comment source value.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions.SetCommentSource(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread,System.String)">
+            <summary>
+            Sets the comment sourc e value used to decorate comments created by this addin.
+            </summary>
+            <param name="thread">Thread for which the value should be set.</param>
+            <param name="value">Value to set as comment source.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions.IsCommentSource(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread,System.String)">
+            <summary>
+            Checks if the custom comment source value used to decorate comments created by this addin
+            has a specific value.
+            </summary>
+            <param name="thread">Thread to check.</param>
+            <param name="value">Value to check for.</param>
+            <returns><c>True</c> if the value is identical, <c>False</c> otherwise.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions.GetIssueMessage(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread)">
+            <summary>
+            Gets the original message of the issue as provided by Cake.Issues.PullRequests,
+            without any formatting done by this addin.
+            </summary>
+            <param name="thread">Thread to get the value from.</param>
+            <returns>Original message of the issue.</returns>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsPullRequestCommentThreadExtensions.SetIssueMessage(Cake.Tfs.PullRequest.CommentThread.TfsPullRequestCommentThread,System.String)">
+            <summary>
+            Sets the original message of the issue as provided by Cake.Issues.PullRequests.
+            </summary>
+            <param name="thread">Thread for which the value should be set.</param>
+            <param name="value">Value to set as the original message.</param>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsDiscussionThreadsCapability">
+            <summary>
+            Implementation of a <see cref="T:Cake.Issues.PullRequests.BaseDiscussionThreadsCapability`1"/> for <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsDiscussionThreadsCapability.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.Tfs.ITfsPullRequestSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsDiscussionThreadsCapability"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsDiscussionThreadsCapability.InternalFetchDiscussionThreads(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsDiscussionThreadsCapability.InternalResolveDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsDiscussionThreadsCapability.InternalReopenDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.PullRequests.IPullRequestDiscussionThread})">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsFilteringByModifiedFilesCapability">
+            <summary>
+            Implementation of a <see cref="T:Cake.Issues.PullRequests.BaseFilteringByModifiedFilesCapability`1"/> for <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsFilteringByModifiedFilesCapability.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.Tfs.ITfsPullRequestSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsFilteringByModifiedFilesCapability"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsFilteringByModifiedFilesCapability.InternalGetModifiedFilesInPullRequest">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCheckingCommitIdCapability">
+            <summary>
+            Implementation of a <see cref="T:Cake.Issues.PullRequests.BaseCheckingCommitIdCapability`1"/> for <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCheckingCommitIdCapability.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.Tfs.ITfsPullRequestSystem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCheckingCommitIdCapability"/> class.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="pullRequestSystem">Pull request system to which this capability belongs.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.Capabilities.TfsCheckingCommitIdCapability.GetLastSourceCommitId">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.ContentProvider">
+            <summary>
+            Class for providing the content for a pull request comment.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.ContentProvider.GetContent(Cake.Issues.IIssue)">
+            <summary>
+            Returns the content for an issue.
+            </summary>
+            <param name="issue">Issue for which the content should be returned.</param>
+            <returns>Comment content for the issue.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.ITfsPullRequestSystem">
+            <summary>
+            Interface for writing issues to Team Foundation Server or Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.Tfs.ITfsPullRequestSystem.TfsPullRequest">
+            <summary>
+            Gets information about the pull request.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.ITfsPullRequestSystem.ValidatePullRequest">
+            <summary>
+            Validates if a pull request could be found.
+            Depending on <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            the pull request instance can be null for subsequent calls.
+            </summary>
+            <returns>True if a valid pull request instance exists.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings">
+            <summary>
+            Settings for <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.#ctor(System.Uri,System.String,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceBranch">Branch for which the pull request is made.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.#ctor(System.Uri,System.Int32,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings"/> class.
+            </summary>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="pullRequestId">ID of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.#ctor(Cake.Tfs.PullRequest.TfsPullRequestSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings"/> class
+            based on the instance of a <see cref="T:Cake.Tfs.PullRequest.TfsPullRequestSettings"/> class.
+            </summary>
+            <param name="settings">Settings containing the parameters.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.#ctor(Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings"/> class
+            based on the environment variables set by the Azure Pipelines / TFS build.
+            </summary>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings"/> class
+            based on the environment variables set by the Azure Pipelines / TFS build
+            using the build authentication token.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.CheckCommitId">
+            <summary>
+            Gets or sets a value indicating whether pull request system should check if commit Id
+            is still up to date before posting comments.
+            Default value is <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.ManageDiscussionThreadStatus">
+            <summary>
+            Gets or sets a value indicating whether discussion threads should automatically be
+            resolved oder reopened.
+            Default value is <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings.ReportIssuesNotRelatedToAFile">
+            <summary>
+            Gets or sets a value indicating whether issues not related to a file should be posted
+            as comments or not.
+            Default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem">
+            <summary>
+            Class for writing issues to Team Foundation Server or Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.#ctor(Cake.Core.Diagnostics.ICakeLog,Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem"/> class.
+            Connects to the TFS server using NTLM authentication.
+            </summary>
+            <param name="log">The Cake log context.</param>
+            <param name="settings">Settings for accessing TFS.</param>
+        </member>
+        <member name="P:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.Cake#Issues#PullRequests#Tfs#ITfsPullRequestSystem#TfsPullRequest">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.Initialize(Cake.Issues.PullRequests.ReportIssuesToPullRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.GetPreferredCommentFormat">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.Cake#Issues#PullRequests#Tfs#ITfsPullRequestSystem#ValidatePullRequest">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.InternalPostDiscussionThreads(System.Collections.Generic.IEnumerable{Cake.Issues.IIssue},System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem.ValidatePullRequest">
+            <summary>
+            Validates if a pull request could be found.
+            Depending on <see cref="P:Cake.Tfs.PullRequest.TfsPullRequestSettings.ThrowExceptionIfPullRequestCouldNotBeFound"/>
+            the pull request instance can not be successfully loaded.
+            </summary>
+            <returns>True if a valid pull request instance exists.</returns>
+        </member>
+        <member name="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases">
+            <content>
+            Contains functionality related to <see cref="T:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystem"/>.
+            </content>
+            <summary>
+            Contains functionality related to writing code analysis issues to Team Foundation Server or
+            Azure DevOps pull requests.
+            </summary>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases.TfsPullRequests(Cake.Core.ICakeContext,System.Uri,System.String,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Gets an object for writing issues to Team Foundation Server or Azure DevOps pull request
+            in a specific repository and for a specific source branch.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="sourceBranch">Branch for which the pull request is made.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+            <returns>Object for writing issues to Team Foundation Server or Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    TfsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        "refs/heads/feature/myfeature",
+                        TfsAuthenticationNtlm()),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases.TfsPullRequests(Cake.Core.ICakeContext,System.Uri,System.Int32,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Gets an object for writing issues to Team Foundation Server or Azure DevOps pull request
+            in a specific repository and with a specific ID.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="repositoryUrl">Full URL of the Git repository,
+            eg. <code>http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository</code>.
+            Supported URL schemes are HTTP, HTTPS and SSH.
+            URLs using SSH scheme are converted to HTTPS.</param>
+            <param name="pullRequestId">ID of the pull request.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+            <returns>Object for writing issues to Team Foundation Server or Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    TfsPullRequests(
+                        new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                        5,
+                        TfsAuthenticationNtlm()),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases.TfsPullRequests(Cake.Core.ICakeContext,Cake.Tfs.Authentication.ITfsCredentials)">
+            <summary>
+            Gets an object for writing issues to Team Foundation Server or Azure DevOps pull request
+            where all required data is taken from the environment variables set by the Azure Pipelines / TFS build.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="credentials">Credentials to use to authenticate against Team Foundation Server or
+            Azure DevOps.</param>
+            <returns>Object for writing issues to Team Foundation Server or Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    TfsPullRequests(
+                        TfsAuthenticationNtlm()),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases.TfsPullRequests(Cake.Core.ICakeContext)">
+            <summary>
+            Gets an object for writing issues to Team Foundation Server or Azure DevOps pull request
+            where all required data (including authentication token) is taken from the environment variables set by the Azure Pipelines / TFS build.
+            </summary>
+            <param name="context">The context.</param>
+            <returns>Object for writing issues to Team Foundation Server or Azure DevOps pull request.</returns>
+            <example>
+            <para>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</para>
+            <code>
+            <![CDATA[
+                ReportIssuesToPullRequest(
+                    MsBuildCodeAnalysis(
+                        @"c:\build\msbuild.log",
+                        MsBuildXmlFileLoggerFormat),
+                    TfsPullRequests(),
+                    @"c:\repo");
+            ]]>
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemAliases.TfsPullRequests(Cake.Core.ICakeContext,Cake.Issues.PullRequests.Tfs.TfsPullRequestSystemSettings)">
+             <summary>
+             Gets an object for writing issues to Team Foundation Server or Visual Studio Team Services pull request
+             using the specified settings.
+             </summary>
+             <param name="context">The context.</param>
+             <param name="settings">Settings for accessing the pull request system.</param>
+             <returns>Object for writing issues to Team Foundation Server or Azure DevOps pull request.</returns>
+             <example>
+             <para>Report code analysis issues reported as MsBuild warnings to a TFS pull request:</para>
+             <code>
+             <![CDATA[
+                 var pullRequestSettings =
+                     new TfsPullRequestSettings(
+                         new Uri("http://myserver:8080/tfs/defaultcollection/myproject/_git/myrepository"),
+                         "refs/heads/feature/myfeature",
+                         TfsAuthenticationNtlm());
+            
+                 ReportCodeAnalysisIssuesToPullRequest(
+                     MsBuildCodeAnalysis(
+                         @"c:\build\msbuild.log",
+                         MsBuildXmlFileLoggerFormat),
+                     TfsPullRequests(pullRequestSettings),
+                     @"c:\repo");
+             ]]>
+             </code>
+             </example>
+        </member>
+    </members>
+</doc>

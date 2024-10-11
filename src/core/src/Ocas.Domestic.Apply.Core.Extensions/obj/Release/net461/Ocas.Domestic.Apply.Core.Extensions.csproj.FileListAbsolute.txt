@@ -1,0 +1,9 @@
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\bin\Release\net461\Ocas.Domestic.Apply.Core.Extensions.dll
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\bin\Release\net461\Ocas.Domestic.Apply.Core.Extensions.pdb
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.csprojAssemblyReference.cache
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.csproj.CoreCompileInputs.cache
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.sourcelink.json
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.AssemblyInfoInputs.cache
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.AssemblyInfo.cs
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.dll
+C:\OcasProjects\apply-api\src\core\src\Ocas.Domestic.Apply.Core.Extensions\obj\Release\net461\Ocas.Domestic.Apply.Core.Extensions.pdb

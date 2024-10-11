@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="AssemblyInfo">
+    <TargetFramework>net461</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace>Ocas.Domestic.Apply</RootNamespace>
+  </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="..\GlobalSuppressions.Global.cs" Link="GlobalSuppressions.Global.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="Ocas.Analyzers" Version="0.1.18">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Ocas.Common" Version="1.4.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\data\src\Ocas.Domestic.Core\Ocas.Domestic.Core.csproj" />
+    </ItemGroup>
+
+</Project>
